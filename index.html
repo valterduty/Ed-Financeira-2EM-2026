@@ -12,7 +12,617 @@
 </html>
 
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 — Retomando os Investimentos: Desafio da Carteira</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9f4 100%);
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #2980b9 0%, #16a085 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        main {
+            padding: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            border-left: 4px solid #16a085;
+            padding-left: 12px;
+        }
+        .intro-box {
+            background: #f0f8fc;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .problems-list {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            background: #fef4f4;
+            border-left: 4px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            gap: 12px;
+        }
+        .problem-item svg {
+            flex-shrink: 0;
+        }
+        .summary-box {
+            background: #eafaf1;
+            border: 2px solid #b8e9d0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .summary-box h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        @media(max-width: 600px) {
+            main { padding: 20px; }
+            header h1 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <header>
+        <h1>Aula 02 — Retomando os Investimentos</h1>
+        <p>Desafio da Carteira: Conhecendo seu Perfil de Investidor</p>
+    </header>
+
+    <main>
+        <h2>Qual é a importância de conhecer seu perfil antes de investir?</h2>
+
+        <!-- Esquema visual: Componentes do Perfil de Investidor -->
+        <div class="svg-container">
+            <svg width="720" height="280" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#2980b9" />
+                        <stop offset="100%" stop-color="#16a085" />
+                    </linearGradient>
+                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+                    </filter>
+                </defs>
+
+                <!-- Centro: Perfil do Investidor -->
+                <circle cx="360" cy="140" r="80" fill="url(#grad1)" filter="url(#shadow)"/>
+                <text x="360" y="135" text-anchor="middle" fill="white" font-size="18" font-weight="bold">PERFIL DE</text>
+                <text x="360" y="160" text-anchor="middle" fill="white" font-size="18" font-weight="bold">INVESTIDOR</text>
+
+                <!-- Elementos ao redor -->
+                <g font-family="Arial" font-size="13" text-anchor="middle">
+                    <!-- Risco -->
+                    <rect x="50" y="50" width="130" height="60" rx="10" fill="#3498db" filter="url(#shadow)"/>
+                    <text x="115" y="78" fill="white" font-weight="bold">Tolerância</text>
+                    <text x="115" y="98" fill="white">ao Risco</text>
+                    <path d="M180 80 L280 120" stroke="#3498db" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Objetivos -->
+                    <rect x="540" y="50" width="130" height="60" rx="10" fill="#27ae60" filter="url(#shadow)"/>
+                    <text x="605" y="78" fill="white" font-weight="bold">Objetivos</text>
+                    <text x="605" y="98" fill="white">Financeiros</text>
+                    <path d="M540 80 L440 120" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Prazo -->
+                    <rect x="50" y="190" width="130" height="60" rx="10" fill="#f39c12" filter="url(#shadow)"/>
+                    <text x="115" y="218" fill="white" font-weight="bold">Prazo para</text>
+                    <text x="115" y="238" fill="white">Investir</text>
+                    <path d="M180 220 L280 160" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Situação Pessoal -->
+                    <rect x="540" y="190" width="130" height="60" rx="10" fill="#9b59b6" filter="url(#shadow)"/>
+                    <text x="605" y="218" fill="white" font-weight="bold">Situação</text>
+                    <text x="605" y="238" fill="white">Pessoal</text>
+                    <path d="M540 220 L440 160" stroke="#9b59b6" stroke-width="3" stroke-dasharray="5,4"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="intro-box">
+            <p><strong>Conhecer seu perfil de investidor</strong> é importante porque ele mostra quanto risco você está disposto e consegue assumir, além de considerar seus objetivos financeiros, prazo para investir e situação pessoal. Com essas informações, fica mais fácil escolher investimentos compatíveis com suas necessidades e evitar decisões que causem desconforto ou prejuízos.</p>
+        </div>
+
+        <h2>Investir sem conhecer seu perfil pode levar a decisões inadequadas</h2>
+
+        <!-- Ilustração: Aviso / Alerta -->
+        <div class="svg-container">
+            <svg width="520" height="90" viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#e74c3c" />
+                        <stop offset="100%" stop-color="#f39c12" />
+                    </linearGradient>
+                </defs>
+                <rect x="10" y="10" width="500" height="70" rx="12" fill="#fef4e8" stroke="url(#warnGrad)" stroke-width="3"/>
+                <polygon points="35,45 50,18 65,45" fill="#e74c3c" stroke="#b03a2e" stroke-width="2"/>
+                <text x="85" y="38" font-family="Arial" font-size="16" font-weight="bold" fill="#c0392b">Cuidado!</text>
+                <text x="85" y="60" font-family="Arial" font-size="13" fill="#7f4200">Investir sem perfil = riscos desnecessários e prejuízos</text>
+            </svg>
+        </div>
+
+        <div class="problems-list">
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Risco incompatível:</strong> Escolher investimentos muito arriscados para quem não tolera perdas, o que pode gerar ansiedade e vendas em momentos de queda.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Crescimento comprometido:</strong> Optar apenas por aplicações muito conservadoras quando o objetivo é de longo prazo, reduzindo o potencial de crescimento do patrimônio.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Liquidez em risco:</strong> Investir em produtos incompatíveis com o prazo em que o dinheiro será necessário, comprometendo a disponibilidade dos recursos.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Falta de planejamento:</strong> Tomar decisões por impulso, influenciado por modismos ou recomendações de terceiros, em vez de seguir uma estratégia planejada.
+                </div>
+            </div>
+        </div>
+
+        <!-- Esquema de Resumo -->
+        <div class="svg-container" style="margin-top:35px;">
+            <svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="okGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#27ae60" />
+                        <stop offset="100%" stop-color="#2ecc71" />
+                    </linearGradient>
+                </defs>
+                <!-- Fluxo -->
+                <rect x="20" y="55" width="150" height="50" rx="10" fill="#2980b9"/>
+                <text x="95" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Conhecer o Perfil</text>
+
+                <path d="M170 80 L210 80 L210 65 L230 85 L210 105 L210 90 L170 90 Z" fill="#16a085"/>
+
+                <rect x="230" y="55" width="150" height="50" rx="10" fill="#16a085"/>
+                <text x="305" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Alinhar Investimentos</text>
+
+                <path d="M380 80 L420 80 L420 65 L440 85 L420 105 L420 90 L380 90 Z" fill="#27ae60"/>
+
+                <rect x="440" y="55" width="140" height="50" rx="10" fill="url(#okGrad)"/>
+                <text x="510" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bons Resultados ✅</text>
+            </svg>
+        </div>
+
+        <div class="summary-box">
+            <h3>Em resumo</h3>
+            <p>Conhecer seu perfil de investidor ajuda a <strong>alinhar os investimentos aos seus objetivos e à sua tolerância ao risco</strong>, aumentando as chances de alcançar bons resultados e evitando escolhas que podem prejudicar sua saúde financeira.</p>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - Retomando os Investimentos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            line-height: 1.7; 
+            color: #2c3e50; 
+            background: linear-gradient(to right, #f0f4f8, #eaf2f8);
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+        header { background: linear-gradient(135deg, #2980b9, #1a5276); color: white; padding: 30px; text-align: center; }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        h2 { color: #2980b9; margin: 30px 0 15px; border-bottom: 2px solid #aed6f1; padding-bottom: 8px; font-size: 1.4rem; }
+        h3 { color: #1a5276; margin: 20px 0 10px; font-size: 1.1rem; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .content { padding: 0 30px 30px; }
+        .svg-container { display: flex; justify-content: center; margin: 25px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        th { background: #2980b9; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid #ddd; }
+        tr:nth-child(even) { background: #f2f8fc; }
+        .destaque { background: #e8f4fc; border-left: 4px solid #2980b9; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .card { background: #f9fcfe; border: 1px solid #d4e6f1; border-radius: 10px; padding: 18px; margin: 15px 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width:768px) { .grid-2 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aula 01 — Retomando os investimentos</h1>
+            <p>Entenda onde seu dinheiro cresce e como proteger seu poder de compra</p>
+        </header>
+        <div class="content">
+
+            <!-- Ilustração: Crescimento do Dinheiro -->
+            <div class="svg-container">
+                <svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="30" width="120" height="130" fill="#e74c3c" rx="8" opacity="0.9"/>
+                    <text x="80" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Sem investir</text>
+                    <text x="80" y="90" text-anchor="middle" fill="white" font-size="12">Inflação come</text>
+                    <path d="M40 110 L100 140" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    <polygon points="100,140 92,132 96,140 92,148" fill="white"/>
+                    <text x="80" y="160" text-anchor="middle" fill="white" font-size="12">Valor cai</text>
+                    
+                    <rect x="200" y="30" width="120" height="130" fill="#27ae60" rx="8" opacity="0.9"/>
+                    <text x="260" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Investindo</text>
+                    <text x="260" y="90" text-anchor="middle" fill="white" font-size="12">Rende e cresce</text>
+                    <path d="M220 140 L280 100" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    <polygon points="280,100 272,108 276,100 268,96" fill="white"/>
+                    <text x="260" y="160" text-anchor="middle" fill="white" font-size="12">Valor sobe</text>
+                    
+                    <rect x="380" y="30" width="120" height="130" fill="#2980b9" rx="8" opacity="0.9"/>
+                    <text x="440" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Com equilíbrio</text>
+                    <text x="440" y="90" text-anchor="middle" fill="white" font-size="12">Protege + cresce</text>
+                    <path d="M400 120 L460 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    <polygon points="460,80 452,88 456,80 448,76" fill="white"/>
+                    <text x="440" y="160" text-anchor="middle" fill="white" font-size="12">Melhor caminho</text>
+                </svg>
+            </div>
+
+            <h2>Por que investir?</h2>
+            <p>Guardar dinheiro é importante, mas investir é o que permite que ele cresça ao longo do tempo.</p>
+            <p>Se você guardasse dinheiro por anos sem investir, ele realmente manteria o mesmo valor no futuro?</p>
+            <p><strong>A resposta curta é: não.</strong> Guardar dinheiro sem investir normalmente faz com que ele perca poder de compra ao longo do tempo por causa da inflação.</p>
+
+            <div class="destaque">
+                <strong>Exemplo prático:</strong><br>
+                Hoje, R$ 100 compram uma determinada quantidade de produtos.<br>
+                Se a inflação for de 5% ao ano, daqui a um ano esses mesmos produtos custarão, em média, R$ 105.<br>
+                Se o seu dinheiro ficou parado, você ainda terá R$ 100, mas comprará menos do que antes.
+            </div>
+
+            <p>É por isso que investir é importante. Os principais objetivos são:</p>
+            <ul>
+                <li><strong>Proteger o dinheiro da inflação:</strong> um bom investimento busca render pelo menos o suficiente para compensar a alta dos preços.</li>
+                <li><strong>Fazer o patrimônio crescer:</strong> alguns investimentos podem render acima da inflação, aumentando seu poder de compra ao longo do tempo.</li>
+                <li><strong>Ajudar a alcançar objetivos financeiros:</strong> como comprar um imóvel, pagar estudos, viajar ou construir uma aposentadoria mais confortável.</li>
+            </ul>
+
+            <h3>Vale a pena investir sempre?</h3>
+            <p>Nem todo investimento é adequado para qualquer objetivo. Antes de investir, é importante considerar:</p>
+            <ul>
+                <li>o prazo em que você pretende usar o dinheiro;</li>
+                <li>o nível de risco que está disposto a assumir;</li>
+                <li>a necessidade de liquidez (facilidade para resgatar o dinheiro).</li>
+            </ul>
+            <p>Em resumo, guardar dinheiro é importante, mas investir é o que ajuda esse dinheiro a manter ou aumentar seu valor real ao longo do tempo. Deixar o dinheiro parado pode parecer seguro, mas, na prática, a inflação faz com que ele valha menos com o passar dos anos.</p>
+
+            <!-- Esquema: Pilares da Decisão de Investimento -->
+            <div class="svg-container">
+                <svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="240" cy="70" r="55" fill="#2980b9" opacity="0.9"/>
+                    <text x="240" y="65" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Decisão de</text>
+                    <text x="240" y="88" text-anchor="middle" fill="white" font-size="15" font-weight="bold">Investir</text>
+                    
+                    <polygon points="80,160 140,120 200,160" fill="#27ae60" opacity="0.85"/>
+                    <text x="140" y="165" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Prazo</text>
+                    
+                    <polygon points="200,180 240,130 280,180" fill="#f39c12" opacity="0.85"/>
+                    <text x="240" y="190" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Risco</text>
+                    
+                    <polygon points="280,160 340,120 400,160" fill="#9b59b6" opacity="0.85"/>
+                    <text x="340" y="165" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Liquidez</text>
+                    
+                    <line x1="140" y1="115" x2="210" y2="95" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+                    <line x1="240" y1="125" x2="240" y2="125" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+                    <line x1="340" y1="115" x2="270" y2="95" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+                </svg>
+            </div>
+
+            <h2>Ativos para investir e suas características</h2>
+            <p>Existem diversos tipos de ativos financeiros, cada um com características, riscos e potenciais de retorno diferentes.</p>
+
+            <div class="card">
+                <h3>1. Renda Fixa</h3>
+                <p>São investimentos em que a forma de remuneração é conhecida no momento da aplicação ou segue um índice definido.</p>
+                <p><strong>Características:</strong> Menor risco em comparação com a renda variável; maior previsibilidade dos rendimentos; indicada para objetivos de curto e médio prazo.</p>
+                <p><strong>Exemplos:</strong> Tesouro Direto • CDB • LCI e LCA • Debêntures</p>
+            </div>
+
+            <div class="card">
+                <h3>2. Renda Variável</h3>
+                <p>São ativos cujo valor pode oscilar diariamente, não havendo garantia de retorno.</p>
+                <p><strong>Características:</strong> Maior potencial de rentabilidade; maior risco e volatilidade; indicada para investidores com horizonte de longo prazo.</p>
+                <p><strong>Exemplos:</strong> Ações • Fundos Imobiliários (FIIs) • ETFs • BDRs</p>
+            </div>
+
+            <div class="card">
+                <h3>3. Fundos de Investimento</h3>
+                <p>Reúnem recursos de vários investidores para serem administrados por um gestor profissional.</p>
+                <p><strong>Características:</strong> Diversificação; gestão especializada; cobrança de taxas de administração e, em alguns casos, de performance.</p>
+                <p><strong>Exemplos:</strong> Fundos de Renda Fixa • Multimercado • de Ações • Cambiais</p>
+            </div>
+
+            <div class="card">
+                <h3>4. Investimentos Internacionais</h3>
+                <p>Permitem investir em ativos de outros países.</p>
+                <p><strong>Características:</strong> Diversificação geográfica; exposição ao câmbio; redução da dependência do mercado brasileiro.</p>
+                <p><strong>Exemplos:</strong> ETFs internacionais • Ações estrangeiras • BDRs • Fundos internacionais</p>
+            </div>
+
+            <div class="card">
+                <h3>5. Ativos Reais</h3>
+                <p>São bens físicos que podem gerar valorização ou renda.</p>
+                <p><strong>Características:</strong> Proteção patrimonial em alguns cenários; menor liquidez em comparação a investimentos financeiros.</p>
+                <p><strong>Exemplos:</strong> Imóveis • Terrenos • Ouro</p>
+            </div>
+
+            <h3>Comparação dos principais ativos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Ativo</th>
+                        <th>Risco</th>
+                        <th>Rentabilidade</th>
+                        <th>Liquidez</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Renda Fixa</td><td>Baixo a médio</td><td>Baixa a moderada</td><td>Alta a média</td></tr>
+                    <tr><td>Ações</td><td>Alto</td><td>Moderada a alta</td><td>Alta</td></tr>
+                    <tr><td>FIIs</td><td>Médio</td><td>Moderada</td><td>Alta</td></tr>
+                    <tr><td>ETFs</td><td>Médio</td><td>Moderada a alta</td><td>Alta</td></tr>
+                    <tr><td>Fundos</td><td>Varia conforme o fundo</td><td>Variável</td><td>Variável</td></tr>
+                    <tr><td>Imóveis</td><td>Médio</td><td>Moderada</td><td>Baixa</td></tr>
+                    <tr><td>Ouro</td><td>Médio</td><td>Variável</td><td>Média</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Como escolher um ativo?</h2>
+            <p>A escolha depende de fatores como:</p>
+            <ul>
+                <li><strong>Objetivo financeiro:</strong> reserva de emergência, aposentadoria, compra de um bem etc.</li>
+                <li><strong>Prazo do investimento:</strong> curto, médio ou longo prazo.</li>
+                <li><strong>Perfil de risco:</strong> conservador, moderado ou arrojado.</li>
+                <li><strong>Necessidade de liquidez:</strong> facilidade para resgatar o dinheiro.</li>
+            </ul>
+            <p>Não existe um único ativo ideal para todos. Em geral, uma carteira diversificada, combinando diferentes tipos de ativos, pode ajudar a equilibrar risco e retorno e reduzir a exposição a oscilações de um único investimento.</p>
+
+            <!-- Gráfico Risco x Retorno -->
+            <div class="svg-container">
+                <svg width="500" height="320" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+                    <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Relação Risco × Retorno</text>
+                    <line x1="60" y1="270" x2="460" y2="270" stroke="#333" stroke-width="3"/>
+                    <line x1="60" y1="270" x2="60" y2="40" stroke="#333" stroke-width="3"/>
+                    <polygon points="460,270 450,264 450,276" fill="#333"/>
+                    <polygon points="60,40 54,50 66,50" fill="#333"/>
+                    <text x="250" y="300" text-anchor="middle" font-size="14" fill="#555">→ Risco</text>
+                    <text x="25" y="160" transform="rotate(-90 25 160)" font-size="14" fill="#555">← Retorno</text>
+                    
+                    <line x1="60" y1="250" x2="430" y2="60" stroke="#2980b9" stroke-width="3" stroke-dasharray="8,4" opacity="0.7"/>
+                    
+                    <circle cx="90" cy="240" r="12" fill="#27ae60"/><text x="90" y="265" text-anchor="middle" font-size="11">Tesouro Selic</text>
+                    <circle cx="140" cy="225" r="12" fill="#2ecc71"/><text x="140" y="250" text-anchor="middle" font-size="11">CDB/LCI</text>
+                    <circle cx="240" cy="170" r="12" fill="#f39c12"/><text x="240" y="195" text-anchor="middle" font-size="11">FIIs</text>
+                    <circle cx="300" cy="145" r="12" fill="#e67e22"/><text x="300" y="170" text-anchor="middle" font-size="11">ETFs</text>
+                    <circle cx="380" cy="100" r="12" fill="#e74c3c"/><text x="380" y="125" text-anchor="middle" font-size="11">Ações</text>
+                    <circle cx="190" cy="190" r="12" fill="#d4b508"/><text x="190" y="215" text-anchor="middle" font-size="11">Ouro</text>
+                </svg>
+            </div>
+
+            <h2>Relação Risco × Retorno</h2>
+            <p>A relação risco × retorno é um dos princípios fundamentais dos investimentos. Em geral, quanto maior o potencial de retorno, maior tende a ser o risco.</p>
+            <ul>
+                <li><strong>Baixo risco:</strong> menor chance de perdas, porém os rendimentos costumam ser mais limitados.</li>
+                <li><strong>Risco moderado:</strong> equilíbrio entre segurança e potencial de retorno.</li>
+                <li><strong>Alto risco:</strong> maior possibilidade de ganhos expressivos, mas também de perdas significativas.</li>
+            </ul>
+            <h3>Exemplos:</h3>
+            <ul>
+                <li><strong>Tesouro Selic:</strong> indicado para reserva de emergência, pois apresenta baixo risco e alta liquidez.</li>
+                <li><strong>CDBs e LCIs/LCAs:</strong> oferecem segurança semelhante à poupança em muitos casos, podendo proporcionar rentabilidade superior.</li>
+                <li><strong>FIIs:</strong> permitem investir no mercado imobiliário sem comprar um imóvel, mas seus preços podem oscilar.</li>
+                <li><strong>Ações:</strong> podem gerar altos retornos no longo prazo, porém estão sujeitas às variações do mercado.</li>
+                <li><strong>ETFs:</strong> proporcionam diversificação ao reunir vários ativos em um único investimento, reduzindo o risco em relação à compra de uma única ação.</li>
+            </ul>
+
+            <div class="destaque">
+                <strong>Conclusão:</strong> Não existe investimento com alto retorno e risco muito baixo de forma consistente. Por isso, a escolha deve considerar os objetivos financeiros, o prazo, o perfil de risco e a necessidade de liquidez. Diversificar os investimentos é uma estratégia importante para equilibrar risco e retorno.
+            </div>
+
+            <!-- Ilustração Inflação -->
+            <div class="svg-container">
+                <svg width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+                    <text x="230" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">Inflação — O Inimigo Invisível</text>
+                    <rect x="40" y="60" width="160" height="120" fill="#e74c3c" rx="8" opacity="0.25"/>
+                    <text x="120" y="90" text-anchor="middle" fill="#c0392b" font-size="14" font-weight="bold">Dinheiro parado</text>
+                    <path d="M60 150 L100 120 L140 130 L180 90" stroke="#c0392b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <polygon points="180,90 172,98 176,90 170,86" fill="#c0392b"/>
+                    <text x="120" y="175" text-anchor="middle" fill="#c0392b" font-size="12">Perde poder de compra</text>
+                    
+                    <rect x="260" y="60" width="160" height="120" fill="#27ae60" rx="8" opacity="0.25"/>
+                    <text x="340" y="90" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">Investindo</text>
+                    <path d="M280 130 L320 100 L360 110 L400 70" stroke="#27ae60" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <polygon points="400,70 392,78 396,70 388,66" fill="#27ae60"/>
+                    <text x="340" y="175" text-anchor="middle" fill="#1e8449" font-size="12">Preserva e cresce</text>
+                </svg>
+            </div>
+
+            <h2>Inflação: o inimigo invisível</h2>
+            <p>A inflação é o aumento contínuo e generalizado dos preços de bens e serviços ao longo do tempo. Quando a inflação sobe, o dinheiro perde poder de compra, ou seja, com a mesma quantia é possível comprar menos produtos e serviços do que antes.</p>
+            <p>Por isso, a inflação é conhecida como o "inimigo invisível" das finanças pessoais: seus efeitos acontecem de forma gradual, mas podem reduzir significativamente o valor do dinheiro ao longo dos anos.</p>
+
+            <h3>Como a inflação afeta o dia a dia?</h3>
+            <p>Imagine que um produto custe R$ 100 hoje. Se a inflação anual for de 6%, no ano seguinte esse mesmo produto passará a custar aproximadamente R$ 106. Se sua renda ou seus investimentos não acompanharem esse aumento, seu poder de compra diminuirá.</p>
+
+            <h3>Impactos da inflação:</h3>
+            <ul>
+                <li>Reduz o poder de compra das famílias.</li>
+                <li>Aumenta o custo de vida.</li>
+                <li>Diminui o valor real do dinheiro guardado sem rendimento.</li>
+                <li>Pode afetar o planejamento financeiro e a capacidade de poupança.</li>
+            </ul>
+
+            <h3>Como se proteger da inflação?</h3>
+            <ul>
+                <li>Investir em aplicações que busquem acompanhar ou superar a inflação.</li>
+                <li>Diversificar os investimentos para reduzir riscos.</li>
+                <li>Planejar o orçamento, evitando gastos desnecessários.</li>
+                <li>Revisar periodicamente os objetivos financeiros e os investimentos.</li>
+            </ul>
+
+            <h2>Rentabilidade Real</h2>
+            <p>A rentabilidade real é o ganho obtido em um investimento após descontar os efeitos da inflação. Ela mostra quanto o poder de compra do investidor realmente aumentou ao longo do tempo.</p>
+            <p>Em outras palavras, não basta que um investimento gere lucro; é importante verificar se esse lucro foi suficiente para superar a inflação.</p>
+
+            <!-- Esquema Rentabilidade Real -->
+            <div class="svg-container">
+                <svg width="460" height="180" viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="70" width="120" height="80" fill="#f39c12" rx="8" opacity="0.85"/>
+                    <text x="90" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Rentabilidade</text>
+                    <text x="90" y="125" text-anchor="middle" fill="white" font-size="13">Nominal</text>
+                    
+                    <path d="M160 105 L190 105 M190 90 L190 120" stroke="#333" stroke-width="3"/>
+                    <rect x="200" y="70" width="100" height="80" fill="#e74c3c" rx="8" opacity="0.85"/>
+                    <text x="250" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Inflação</text>
+                    
+                    <path d="M310 105 L340 105" stroke="#333" stroke-width="3"/>
+                    <polygon points="340,105 332,98 332,112" fill="#333"/>
+                    
+                    <rect x="350" y="70" width="90" height="80" fill="#27ae60" rx="8" opacity="0.85"/>
+                    <text x="395" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Real</text>
+                </svg>
+            </div>
+
+            <h3>Rentabilidade Nominal × Rentabilidade Real</h3>
+            <ul>
+                <li><strong>Rentabilidade Nominal:</strong> é o rendimento total do investimento, sem considerar a inflação.</li>
+                <li><strong>Rentabilidade Real:</strong> é o rendimento obtido depois de descontar a inflação, representando o ganho efetivo de poder de compra.</li>
+            </ul>
+
+            <h3>Por que a rentabilidade real é importante?</h3>
+            <p>Ela permite:</p>
+            <ul>
+                <li>Avaliar se o investimento realmente aumentou seu patrimônio em termos de poder de compra.</li>
+                <li>Comparar diferentes investimentos de forma mais adequada.</li>
+                <li>Tomar decisões financeiras mais conscientes.</li>
+                <li>Planejar objetivos de longo prazo, como aposentadoria ou compra de um imóvel.</li>
+            </ul>
+
+            <h3>Como aumentar a rentabilidade real?</h3>
+            <ul>
+                <li>Escolher investimentos com potencial de rendimento acima da inflação.</li>
+                <li>Diversificar a carteira de investimentos.</li>
+                <li>Investir com foco no longo prazo.</li>
+                <li>Acompanhar periodicamente o desempenho dos investimentos.</li>
+            </ul>
+
+            <div class="destaque">
+                <strong>Conclusão:</strong> A rentabilidade real é um dos indicadores mais importantes para o investidor, pois revela o ganho efetivo do investimento após considerar a inflação. Um investimento só gera crescimento verdadeiro do patrimônio quando sua rentabilidade supera a inflação, preservando e aumentando o poder de compra ao longo do tempo.
+            </div>
+
+            <h2>O que é mais importante: segurança, rentabilidade ou equilíbrio?</h2>
+            <p>Não existe uma única resposta correta. O mais importante depende dos objetivos, do prazo e do perfil de cada investidor. Em geral, o ideal é buscar um equilíbrio entre risco e retorno, sem deixar de considerar a segurança.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🛡️ Segurança</h3>
+                    <p>É prioridade para quem pretende preservar o patrimônio ou precisará do dinheiro em pouco tempo. Investimentos mais seguros costumam apresentar menor risco de perdas, mas também menor potencial de rentabilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Rentabilidade</h3>
+                    <p>É importante para quem deseja aumentar o patrimônio, especialmente no longo prazo. No entanto, investimentos com maior potencial de retorno geralmente envolvem riscos mais elevados.</p>
+                </div>
+            </div>
+
+            <h3>Equilíbrio entre risco e retorno</h3>
+            <p>Consiste em escolher investimentos compatíveis com seus objetivos e com o nível de risco que está disposto a assumir. Essa estratégia busca obter bons resultados sem assumir riscos desnecessários.</p>
+
+            <h3>Exemplos práticos:</h3>
+            <ul>
+                <li><strong>Reserva de emergência:</strong> segurança e liquidez são mais importantes do que a rentabilidade.</li>
+                <li><strong>Aposentadoria (longo prazo):</strong> pode ser interessante aceitar um pouco mais de risco em busca de maiores retornos.</li>
+            </ul>
+
+            <div class="destaque">
+                <strong>Conclusão final:</strong> Ao investir, não se deve considerar apenas a segurança ou apenas a rentabilidade. A melhor decisão é encontrar um equilíbrio entre risco e retorno, alinhando os investimentos aos seus objetivos financeiros, ao prazo de aplicação e ao seu perfil de investidor. Dessa forma, é possível buscar crescimento do patrimônio de forma consciente e sustentável.
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
 
 
 
