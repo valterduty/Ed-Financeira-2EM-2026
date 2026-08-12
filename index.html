@@ -12,266 +12,131 @@
 </html>
 
 
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 02 — Retomando os Investimentos: Desafio da Carteira</title>
+    <title>Aulas - Conteúdo</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9f4 100%);
-            color: #2c3e50;
-            line-height: 1.7;
-            padding: 20px;
-        }
-        .container {
+            background-color: #f0f4f8;
+            padding: 2rem;
             max-width: 900px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
         }
-        header {
-            background: linear-gradient(135deg, #2980b9 0%, #16a085 100%);
-            color: #fff;
-            padding: 30px;
+
+        h1 {
             text-align: center;
+            color: #2d3748;
+            margin-bottom: 2.5rem;
         }
-        header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-        main {
-            padding: 30px;
-        }
-        h2 {
-            color: #2980b9;
-            margin: 30px 0 15px;
-            font-size: 1.4rem;
-            border-left: 4px solid #16a085;
-            padding-left: 12px;
-        }
-        .intro-box {
-            background: #f0f8fc;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .svg-container {
-            text-align: center;
-            margin: 25px 0;
-        }
-        .svg-container svg {
-            max-width: 100%;
-            height: auto;
-        }
-        .problems-list {
+
+        .lista-aulas {
             display: grid;
-            gap: 15px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
         }
-        .problem-item {
-            display: flex;
-            align-items: flex-start;
-            background: #fef4f4;
-            border-left: 4px solid #e74c3c;
-            border-radius: 8px;
-            padding: 15px;
-            gap: 12px;
+
+        .botao-aula {
+            padding: 1rem 1.2rem;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
         }
-        .problem-item svg {
-            flex-shrink: 0;
+
+        .botao-aula:hover {
+            background-color: #2b6cb0;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        .summary-box {
-            background: #eafaf1;
-            border: 2px solid #b8e9d0;
+
+        .botao-aula.ativa {
+            background-color: #2f855a;
+            box-shadow: 0 4px 14px rgba(47,133,90,0.3);
+        }
+
+        .conteudo-aula {
+            background-color: white;
+            padding: 2rem;
             border-radius: 12px;
-            padding: 20px;
-            margin-top: 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            min-height: 200px;
+            display: none;
         }
-        .summary-box h3 {
-            color: #16a085;
-            margin-bottom: 10px;
+
+        .conteudo-aula.visivel {
+            display: block;
+            animation: aparece 0.4s ease;
         }
-        @media(max-width: 600px) {
-            main { padding: 20px; }
-            header h1 { font-size: 1.4rem; }
+
+        .conteudo-aula h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        @keyframes aparece {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Aula 02 — Retomando os Investimentos</h1>
-        <p>Desafio da Carteira: Conhecendo seu Perfil de Investidor</p>
-    </header>
+    <h1>📚 Lista de Aulas</h1>
 
-    <main>
-        <h2>Qual é a importância de conhecer seu perfil antes de investir?</h2>
-
-        <!-- Esquema visual: Componentes do Perfil de Investidor -->
-        <div class="svg-container">
-            <svg width="720" height="280" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#2980b9" />
-                        <stop offset="100%" stop-color="#16a085" />
-                    </linearGradient>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
-                    </filter>
-                </defs>
-
-                <!-- Centro: Perfil do Investidor -->
-                <circle cx="360" cy="140" r="80" fill="url(#grad1)" filter="url(#shadow)"/>
-                <text x="360" y="135" text-anchor="middle" fill="white" font-size="18" font-weight="bold">PERFIL DE</text>
-                <text x="360" y="160" text-anchor="middle" fill="white" font-size="18" font-weight="bold">INVESTIDOR</text>
-
-                <!-- Elementos ao redor -->
-                <g font-family="Arial" font-size="13" text-anchor="middle">
-                    <!-- Risco -->
-                    <rect x="50" y="50" width="130" height="60" rx="10" fill="#3498db" filter="url(#shadow)"/>
-                    <text x="115" y="78" fill="white" font-weight="bold">Tolerância</text>
-                    <text x="115" y="98" fill="white">ao Risco</text>
-                    <path d="M180 80 L280 120" stroke="#3498db" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Objetivos -->
-                    <rect x="540" y="50" width="130" height="60" rx="10" fill="#27ae60" filter="url(#shadow)"/>
-                    <text x="605" y="78" fill="white" font-weight="bold">Objetivos</text>
-                    <text x="605" y="98" fill="white">Financeiros</text>
-                    <path d="M540 80 L440 120" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Prazo -->
-                    <rect x="50" y="190" width="130" height="60" rx="10" fill="#f39c12" filter="url(#shadow)"/>
-                    <text x="115" y="218" fill="white" font-weight="bold">Prazo para</text>
-                    <text x="115" y="238" fill="white">Investir</text>
-                    <path d="M180 220 L280 160" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Situação Pessoal -->
-                    <rect x="540" y="190" width="130" height="60" rx="10" fill="#9b59b6" filter="url(#shadow)"/>
-                    <text x="605" y="218" fill="white" font-weight="bold">Situação</text>
-                    <text x="605" y="238" fill="white">Pessoal</text>
-                    <path d="M540 220 L440 160" stroke="#9b59b6" stroke-width="3" stroke-dasharray="5,4"/>
-                </g>
-            </svg>
-        </div>
-
-        <div class="intro-box">
-            <p><strong>Conhecer seu perfil de investidor</strong> é importante porque ele mostra quanto risco você está disposto e consegue assumir, além de considerar seus objetivos financeiros, prazo para investir e situação pessoal. Com essas informações, fica mais fácil escolher investimentos compatíveis com suas necessidades e evitar decisões que causem desconforto ou prejuízos.</p>
-        </div>
-
-        <h2>Investir sem conhecer seu perfil pode levar a decisões inadequadas</h2>
-
-        <!-- Ilustração: Aviso / Alerta -->
-        <div class="svg-container">
-            <svg width="520" height="90" viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#e74c3c" />
-                        <stop offset="100%" stop-color="#f39c12" />
-                    </linearGradient>
-                </defs>
-                <rect x="10" y="10" width="500" height="70" rx="12" fill="#fef4e8" stroke="url(#warnGrad)" stroke-width="3"/>
-                <polygon points="35,45 50,18 65,45" fill="#e74c3c" stroke="#b03a2e" stroke-width="2"/>
-                <text x="85" y="38" font-family="Arial" font-size="16" font-weight="bold" fill="#c0392b">Cuidado!</text>
-                <text x="85" y="60" font-family="Arial" font-size="13" fill="#7f4200">Investir sem perfil = riscos desnecessários e prejuízos</text>
-            </svg>
-        </div>
-
-        <div class="problems-list">
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Risco incompatível:</strong> Escolher investimentos muito arriscados para quem não tolera perdas, o que pode gerar ansiedade e vendas em momentos de queda.
-                </div>
-            </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Crescimento comprometido:</strong> Optar apenas por aplicações muito conservadoras quando o objetivo é de longo prazo, reduzindo o potencial de crescimento do patrimônio.
-                </div>
-            </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Liquidez em risco:</strong> Investir em produtos incompatíveis com o prazo em que o dinheiro será necessário, comprometendo a disponibilidade dos recursos.
-                </div>
-            </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Falta de planejamento:</strong> Tomar decisões por impulso, influenciado por modismos ou recomendações de terceiros, em vez de seguir uma estratégia planejada.
-                </div>
-            </div>
-        </div>
-
-        <!-- Esquema de Resumo -->
-        <div class="svg-container" style="margin-top:35px;">
-            <svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="okGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#27ae60" />
-                        <stop offset="100%" stop-color="#2ecc71" />
-                    </linearGradient>
-                </defs>
-                <!-- Fluxo -->
-                <rect x="20" y="55" width="150" height="50" rx="10" fill="#2980b9"/>
-                <text x="95" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Conhecer o Perfil</text>
-
-                <path d="M170 80 L210 80 L210 65 L230 85 L210 105 L210 90 L170 90 Z" fill="#16a085"/>
-
-                <rect x="230" y="55" width="150" height="50" rx="10" fill="#16a085"/>
-                <text x="305" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Alinhar Investimentos</text>
-
-                <path d="M380 80 L420 80 L420 65 L440 85 L420 105 L420 90 L380 90 Z" fill="#27ae60"/>
-
-                <rect x="440" y="55" width="140" height="50" rx="10" fill="url(#okGrad)"/>
-                <text x="510" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bons Resultados ✅</text>
-            </svg>
-        </div>
-
-        <div class="summary-box">
-            <h3>Em resumo</h3>
-            <p>Conhecer seu perfil de investidor ajuda a <strong>alinhar os investimentos aos seus objetivos e à sua tolerância ao risco</strong>, aumentando as chances de alcançar bons resultados e evitando escolhas que podem prejudicar sua saúde financeira.</p>
-        </div>
-    </main>
-</div>
-
-</body>
-</html>
+    <!-- Lista dos botões das aulas -->
+    <div class="lista-aulas">
+        <button class="botao-aula" data-aula="1">Aula 01</button>
+        <button class="botao-aula" data-aula="2">Aula 02</button>
+        <button class="botao-aula" data-aula="3">Aula 03</button>
+        <button class="botao-aula" data-aula="4">Aula 04</button>
+        <button class="botao-aula" data-aula="5">Aula 05</button>
+        <button class="botao-aula" data-aula="6">Aula 06</button>
+        <button class="botao-aula" data-aula="7">Aula 07</button>
+        <button class="botao-aula" data-aula="8">Aula 08</button>
+        <button class="botao-aula" data-aula="9">Aula 09</button>
+        <button class="botao-aula" data-aula="10">Aula 10</button>
+        <button class="botao-aula" data-aula="11">Aula 11</button>
+        <button class="botao-aula" data-aula="12">Aula 12</button>
+        <button class="botao-aula" data-aula="13">Aula 13</button>
+        <button class="botao-aula" data-aula="14">Aula 14</button>
+    </div>
 
 
 
 
-<!DOCTYPE html>
+
+
+
+  
+    <!-- Área onde o conteúdo será exibido -->
+    <div id="conteudo-exibicao">
+        <div class="conteudo-aula" id="aula-1">
+            <h2>Aula 01: Retomando os investimentos: onde meu dinheiro cresce?
+</h2>
+            <p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -604,9 +469,358 @@
     </div>
 </body>
 </html>
+</p>
+        </div>
 
 
 
+
+
+
+      
+        <div class="conteudo-aula" id="aula-2">
+            <h2>Aula 02:Retomando os investimentos: desafio da carteira
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 — Retomando os Investimentos: Desafio da Carteira</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9f4 100%);
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #2980b9 0%, #16a085 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        main {
+            padding: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            border-left: 4px solid #16a085;
+            padding-left: 12px;
+        }
+        .intro-box {
+            background: #f0f8fc;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .problems-list {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            background: #fef4f4;
+            border-left: 4px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            gap: 12px;
+        }
+        .problem-item svg {
+            flex-shrink: 0;
+        }
+        .summary-box {
+            background: #eafaf1;
+            border: 2px solid #b8e9d0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .summary-box h3 {
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        @media(max-width: 600px) {
+            main { padding: 20px; }
+            header h1 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Aula 02 — Retomando os Investimentos</h1>
+        <p>Desafio da Carteira: Conhecendo seu Perfil de Investidor</p>
+    </header>
+
+    <main>
+        <h2>Qual é a importância de conhecer seu perfil antes de investir?</h2>
+
+        <!-- Esquema visual: Componentes do Perfil de Investidor -->
+        <div class="svg-container">
+            <svg width="720" height="280" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#2980b9" />
+                        <stop offset="100%" stop-color="#16a085" />
+                    </linearGradient>
+                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+                    </filter>
+                </defs>
+
+                <!-- Centro: Perfil do Investidor -->
+                <circle cx="360" cy="140" r="80" fill="url(#grad1)" filter="url(#shadow)"/>
+                <text x="360" y="135" text-anchor="middle" fill="white" font-size="18" font-weight="bold">PERFIL DE</text>
+                <text x="360" y="160" text-anchor="middle" fill="white" font-size="18" font-weight="bold">INVESTIDOR</text>
+
+                <!-- Elementos ao redor -->
+                <g font-family="Arial" font-size="13" text-anchor="middle">
+                    <!-- Risco -->
+                    <rect x="50" y="50" width="130" height="60" rx="10" fill="#3498db" filter="url(#shadow)"/>
+                    <text x="115" y="78" fill="white" font-weight="bold">Tolerância</text>
+                    <text x="115" y="98" fill="white">ao Risco</text>
+                    <path d="M180 80 L280 120" stroke="#3498db" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Objetivos -->
+                    <rect x="540" y="50" width="130" height="60" rx="10" fill="#27ae60" filter="url(#shadow)"/>
+                    <text x="605" y="78" fill="white" font-weight="bold">Objetivos</text>
+                    <text x="605" y="98" fill="white">Financeiros</text>
+                    <path d="M540 80 L440 120" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Prazo -->
+                    <rect x="50" y="190" width="130" height="60" rx="10" fill="#f39c12" filter="url(#shadow)"/>
+                    <text x="115" y="218" fill="white" font-weight="bold">Prazo para</text>
+                    <text x="115" y="238" fill="white">Investir</text>
+                    <path d="M180 220 L280 160" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,4"/>
+
+                    <!-- Situação Pessoal -->
+                    <rect x="540" y="190" width="130" height="60" rx="10" fill="#9b59b6" filter="url(#shadow)"/>
+                    <text x="605" y="218" fill="white" font-weight="bold">Situação</text>
+                    <text x="605" y="238" fill="white">Pessoal</text>
+                    <path d="M540 220 L440 160" stroke="#9b59b6" stroke-width="3" stroke-dasharray="5,4"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="intro-box">
+            <p><strong>Conhecer seu perfil de investidor</strong> é importante porque ele mostra quanto risco você está disposto e consegue assumir, além de considerar seus objetivos financeiros, prazo para investir e situação pessoal. Com essas informações, fica mais fácil escolher investimentos compatíveis com suas necessidades e evitar decisões que causem desconforto ou prejuízos.</p>
+        </div>
+
+        <h2>Investir sem conhecer seu perfil pode levar a decisões inadequadas</h2>
+
+        <!-- Ilustração: Aviso / Alerta -->
+        <div class="svg-container">
+            <svg width="520" height="90" viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#e74c3c" />
+                        <stop offset="100%" stop-color="#f39c12" />
+                    </linearGradient>
+                </defs>
+                <rect x="10" y="10" width="500" height="70" rx="12" fill="#fef4e8" stroke="url(#warnGrad)" stroke-width="3"/>
+                <polygon points="35,45 50,18 65,45" fill="#e74c3c" stroke="#b03a2e" stroke-width="2"/>
+                <text x="85" y="38" font-family="Arial" font-size="16" font-weight="bold" fill="#c0392b">Cuidado!</text>
+                <text x="85" y="60" font-family="Arial" font-size="13" fill="#7f4200">Investir sem perfil = riscos desnecessários e prejuízos</text>
+            </svg>
+        </div>
+
+        <div class="problems-list">
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Risco incompatível:</strong> Escolher investimentos muito arriscados para quem não tolera perdas, o que pode gerar ansiedade e vendas em momentos de queda.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Crescimento comprometido:</strong> Optar apenas por aplicações muito conservadoras quando o objetivo é de longo prazo, reduzindo o potencial de crescimento do patrimônio.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Liquidez em risco:</strong> Investir em produtos incompatíveis com o prazo em que o dinheiro será necessário, comprometendo a disponibilidade dos recursos.
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <svg width="36" height="36" viewBox="0 0 36 36">
+                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
+                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <strong>Falta de planejamento:</strong> Tomar decisões por impulso, influenciado por modismos ou recomendações de terceiros, em vez de seguir uma estratégia planejada.
+                </div>
+            </div>
+        </div>
+
+        <!-- Esquema de Resumo -->
+        <div class="svg-container" style="margin-top:35px;">
+            <svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="okGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#27ae60" />
+                        <stop offset="100%" stop-color="#2ecc71" />
+                    </linearGradient>
+                </defs>
+                <!-- Fluxo -->
+                <rect x="20" y="55" width="150" height="50" rx="10" fill="#2980b9"/>
+                <text x="95" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Conhecer o Perfil</text>
+
+                <path d="M170 80 L210 80 L210 65 L230 85 L210 105 L210 90 L170 90 Z" fill="#16a085"/>
+
+                <rect x="230" y="55" width="150" height="50" rx="10" fill="#16a085"/>
+                <text x="305" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Alinhar Investimentos</text>
+
+                <path d="M380 80 L420 80 L420 65 L440 85 L420 105 L420 90 L380 90 Z" fill="#27ae60"/>
+
+                <rect x="440" y="55" width="140" height="50" rx="10" fill="url(#okGrad)"/>
+                <text x="510" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bons Resultados ✅</text>
+            </svg>
+        </div>
+
+        <div class="summary-box">
+            <h3>Em resumo</h3>
+            <p>Conhecer seu perfil de investidor ajuda a <strong>alinhar os investimentos aos seus objetivos e à sua tolerância ao risco</strong>, aumentando as chances de alcançar bons resultados e evitando escolhas que podem prejudicar sua saúde financeira.</p>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
+</p>
+        </div>
+
+
+
+
+
+
+
+      
+        <!-- Repita o padrão para as demais aulas -->
+        <div class="conteudo-aula" id="aula-3">
+            <h2>Aula 03</h2>
+            <p>Conteúdo da Aula 03...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-4">
+            <h2>Aula 04</h2>
+            <p>Conteúdo da Aula 04...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-5">
+            <h2>Aula 05</h2>
+            <p>Conteúdo da Aula 05...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-6">
+            <h2>Aula 06</h2>
+            <p>Conteúdo da Aula 06...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-7">
+            <h2>Aula 07</h2>
+            <p>Conteúdo da Aula 07...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-8">
+            <h2>Aula 08</h2>
+            <p>Conteúdo da Aula 08...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-9">
+            <h2>Aula 09</h2>
+            <p>Conteúdo da Aula 09...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-10">
+            <h2>Aula 10</h2>
+            <p>Conteúdo da Aula 10...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-11">
+            <h2>Aula 11</h2>
+            <p>Conteúdo da Aula 11...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-12">
+            <h2>Aula 12</h2>
+            <p>Conteúdo da Aula 12...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-13">
+            <h2>Aula 13</h2>
+            <p>Conteúdo da Aula 13...</p>
+        </div>
+        <div class="conteudo-aula" id="aula-14">
+            <h2>Aula 14 — Conclusão</h2>
+            <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
+        </div>
+    </div>
+
+<script>
+    // Seleciona todos os botões e conteúdos
+    const botoes = document.querySelectorAll('.botao-aula');
+    const conteudos = document.querySelectorAll('.conteudo-aula');
+
+    // Adiciona o clique em cada botão
+    botoes.forEach(botao => {
+        botao.addEventListener('click', () => {
+            // Remove destaque de todos os botões e esconde todos os conteúdos
+            botoes.forEach(btn => btn.classList.remove('ativa'));
+            conteudos.forEach(ctd => ctd.classList.remove('visivel'));
+
+            // Pega o número da aula clicada
+            const numeroAula = botao.getAttribute('data-aula');
+            
+            // Adiciona destaque ao botão clicado e mostra o conteúdo correspondente
+            botao.classList.add('ativa');
+            document.getElementById(`aula-${numeroAula}`).classList.add('visivel');
+        });
+    });
+</script>
+
+</body>
+</html> 
 
 
 
