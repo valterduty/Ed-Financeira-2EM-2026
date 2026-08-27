@@ -3,26 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educação Financeira 2º EM</title>
-</head>
-<body>
-    <h1>Educação Financeira 2º EM</h1>
-    <p>3º Bimestre - 2026</p>
-</body>
-</html>
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aulas - Conteúdo</title>
     <style>
         * {
@@ -45,11 +25,10 @@
             margin-bottom: 2.5rem;
         }
 
-        .lista-aulas {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
+        .item-aula {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .botao-aula {
@@ -62,6 +41,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
+            width: 100%;
         }
 
         .botao-aula:hover {
@@ -78,15 +58,15 @@
         .conteudo-aula {
             background-color: white;
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 0 0 12px 12px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            min-height: 200px;
+            margin-top: -4px;
             display: none;
+            animation: aparece 0.4s ease;
         }
 
         .conteudo-aula.visivel {
             display: block;
-            animation: aparece 0.4s ease;
         }
 
         .conteudo-aula h2 {
@@ -96,33 +76,448 @@
             padding-bottom: 0.5rem;
         }
 
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .botao-nav {
+            padding: 0.7rem 1.1rem;
+            background-color: #744210;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .botao-nav:hover {
+            background-color: #5a350e;
+            transform: translateY(-2px);
+        }
+
+        .botao-nav:disabled {
+            background-color: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            opacity: 0.7;
+        }
+
+        .atalhos {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #718096;
+            text-align: center;
+            width: 100%;
+        }
+
         @keyframes aparece {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .navegacao {
+                flex-direction: column;
+            }
+            .botao-nav {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>📚 Lista de Aulas</h1>
+    <h1>📚 Educação Financeira 2º EM</h1>
 
-    <!-- Lista dos botões das aulas -->
-    <div class="lista-aulas">
+
+
+
+  
+    <!-- Aula 01 -->
+    <div class="item-aula">
         <button class="botao-aula" data-aula="1">Aula 01</button>
-        <button class="botao-aula" data-aula="2">Aula 02</button>
-        <button class="botao-aula" data-aula="3">Aula 03</button>
-        <button class="botao-aula" data-aula="4">Aula 04</button>
-        <button class="botao-aula" data-aula="5">Aula 05</button>
-        <button class="botao-aula" data-aula="6">Aula 06</button>
-        <button class="botao-aula" data-aula="7">Aula 07</button>
-        <button class="botao-aula" data-aula="8">Aula 08</button>
-        <button class="botao-aula" data-aula="9">Aula 09</button>
-        <button class="botao-aula" data-aula="10">Aula 10</button>
-        <button class="botao-aula" data-aula="11">Aula 11</button>
-        <button class="botao-aula" data-aula="12">Aula 12</button>
-        <button class="botao-aula" data-aula="13">Aula 13</button>
-        <button class="botao-aula" data-aula="14">Aula 14</button>
+        <div class="conteudo-aula" id="aula-1">
+            <h2>Aula 01: Retomando os investimentos - onde meu dinheiro cresce</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira - Aula 01: Retomando os Investimentos</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            border-left: 4px solid #2b6cb0;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #2d3748;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .destaque {
+            background-color: #ebf8ff;
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #2b6cb0;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f7fafc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #718096;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>💰 Educação Financeira</h1>
+        <p style="margin:0; color:#ebf8ff; font-size:1.1rem;">Aula 01: Retomando os investimentos — onde meu dinheiro cresce</p>
+    </header>
+
+    <!-- Ilustração 1: Crescimento do dinheiro embutida como SVG -->
+    <div class="ilustracao">
+        <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fundo -->
+            <rect width="400" height="200" fill="#f0f4f8" rx="10"/>
+            <!-- Solo -->
+            <path d="M50 160 Q100 150 150 155 Q200 160 250 152 Q300 145 350 160 L350 180 L50 180 Z" fill="#6b4423"/>
+            <!-- Caule -->
+            <path d="M200 150 L200 80" stroke="#2f855a" stroke-width="6" stroke-linecap="round"/>
+            <!-- Folhas -->
+            <ellipse cx="170" cy="100" rx="25" ry="15" fill="#48bb78" transform="rotate(-30 170 100)"/>
+            <ellipse cx="230" cy="90" rx="25" ry="15" fill="#48bb78" transform="rotate(30 230 90)"/>
+            <!-- Moedas crescendo como frutos -->
+            <circle cx="200" cy="60" r="22" fill="#f6e05e" stroke="#ecc94b" stroke-width="3"/>
+            <text x="200" y="67" text-anchor="middle" font-size="18" font-weight="bold" fill="#744210">R$</text>
+            <circle cx="160" cy="75" r="16" fill="#f6e05e" stroke="#ecc94b" stroke-width="2"/>
+            <text x="160" y="81" text-anchor="middle" font-size="13" font-weight="bold" fill="#744210">R$</text>
+            <circle cx="240" cy="70" r="16" fill="#f6e05e" stroke="#ecc94b" stroke-width="2"/>
+            <text x="240" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#744210">R$</text>
+            <!-- Título -->
+            <text x="200" y="195" text-anchor="middle" font-size="13" fill="#2d3748">Investir faz o dinheiro crescer</text>
+        </svg>
     </div>
+
+    <section>
+        <h2>Por que investir?</h2>
+        <p>Guardar dinheiro é importante, mas investir é o que permite que ele cresça ao longo do tempo.</p>
+        <p>Se você guardasse dinheiro por anos sem investir, ele realmente manteria o mesmo valor no futuro? A resposta curta é: <strong>não</strong>. Guardar dinheiro sem investir normalmente faz com que ele perca poder de compra ao longo do tempo por causa da inflação.</p>
+
+        <div class="destaque">
+            <strong>Exemplo prático:</strong>
+            <p>Hoje, R$ 100 compram uma determinada quantidade de produtos. Se a inflação for de 5% ao ano, daqui a um ano esses mesmos produtos custarão, em média, R$ 105. Se o seu dinheiro ficou parado, você ainda terá R$ 100, mas comprará menos do que antes.</p>
+        </div>
+
+        <p>É por isso que investir é importante. Os principais objetivos são:</p>
+        <ul>
+            <li><strong>Proteger o dinheiro da inflação:</strong> um bom investimento busca render pelo menos o suficiente para compensar a alta dos preços.</li>
+            <li><strong>Fazer o patrimônio crescer:</strong> alguns investimentos podem render acima da inflação, aumentando seu poder de compra ao longo do tempo.</li>
+            <li><strong>Ajudar a alcançar objetivos financeiros:</strong> como comprar um imóvel, pagar estudos, viajar ou construir uma aposentadoria mais confortável.</li>
+        </ul>
+
+        <h3>Vale a pena investir sempre?</h3>
+        <p>Nem todo investimento é adequado para qualquer objetivo. Antes de investir, é importante considerar:</p>
+        <ul>
+            <li>o prazo em que você pretende usar o dinheiro;</li>
+            <li>o nível de risco que está disposto a assumir;</li>
+            <li>a necessidade de liquidez (facilidade para resgatar o dinheiro).</li>
+        </ul>
+        <p>Em resumo: guardar dinheiro é importante, mas investir é o que ajuda esse dinheiro a manter ou aumentar seu valor real ao longo do tempo. Deixar o dinheiro parado pode parecer seguro, mas, na prática, a inflação faz com que ele valha menos com o passar dos anos.</p>
+    </section>
+
+    <!-- Ilustração 2: Inflação como inimigo embutida como SVG -->
+    <div class="ilustracao">
+        <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fundo -->
+            <rect width="400" height="220" fill="#fff5f5" rx="10"/>
+            <!-- Dinheiro de um lado -->
+            <rect x="60" y="70" width="100" height="60" rx="8" fill="#48bb78" stroke="#2f855a" stroke-width="3"/>
+            <text x="110" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="white">R$ 100</text>
+            <text x="110" y="145" text-anchor="middle" font-size="12" fill="#2d3748">Hoje</text>
+            <!-- Seta diminuindo -->
+            <path d="M170 100 L210 100" stroke="#e53e3e" stroke-width="4" marker-end="url(#seta)"/>
+            <defs>
+                <marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"/>
+                </marker>
+            </defs>
+            <!-- Dinheiro com inflação -->
+            <rect x="240" y="85" width="80" height="45" rx="8" fill="#fc8181" stroke="#e53e3e" stroke-width="3"/>
+            <text x="280" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Menos</text>
+            <text x="280" y="145" text-anchor="middle" font-size="12" fill="#2d3748">Com inflação</text>
+            <!-- Título -->
+            <text x="200" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#c53030">💸 Inflação: o poder de compra diminui</text>
+        </svg>
+    </div>
+
+    <section>
+        <h2>Ativos para investir e suas características</h2>
+        <p>Existem diversos tipos de ativos financeiros, cada um com características, riscos e potenciais de retorno diferentes.</p>
+
+        <h3>1. Renda Fixa</h3>
+        <p>São investimentos em que a forma de remuneração é conhecida no momento da aplicação ou segue um índice definido.</p>
+        <ul>
+            <li><strong>Características:</strong> Menor risco, maior previsibilidade, indicada para curto e médio prazo.</li>
+            <li><strong>Exemplos:</strong> Tesouro Direto, CDB, LCI e LCA, Debêntures.</li>
+        </ul>
+
+        <h3>2. Renda Variável</h3>
+        <p>São ativos cujo valor pode oscilar diariamente, não havendo garantia de retorno.</p>
+        <ul>
+            <li><strong>Características:</strong> Maior potencial de rentabilidade, maior risco e volatilidade, indicada para longo prazo.</li>
+            <li><strong>Exemplos:</strong> Ações, Fundos Imobiliários (FIIs), ETFs, BDRs.</li>
+        </ul>
+
+        <h3>3. Fundos de Investimento</h3>
+        <p>Reúnem recursos de vários investidores para serem administrados por um gestor profissional.</p>
+        <ul>
+            <li><strong>Características:</strong> Diversificação, gestão especializada, cobrança de taxas.</li>
+            <li><strong>Exemplos:</strong> Fundos de renda fixa, multimercado, de ações, cambiais.</li>
+        </ul>
+
+        <h3>4. Investimentos Internacionais</h3>
+        <p>Permitem investir em ativos de outros países.</p>
+        <ul>
+            <li><strong>Características:</strong> Diversificação geográfica, exposição ao câmbio, menor dependência do mercado brasileiro.</li>
+            <li><strong>Exemplos:</strong> ETFs internacionais, ações estrangeiras, BDRs, Fundos internacionais.</li>
+        </ul>
+
+        <h3>5. Ativos Reais</h3>
+        <p>São bens físicos que podem gerar valorização ou renda.</p>
+        <ul>
+            <li><strong>Características:</strong> Proteção patrimonial, menor liquidez.</li>
+            <li><strong>Exemplos:</strong> Imóveis, Terrenos, Ouro.</li>
+        </ul>
+
+        <h2>Comparação dos principais ativos</h2>
+        <table>
+            <tr>
+                <th>Tipo de ativo</th>
+                <th>Risco</th>
+                <th>Rentabilidade</th>
+                <th>Liquidez</th>
+            </tr>
+            <tr>
+                <td>Renda Fixa</td>
+                <td>Baixo a médio</td>
+                <td>Baixa a moderada</td>
+                <td>Alta a média</td>
+            </tr>
+            <tr>
+                <td>Ações</td>
+                <td>Alta</td>
+                <td>Moderada a alta</td>
+                <td>Alta</td>
+            </tr>
+            <tr>
+                <td>FIIs</td>
+                <td>Média</td>
+                <td>Moderada</td>
+                <td>Alta</td>
+            </tr>
+            <tr>
+                <td>ETFs</td>
+                <td>Média</td>
+                <td>Moderada a alta</td>
+                <td>Alta</td>
+            </tr>
+            <tr>
+                <td>Fundos</td>
+                <td>Varia conforme o fundo</td>
+                <td>Variável</td>
+                <td>Variável</td>
+            </tr>
+            <tr>
+                <td>Imóveis</td>
+                <td>Médio</td>
+                <td>Moderada</td>
+                <td>Baixa</td>
+            </tr>
+            <tr>
+                <td>Ouro</td>
+                <td>Médio</td>
+                <td>Variável</td>
+                <td>Média</td>
+            </tr>
+        </table>
+
+        <h2>Como escolher um ativo?</h2>
+        <p>A escolha depende de fatores como:</p>
+        <ul>
+            <li>Objetivo financeiro (reserva de emergência, aposentadoria, compra de um bem etc.);</li>
+            <li>Prazo do investimento (curto, médio ou longo prazo);</li>
+            <li>Perfil de risco (conservador, moderado ou arrojado);</li>
+            <li>Necessidade de liquidez.</li>
+        </ul>
+        <p>Não existe um único ativo ideal para todos. Em geral, uma carteira diversificada, combinando diferentes tipos de ativos, pode ajudar a equilibrar risco e retorno.</p>
+
+        <h2>Relação Risco × Retorno</h2>
+        <p>Quanto maior o potencial de retorno, maior tende a ser o risco. Investimentos com menor risco costumam oferecer retornos mais previsíveis e menores.</p>
+        <ul>
+            <li><strong>Baixo risco:</strong> menor chance de perdas, rendimentos mais limitados.</li>
+            <li><strong>Risco moderado:</strong> equilíbrio entre segurança e potencial de retorno.</li>
+            <li><strong>Alto risco:</strong> maior possibilidade de ganhos expressivos, mas também de perdas significativas.</li>
+        </ul>
+
+        <h2>Inflação: o inimigo invisível</h2>
+        <p>A inflação é o aumento contínuo e generalizado dos preços. Quando ela sobe, o dinheiro perde poder de compra — com a mesma quantia, compra-se menos.</p>
+        <div class="destaque">
+            <strong>Exemplo:</strong> Um produto custa R$ 100. Se a inflação for de 6% ao ano, custará aproximadamente R$ 106. Se seus rendimentos não acompanharem, seu poder de compra diminui.
+        </div>
+        <p><strong>Como se proteger?</strong> Invista em aplicações que busquem superar a inflação, diversifique sua carteira, planeje o orçamento e revise seus investimentos periodicamente.</p>
+
+        <h2>Rentabilidade Real</h2>
+        <p>É o ganho obtido após descontar os efeitos da inflação. Mostra quanto seu poder de compra realmente aumentou.</p>
+        <ul>
+            <li><strong>Rentabilidade Nominal:</strong> rendimento total, sem considerar a inflação.</li>
+            <li><strong>Rentabilidade Real:</strong> ganho efetivo de poder de compra.</li>
+        </ul>
+        <p>Um investimento só gera crescimento verdadeiro quando sua rentabilidade supera a inflação. Para isso, escolha ativos com potencial de rendimento acima da inflação, diversifique e invista com foco no longo prazo.</p>
+
+        <h2>Segurança, Rentabilidade ou Equilíbrio?</h2>
+        <p>Não existe resposta única. O ideal é buscar equilíbrio:</p>
+        <ul>
+            <li><strong>Segurança:</strong> prioridade para reserva de emergência e dinheiro de curto prazo.</li>
+            <li><strong>Rentabilidade:</strong> mais importante no longo prazo, mas vem com mais risco.</li>
+            <li><strong>Equilíbrio:</strong> alinhar os investimentos aos seus objetivos, prazo e perfil de risco.</li>
+        </ul>
+        <p><strong>Conclusão:</strong> Não existe investimento com alto retorno e risco muito baixo de forma consistente. Diversificar é a estratégia que equilibra risco e retorno, protegendo e fazendo crescer seu patrimônio de forma consciente.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>📚 Educação Financeira — Aula 01: Retomando os investimentos<br>
+        Conteúdo educativo. Invista sempre com consciência.</p>
+    </footer>
+
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="1" disabled>⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="1">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="1">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
@@ -131,622 +526,236 @@
 
 
   
-    <!-- Área onde o conteúdo será exibido -->
-    <div id="conteudo-exibicao">
-        <div class="conteudo-aula" id="aula-1">
-            <h2>Aula 01: Retomando os investimentos: onde meu dinheiro cresce?
-</h2>
-            <p><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01 - Retomando os Investimentos</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            line-height: 1.7; 
-            color: #2c3e50; 
-            background: linear-gradient(to right, #f0f4f8, #eaf2f8);
-            padding: 20px;
-        }
-        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
-        header { background: linear-gradient(135deg, #2980b9, #1a5276); color: white; padding: 30px; text-align: center; }
-        h1 { font-size: 1.8rem; margin-bottom: 10px; }
-        h2 { color: #2980b9; margin: 30px 0 15px; border-bottom: 2px solid #aed6f1; padding-bottom: 8px; font-size: 1.4rem; }
-        h3 { color: #1a5276; margin: 20px 0 10px; font-size: 1.1rem; }
-        p { margin-bottom: 15px; }
-        ul, ol { margin-left: 25px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .content { padding: 0 30px 30px; }
-        .svg-container { display: flex; justify-content: center; margin: 25px 0; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        th { background: #2980b9; color: white; padding: 12px; text-align: left; }
-        td { padding: 10px 12px; border-bottom: 1px solid #ddd; }
-        tr:nth-child(even) { background: #f2f8fc; }
-        .destaque { background: #e8f4fc; border-left: 4px solid #2980b9; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .card { background: #f9fcfe; border: 1px solid #d4e6f1; border-radius: 10px; padding: 18px; margin: 15px 0; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width:768px) { .grid-2 { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Aula 01 — Retomando os investimentos</h1>
-            <p>Entenda onde seu dinheiro cresce e como proteger seu poder de compra</p>
-        </header>
-        <div class="content">
-
-            <!-- Ilustração: Crescimento do Dinheiro -->
-            <div class="svg-container">
-                <svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="20" y="30" width="120" height="130" fill="#e74c3c" rx="8" opacity="0.9"/>
-                    <text x="80" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Sem investir</text>
-                    <text x="80" y="90" text-anchor="middle" fill="white" font-size="12">Inflação come</text>
-                    <path d="M40 110 L100 140" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <polygon points="100,140 92,132 96,140 92,148" fill="white"/>
-                    <text x="80" y="160" text-anchor="middle" fill="white" font-size="12">Valor cai</text>
-                    
-                    <rect x="200" y="30" width="120" height="130" fill="#27ae60" rx="8" opacity="0.9"/>
-                    <text x="260" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Investindo</text>
-                    <text x="260" y="90" text-anchor="middle" fill="white" font-size="12">Rende e cresce</text>
-                    <path d="M220 140 L280 100" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <polygon points="280,100 272,108 276,100 268,96" fill="white"/>
-                    <text x="260" y="160" text-anchor="middle" fill="white" font-size="12">Valor sobe</text>
-                    
-                    <rect x="380" y="30" width="120" height="130" fill="#2980b9" rx="8" opacity="0.9"/>
-                    <text x="440" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Com equilíbrio</text>
-                    <text x="440" y="90" text-anchor="middle" fill="white" font-size="12">Protege + cresce</text>
-                    <path d="M400 120 L460 80" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <polygon points="460,80 452,88 456,80 448,76" fill="white"/>
-                    <text x="440" y="160" text-anchor="middle" fill="white" font-size="12">Melhor caminho</text>
-                </svg>
-            </div>
-
-            <h2>Por que investir?</h2>
-            <p>Guardar dinheiro é importante, mas investir é o que permite que ele cresça ao longo do tempo.</p>
-            <p>Se você guardasse dinheiro por anos sem investir, ele realmente manteria o mesmo valor no futuro?</p>
-            <p><strong>A resposta curta é: não.</strong> Guardar dinheiro sem investir normalmente faz com que ele perca poder de compra ao longo do tempo por causa da inflação.</p>
-
-            <div class="destaque">
-                <strong>Exemplo prático:</strong><br>
-                Hoje, R$ 100 compram uma determinada quantidade de produtos.<br>
-                Se a inflação for de 5% ao ano, daqui a um ano esses mesmos produtos custarão, em média, R$ 105.<br>
-                Se o seu dinheiro ficou parado, você ainda terá R$ 100, mas comprará menos do que antes.
-            </div>
-
-            <p>É por isso que investir é importante. Os principais objetivos são:</p>
-            <ul>
-                <li><strong>Proteger o dinheiro da inflação:</strong> um bom investimento busca render pelo menos o suficiente para compensar a alta dos preços.</li>
-                <li><strong>Fazer o patrimônio crescer:</strong> alguns investimentos podem render acima da inflação, aumentando seu poder de compra ao longo do tempo.</li>
-                <li><strong>Ajudar a alcançar objetivos financeiros:</strong> como comprar um imóvel, pagar estudos, viajar ou construir uma aposentadoria mais confortável.</li>
-            </ul>
-
-            <h3>Vale a pena investir sempre?</h3>
-            <p>Nem todo investimento é adequado para qualquer objetivo. Antes de investir, é importante considerar:</p>
-            <ul>
-                <li>o prazo em que você pretende usar o dinheiro;</li>
-                <li>o nível de risco que está disposto a assumir;</li>
-                <li>a necessidade de liquidez (facilidade para resgatar o dinheiro).</li>
-            </ul>
-            <p>Em resumo, guardar dinheiro é importante, mas investir é o que ajuda esse dinheiro a manter ou aumentar seu valor real ao longo do tempo. Deixar o dinheiro parado pode parecer seguro, mas, na prática, a inflação faz com que ele valha menos com o passar dos anos.</p>
-
-
-            </div>
-
-            <h2>Ativos para investir e suas características</h2>
-            <p>Existem diversos tipos de ativos financeiros, cada um com características, riscos e potenciais de retorno diferentes.</p>
-
-            <div class="card">
-                <h3>1. Renda Fixa</h3>
-                <p>São investimentos em que a forma de remuneração é conhecida no momento da aplicação ou segue um índice definido.</p>
-                <p><strong>Características:</strong> Menor risco em comparação com a renda variável; maior previsibilidade dos rendimentos; indicada para objetivos de curto e médio prazo.</p>
-                <p><strong>Exemplos:</strong> Tesouro Direto • CDB • LCI e LCA • Debêntures</p>
-            </div>
-
-            <div class="card">
-                <h3>2. Renda Variável</h3>
-                <p>São ativos cujo valor pode oscilar diariamente, não havendo garantia de retorno.</p>
-                <p><strong>Características:</strong> Maior potencial de rentabilidade; maior risco e volatilidade; indicada para investidores com horizonte de longo prazo.</p>
-                <p><strong>Exemplos:</strong> Ações • Fundos Imobiliários (FIIs) • ETFs • BDRs</p>
-            </div>
-
-            <div class="card">
-                <h3>3. Fundos de Investimento</h3>
-                <p>Reúnem recursos de vários investidores para serem administrados por um gestor profissional.</p>
-                <p><strong>Características:</strong> Diversificação; gestão especializada; cobrança de taxas de administração e, em alguns casos, de performance.</p>
-                <p><strong>Exemplos:</strong> Fundos de Renda Fixa • Multimercado • de Ações • Cambiais</p>
-            </div>
-
-            <div class="card">
-                <h3>4. Investimentos Internacionais</h3>
-                <p>Permitem investir em ativos de outros países.</p>
-                <p><strong>Características:</strong> Diversificação geográfica; exposição ao câmbio; redução da dependência do mercado brasileiro.</p>
-                <p><strong>Exemplos:</strong> ETFs internacionais • Ações estrangeiras • BDRs • Fundos internacionais</p>
-            </div>
-
-            <div class="card">
-                <h3>5. Ativos Reais</h3>
-                <p>São bens físicos que podem gerar valorização ou renda.</p>
-                <p><strong>Características:</strong> Proteção patrimonial em alguns cenários; menor liquidez em comparação a investimentos financeiros.</p>
-                <p><strong>Exemplos:</strong> Imóveis • Terrenos • Ouro</p>
-            </div>
-
-            <h3>Comparação dos principais ativos</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tipo de Ativo</th>
-                        <th>Risco</th>
-                        <th>Rentabilidade</th>
-                        <th>Liquidez</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Renda Fixa</td><td>Baixo a médio</td><td>Baixa a moderada</td><td>Alta a média</td></tr>
-                    <tr><td>Ações</td><td>Alto</td><td>Moderada a alta</td><td>Alta</td></tr>
-                    <tr><td>FIIs</td><td>Médio</td><td>Moderada</td><td>Alta</td></tr>
-                    <tr><td>ETFs</td><td>Médio</td><td>Moderada a alta</td><td>Alta</td></tr>
-                    <tr><td>Fundos</td><td>Varia conforme o fundo</td><td>Variável</td><td>Variável</td></tr>
-                    <tr><td>Imóveis</td><td>Médio</td><td>Moderada</td><td>Baixa</td></tr>
-                    <tr><td>Ouro</td><td>Médio</td><td>Variável</td><td>Média</td></tr>
-                </tbody>
-            </table>
-
-            <h2>Como escolher um ativo?</h2>
-            <p>A escolha depende de fatores como:</p>
-            <ul>
-                <li><strong>Objetivo financeiro:</strong> reserva de emergência, aposentadoria, compra de um bem etc.</li>
-                <li><strong>Prazo do investimento:</strong> curto, médio ou longo prazo.</li>
-                <li><strong>Perfil de risco:</strong> conservador, moderado ou arrojado.</li>
-                <li><strong>Necessidade de liquidez:</strong> facilidade para resgatar o dinheiro.</li>
-            </ul>
-            <p>Não existe um único ativo ideal para todos. Em geral, uma carteira diversificada, combinando diferentes tipos de ativos, pode ajudar a equilibrar risco e retorno e reduzir a exposição a oscilações de um único investimento.</p>
-
-            <!-- Gráfico Risco x Retorno -->
-            <div class="svg-container">
-                <svg width="500" height="320" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
-                    <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Relação Risco × Retorno</text>
-                    <line x1="60" y1="270" x2="460" y2="270" stroke="#333" stroke-width="3"/>
-                    <line x1="60" y1="270" x2="60" y2="40" stroke="#333" stroke-width="3"/>
-                    <polygon points="460,270 450,264 450,276" fill="#333"/>
-                    <polygon points="60,40 54,50 66,50" fill="#333"/>
-                    <text x="250" y="300" text-anchor="middle" font-size="14" fill="#555">→ Risco</text>
-                    <text x="25" y="160" transform="rotate(-90 25 160)" font-size="14" fill="#555">← Retorno</text>
-                    
-                    <line x1="60" y1="250" x2="430" y2="60" stroke="#2980b9" stroke-width="3" stroke-dasharray="8,4" opacity="0.7"/>
-                    
-                    <circle cx="90" cy="240" r="12" fill="#27ae60"/><text x="90" y="265" text-anchor="middle" font-size="11">Tesouro Selic</text>
-                    <circle cx="140" cy="225" r="12" fill="#2ecc71"/><text x="140" y="250" text-anchor="middle" font-size="11">CDB/LCI</text>
-                    <circle cx="240" cy="170" r="12" fill="#f39c12"/><text x="240" y="195" text-anchor="middle" font-size="11">FIIs</text>
-                    <circle cx="300" cy="145" r="12" fill="#e67e22"/><text x="300" y="170" text-anchor="middle" font-size="11">ETFs</text>
-                    <circle cx="380" cy="100" r="12" fill="#e74c3c"/><text x="380" y="125" text-anchor="middle" font-size="11">Ações</text>
-                    <circle cx="190" cy="190" r="12" fill="#d4b508"/><text x="190" y="215" text-anchor="middle" font-size="11">Ouro</text>
-                </svg>
-            </div>
-
-            <h2>Relação Risco × Retorno</h2>
-            <p>A relação risco × retorno é um dos princípios fundamentais dos investimentos. Em geral, quanto maior o potencial de retorno, maior tende a ser o risco.</p>
-            <ul>
-                <li><strong>Baixo risco:</strong> menor chance de perdas, porém os rendimentos costumam ser mais limitados.</li>
-                <li><strong>Risco moderado:</strong> equilíbrio entre segurança e potencial de retorno.</li>
-                <li><strong>Alto risco:</strong> maior possibilidade de ganhos expressivos, mas também de perdas significativas.</li>
-            </ul>
-            <h3>Exemplos:</h3>
-            <ul>
-                <li><strong>Tesouro Selic:</strong> indicado para reserva de emergência, pois apresenta baixo risco e alta liquidez.</li>
-                <li><strong>CDBs e LCIs/LCAs:</strong> oferecem segurança semelhante à poupança em muitos casos, podendo proporcionar rentabilidade superior.</li>
-                <li><strong>FIIs:</strong> permitem investir no mercado imobiliário sem comprar um imóvel, mas seus preços podem oscilar.</li>
-                <li><strong>Ações:</strong> podem gerar altos retornos no longo prazo, porém estão sujeitas às variações do mercado.</li>
-                <li><strong>ETFs:</strong> proporcionam diversificação ao reunir vários ativos em um único investimento, reduzindo o risco em relação à compra de uma única ação.</li>
-            </ul>
-
-            <div class="destaque">
-                <strong>Conclusão:</strong> Não existe investimento com alto retorno e risco muito baixo de forma consistente. Por isso, a escolha deve considerar os objetivos financeiros, o prazo, o perfil de risco e a necessidade de liquidez. Diversificar os investimentos é uma estratégia importante para equilibrar risco e retorno.
-            </div>
-
-            <!-- Ilustração Inflação -->
-            <div class="svg-container">
-                <svg width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
-                    <text x="230" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">Inflação — O Inimigo Invisível</text>
-                    <rect x="40" y="60" width="160" height="120" fill="#e74c3c" rx="8" opacity="0.25"/>
-                    <text x="120" y="90" text-anchor="middle" fill="#c0392b" font-size="14" font-weight="bold">Dinheiro parado</text>
-                    <path d="M60 150 L100 120 L140 130 L180 90" stroke="#c0392b" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <polygon points="180,90 172,98 176,90 170,86" fill="#c0392b"/>
-                    <text x="120" y="175" text-anchor="middle" fill="#c0392b" font-size="12">Perde poder de compra</text>
-                    
-                    <rect x="260" y="60" width="160" height="120" fill="#27ae60" rx="8" opacity="0.25"/>
-                    <text x="340" y="90" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">Investindo</text>
-                    <path d="M280 130 L320 100 L360 110 L400 70" stroke="#27ae60" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <polygon points="400,70 392,78 396,70 388,66" fill="#27ae60"/>
-                    <text x="340" y="175" text-anchor="middle" fill="#1e8449" font-size="12">Preserva e cresce</text>
-                </svg>
-            </div>
-
-            <h2>Inflação: o inimigo invisível</h2>
-            <p>A inflação é o aumento contínuo e generalizado dos preços de bens e serviços ao longo do tempo. Quando a inflação sobe, o dinheiro perde poder de compra, ou seja, com a mesma quantia é possível comprar menos produtos e serviços do que antes.</p>
-            <p>Por isso, a inflação é conhecida como o "inimigo invisível" das finanças pessoais: seus efeitos acontecem de forma gradual, mas podem reduzir significativamente o valor do dinheiro ao longo dos anos.</p>
-
-            <h3>Como a inflação afeta o dia a dia?</h3>
-            <p>Imagine que um produto custe R$ 100 hoje. Se a inflação anual for de 6%, no ano seguinte esse mesmo produto passará a custar aproximadamente R$ 106. Se sua renda ou seus investimentos não acompanharem esse aumento, seu poder de compra diminuirá.</p>
-
-            <h3>Impactos da inflação:</h3>
-            <ul>
-                <li>Reduz o poder de compra das famílias.</li>
-                <li>Aumenta o custo de vida.</li>
-                <li>Diminui o valor real do dinheiro guardado sem rendimento.</li>
-                <li>Pode afetar o planejamento financeiro e a capacidade de poupança.</li>
-            </ul>
-
-            <h3>Como se proteger da inflação?</h3>
-            <ul>
-                <li>Investir em aplicações que busquem acompanhar ou superar a inflação.</li>
-                <li>Diversificar os investimentos para reduzir riscos.</li>
-                <li>Planejar o orçamento, evitando gastos desnecessários.</li>
-                <li>Revisar periodicamente os objetivos financeiros e os investimentos.</li>
-            </ul>
-
-            <h2>Rentabilidade Real</h2>
-            <p>A rentabilidade real é o ganho obtido em um investimento após descontar os efeitos da inflação. Ela mostra quanto o poder de compra do investidor realmente aumentou ao longo do tempo.</p>
-            <p>Em outras palavras, não basta que um investimento gere lucro; é importante verificar se esse lucro foi suficiente para superar a inflação.</p>
-
-            <!-- Esquema Rentabilidade Real -->
-            <div class="svg-container">
-                <svg width="460" height="180" viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="30" y="70" width="120" height="80" fill="#f39c12" rx="8" opacity="0.85"/>
-                    <text x="90" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Rentabilidade</text>
-                    <text x="90" y="125" text-anchor="middle" fill="white" font-size="13">Nominal</text>
-                    
-                    <path d="M160 105 L190 105 M190 90 L190 120" stroke="#333" stroke-width="3"/>
-                    <rect x="200" y="70" width="100" height="80" fill="#e74c3c" rx="8" opacity="0.85"/>
-                    <text x="250" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Inflação</text>
-                    
-                    <path d="M310 105 L340 105" stroke="#333" stroke-width="3"/>
-                    <polygon points="340,105 332,98 332,112" fill="#333"/>
-                    
-                    <rect x="350" y="70" width="90" height="80" fill="#27ae60" rx="8" opacity="0.85"/>
-                    <text x="395" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Real</text>
-                </svg>
-            </div>
-
-            <h3>Rentabilidade Nominal × Rentabilidade Real</h3>
-            <ul>
-                <li><strong>Rentabilidade Nominal:</strong> é o rendimento total do investimento, sem considerar a inflação.</li>
-                <li><strong>Rentabilidade Real:</strong> é o rendimento obtido depois de descontar a inflação, representando o ganho efetivo de poder de compra.</li>
-            </ul>
-
-            <h3>Por que a rentabilidade real é importante?</h3>
-            <p>Ela permite:</p>
-            <ul>
-                <li>Avaliar se o investimento realmente aumentou seu patrimônio em termos de poder de compra.</li>
-                <li>Comparar diferentes investimentos de forma mais adequada.</li>
-                <li>Tomar decisões financeiras mais conscientes.</li>
-                <li>Planejar objetivos de longo prazo, como aposentadoria ou compra de um imóvel.</li>
-            </ul>
-
-            <h3>Como aumentar a rentabilidade real?</h3>
-            <ul>
-                <li>Escolher investimentos com potencial de rendimento acima da inflação.</li>
-                <li>Diversificar a carteira de investimentos.</li>
-                <li>Investir com foco no longo prazo.</li>
-                <li>Acompanhar periodicamente o desempenho dos investimentos.</li>
-            </ul>
-
-            <div class="destaque">
-                <strong>Conclusão:</strong> A rentabilidade real é um dos indicadores mais importantes para o investidor, pois revela o ganho efetivo do investimento após considerar a inflação. Um investimento só gera crescimento verdadeiro do patrimônio quando sua rentabilidade supera a inflação, preservando e aumentando o poder de compra ao longo do tempo.
-            </div>
-
-            <h2>O que é mais importante: segurança, rentabilidade ou equilíbrio?</h2>
-            <p>Não existe uma única resposta correta. O mais importante depende dos objetivos, do prazo e do perfil de cada investidor. Em geral, o ideal é buscar um equilíbrio entre risco e retorno, sem deixar de considerar a segurança.</p>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3>🛡️ Segurança</h3>
-                    <p>É prioridade para quem pretende preservar o patrimônio ou precisará do dinheiro em pouco tempo. Investimentos mais seguros costumam apresentar menor risco de perdas, mas também menor potencial de rentabilidade.</p>
-                </div>
-                <div class="card">
-                    <h3>📈 Rentabilidade</h3>
-                    <p>É importante para quem deseja aumentar o patrimônio, especialmente no longo prazo. No entanto, investimentos com maior potencial de retorno geralmente envolvem riscos mais elevados.</p>
-                </div>
-            </div>
-
-            <h3>Equilíbrio entre risco e retorno</h3>
-            <p>Consiste em escolher investimentos compatíveis com seus objetivos e com o nível de risco que está disposto a assumir. Essa estratégia busca obter bons resultados sem assumir riscos desnecessários.</p>
-
-            <h3>Exemplos práticos:</h3>
-            <ul>
-                <li><strong>Reserva de emergência:</strong> segurança e liquidez são mais importantes do que a rentabilidade.</li>
-                <li><strong>Aposentadoria (longo prazo):</strong> pode ser interessante aceitar um pouco mais de risco em busca de maiores retornos.</li>
-            </ul>
-
-            <div class="destaque">
-                <strong>Conclusão final:</strong> Ao investir, não se deve considerar apenas a segurança ou apenas a rentabilidade. A melhor decisão é encontrar um equilíbrio entre risco e retorno, alinhando os investimentos aos seus objetivos financeiros, ao prazo de aplicação e ao seu perfil de investidor. Dessa forma, é possível buscar crescimento do patrimônio de forma consciente e sustentável.
-            </div>
-
-        </div>
-    </div>
-</body>
-</html>
-</p>
-        </div>
-
-
-
-
-
-
-      
+    <!-- Aula 02 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="2">Aula 02</button>
         <div class="conteudo-aula" id="aula-2">
-            <h2>Aula 02:Retomando os investimentos: desafio da carteira
+            <h2>Aula 02: Retomando os investimentos - desafio da carteira
 </h2>
             <p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 02 — Retomando os Investimentos: Desafio da Carteira</title>
+    <title>Educação Financeira | Aula 02 - Desafio da Carteira</title>
     <style>
+        /* Estilos gerais e responsivos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f9f4 100%);
-            color: #2c3e50;
-            line-height: 1.7;
-            padding: 20px;
+            background-color: #f0f7f4;
+            color: #2d3748;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
+
+        /* Cabeçalho da página */
         header {
-            background: linear-gradient(135deg, #2980b9 0%, #16a085 100%);
-            color: #fff;
-            padding: 30px;
+            background: linear-gradient(135deg, #2f855a 0%, #38a169 100%);
+            color: white;
+            padding: 2rem 1.5rem;
             text-align: center;
         }
+
         header h1 {
             font-size: 1.8rem;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
+
         header p {
             font-size: 1.1rem;
             opacity: 0.95;
         }
+
+        /* Conteúdo principal */
         main {
-            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem;
         }
-        h2 {
-            color: #2980b9;
-            margin: 30px 0 15px;
-            font-size: 1.4rem;
-            border-left: 4px solid #16a085;
-            padding-left: 12px;
-        }
-        .intro-box {
-            background: #f0f8fc;
+
+        section {
+            background: white;
             border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
-        .svg-container {
-            text-align: center;
-            margin: 25px 0;
+
+        h2 {
+            color: #2f855a;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #e6fffa;
+            padding-bottom: 0.5rem;
         }
-        .svg-container svg {
-            max-width: 100%;
+
+        h3 {
+            color: #276749;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Ilustrações SVG embutidas */
+        .ilustracao {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 320px;
+            width: 100%;
             height: auto;
         }
-        .problems-list {
-            display: grid;
-            gap: 15px;
-            margin: 20px 0;
+
+        /* Lista de riscos */
+        .lista-erros {
+            list-style: none;
+            margin: 1.25rem 0;
+            padding-left: 0;
         }
-        .problem-item {
-            display: flex;
-            align-items: flex-start;
-            background: #fef4f4;
-            border-left: 4px solid #e74c3c;
-            border-radius: 8px;
-            padding: 15px;
-            gap: 12px;
+
+        .lista-erros li {
+            background-color: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0 8px 8px 0;
         }
-        .problem-item svg {
-            flex-shrink: 0;
+
+        .destaque {
+            background-color: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            font-weight: 500;
+            margin-top: 1.5rem;
         }
-        .summary-box {
-            background: #eafaf1;
-            border: 2px solid #b8e9d0;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 30px;
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #2f855a;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
-        .summary-box h3 {
-            color: #16a085;
-            margin-bottom: 10px;
-        }
-        @media(max-width: 600px) {
-            main { padding: 20px; }
-            header h1 { font-size: 1.4rem; }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 1.25rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- Cabeçalho com título da aula -->
     <header>
-        <h1>Aula 02 — Retomando os Investimentos</h1>
-        <p>Desafio da Carteira: Conhecendo seu Perfil de Investidor</p>
+        <h1>📚 Educação Financeira – Aula 02</h1>
+        <p>Retomando os investimentos: o desafio de montar sua carteira</p>
     </header>
 
     <main>
-        <h2>Qual é a importância de conhecer seu perfil antes de investir?</h2>
+        <!-- Primeira seção: Importância do perfil de investidor -->
+        <section>
+            <h2>Qual é a importância de conhecer seu perfil antes de investir?</h2>
 
-        <!-- Esquema visual: Componentes do Perfil de Investidor -->
-        <div class="svg-container">
-            <svg width="720" height="280" viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#2980b9" />
-                        <stop offset="100%" stop-color="#16a085" />
-                    </linearGradient>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
-                    </filter>
-                </defs>
-
-                <!-- Centro: Perfil do Investidor -->
-                <circle cx="360" cy="140" r="80" fill="url(#grad1)" filter="url(#shadow)"/>
-                <text x="360" y="135" text-anchor="middle" fill="white" font-size="18" font-weight="bold">PERFIL DE</text>
-                <text x="360" y="160" text-anchor="middle" fill="white" font-size="18" font-weight="bold">INVESTIDOR</text>
-
-                <!-- Elementos ao redor -->
-                <g font-family="Arial" font-size="13" text-anchor="middle">
-                    <!-- Risco -->
-                    <rect x="50" y="50" width="130" height="60" rx="10" fill="#3498db" filter="url(#shadow)"/>
-                    <text x="115" y="78" fill="white" font-weight="bold">Tolerância</text>
-                    <text x="115" y="98" fill="white">ao Risco</text>
-                    <path d="M180 80 L280 120" stroke="#3498db" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Objetivos -->
-                    <rect x="540" y="50" width="130" height="60" rx="10" fill="#27ae60" filter="url(#shadow)"/>
-                    <text x="605" y="78" fill="white" font-weight="bold">Objetivos</text>
-                    <text x="605" y="98" fill="white">Financeiros</text>
-                    <path d="M540 80 L440 120" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Prazo -->
-                    <rect x="50" y="190" width="130" height="60" rx="10" fill="#f39c12" filter="url(#shadow)"/>
-                    <text x="115" y="218" fill="white" font-weight="bold">Prazo para</text>
-                    <text x="115" y="238" fill="white">Investir</text>
-                    <path d="M180 220 L280 160" stroke="#f39c12" stroke-width="3" stroke-dasharray="5,4"/>
-
-                    <!-- Situação Pessoal -->
-                    <rect x="540" y="190" width="130" height="60" rx="10" fill="#9b59b6" filter="url(#shadow)"/>
-                    <text x="605" y="218" fill="white" font-weight="bold">Situação</text>
-                    <text x="605" y="238" fill="white">Pessoal</text>
-                    <path d="M540 220 L440 160" stroke="#9b59b6" stroke-width="3" stroke-dasharray="5,4"/>
-                </g>
+            <!-- Ilustração SVG 1: Perfil de investidor -->
+            <svg class="ilustracao" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="300" height="180" fill="#f0fff4" rx="12"/>
+                <!-- Ícone pessoa -->
+                <circle cx="150" cy="55" r="30" fill="#38a169"/>
+                <circle cx="150" cy="48" r="18" fill="#fff"/>
+                <path d="M125 90 L150 75 L175 90 Z" fill="#2f855a"/>
+                <!-- Ícone gráfico -->
+                <rect x="60" y="110" width="40" height="45" fill="#9ae6b4" rx="4"/>
+                <rect x="110" y="90" width="40" height="65" fill="#68d391" rx="4"/>
+                <rect x="160" y="70" width="40" height="85" fill="#48bb78" rx="4"/>
+                <rect x="210" y="50" width="40" height="105" fill="#38a169" rx="4"/>
+                <!-- Texto -->
+                <text x="150" y="165" text-anchor="middle" fill="#276749" font-size="13" font-weight="bold">Conheça seu Perfil</text>
             </svg>
-        </div>
 
-        <div class="intro-box">
-            <p><strong>Conhecer seu perfil de investidor</strong> é importante porque ele mostra quanto risco você está disposto e consegue assumir, além de considerar seus objetivos financeiros, prazo para investir e situação pessoal. Com essas informações, fica mais fácil escolher investimentos compatíveis com suas necessidades e evitar decisões que causem desconforto ou prejuízos.</p>
-        </div>
+            <p>Conhecer seu perfil de investidor é fundamental porque ele revela quanto risco você está disposto — e também consegue — assumir. Além disso, ele leva em conta seus objetivos financeiros, o prazo para investir e sua situação pessoal.</p>
 
-        <h2>Investir sem conhecer seu perfil pode levar a decisões inadequadas</h2>
+            <p>Com essas informações, fica muito mais fácil escolher investimentos compatíveis com suas necessidades. Assim, você evita decisões que podem causar ansiedade, perdas ou prejuízos à sua saúde financeira.</p>
+        </section>
 
-        <!-- Ilustração: Aviso / Alerta -->
-        <div class="svg-container">
-            <svg width="520" height="90" viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#e74c3c" />
-                        <stop offset="100%" stop-color="#f39c12" />
-                    </linearGradient>
-                </defs>
-                <rect x="10" y="10" width="500" height="70" rx="12" fill="#fef4e8" stroke="url(#warnGrad)" stroke-width="3"/>
-                <polygon points="35,45 50,18 65,45" fill="#e74c3c" stroke="#b03a2e" stroke-width="2"/>
-                <text x="85" y="38" font-family="Arial" font-size="16" font-weight="bold" fill="#c0392b">Cuidado!</text>
-                <text x="85" y="60" font-family="Arial" font-size="13" fill="#7f4200">Investir sem perfil = riscos desnecessários e prejuízos</text>
+        <!-- Segunda seção: Erros comuns sem conhecer o perfil -->
+        <section>
+            <h2>O que pode acontecer se você investir sem conhecer seu perfil?</h2>
+
+            <!-- Ilustração SVG 2: Escolhas inadequadas -->
+            <svg class="ilustracao" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="300" height="180" fill="#fffaf0" rx="12"/>
+                <!-- Símbolo de alerta -->
+                <path d="M150 30 L270 160 L30 160 Z" fill="#fef5e7" stroke="#ed8936" stroke-width="4"/>
+                <text x="150" y="115" text-anchor="middle" fill="#c05621" font-size="40" font-weight="bold">!</text>
+                <!-- Ícones abaixo -->
+                <circle cx="80" cy="145" r="18" fill="#fc8181"/>
+                <text x="80" y="150" text-anchor="middle" fill="white" font-size="14">✗</text>
+                <circle cx="150" cy="145" r="18" fill="#f6ad55"/>
+                <text x="150" y="150" text-anchor="middle" fill="white" font-size="14">✗</text>
+                <circle cx="220" cy="145" r="18" fill="#fc8181"/>
+                <text x="220" y="150" text-anchor="middle" fill="white" font-size="14">✗</text>
+                <!-- Texto -->
+                <text x="150" y="175" text-anchor="middle" fill="#c05621" font-size="12" font-weight="bold">Investir sem perfil = riscos desnecessários</text>
             </svg>
-        </div>
 
-        <div class="problems-list">
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Risco incompatível:</strong> Escolher investimentos muito arriscados para quem não tolera perdas, o que pode gerar ansiedade e vendas em momentos de queda.
-                </div>
+            <h3>Investir sem conhecer seu perfil pode levar a decisões inadequadas, como:</h3>
+
+            <ul class="lista-erros">
+                <li>🔴 Escolher investimentos muito arriscados para quem não tolera perdas, o que pode gerar ansiedade e vendas precipitadas em momentos de queda do mercado.</li>
+                <li>🟡 Optar apenas por aplicações muito conservadoras quando o objetivo é de longo prazo, reduzindo o potencial de crescimento do seu patrimônio.</li>
+                <li>🔴 Investir em produtos incompatíveis com o prazo em que o dinheiro será necessário, comprometendo sua liquidez quando você precisar.</li>
+                <li>🟡 Tomar decisões por impulso, influenciado por modismos ou recomendações de terceiros, em vez de seguir um planejamento próprio.</li>
+            </ul>
+
+            <div class="destaque">
+                ✅ Em resumo: conhecer seu perfil de investidor ajuda a alinhar os investimentos aos seus objetivos e à sua tolerância ao risco. Isso aumenta muito as chances de alcançar bons resultados e evita escolhas que podem prejudicar sua saúde financeira.
             </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Crescimento comprometido:</strong> Optar apenas por aplicações muito conservadoras quando o objetivo é de longo prazo, reduzindo o potencial de crescimento do patrimônio.
-                </div>
-            </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Liquidez em risco:</strong> Investir em produtos incompatíveis com o prazo em que o dinheiro será necessário, comprometendo a disponibilidade dos recursos.
-                </div>
-            </div>
-
-            <div class="problem-item">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="16" fill="#e74c3c"/>
-                    <path d="M12 12 L24 24 M24 12 L12 24" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div>
-                    <strong>Falta de planejamento:</strong> Tomar decisões por impulso, influenciado por modismos ou recomendações de terceiros, em vez de seguir uma estratégia planejada.
-                </div>
-            </div>
-        </div>
-
-        <!-- Esquema de Resumo -->
-        <div class="svg-container" style="margin-top:35px;">
-            <svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="okGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#27ae60" />
-                        <stop offset="100%" stop-color="#2ecc71" />
-                    </linearGradient>
-                </defs>
-                <!-- Fluxo -->
-                <rect x="20" y="55" width="150" height="50" rx="10" fill="#2980b9"/>
-                <text x="95" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Conhecer o Perfil</text>
-
-                <path d="M170 80 L210 80 L210 65 L230 85 L210 105 L210 90 L170 90 Z" fill="#16a085"/>
-
-                <rect x="230" y="55" width="150" height="50" rx="10" fill="#16a085"/>
-                <text x="305" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Alinhar Investimentos</text>
-
-                <path d="M380 80 L420 80 L420 65 L440 85 L420 105 L420 90 L380 90 Z" fill="#27ae60"/>
-
-                <rect x="440" y="55" width="140" height="50" rx="10" fill="url(#okGrad)"/>
-                <text x="510" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bons Resultados ✅</text>
-            </svg>
-        </div>
-
-        <div class="summary-box">
-            <h3>Em resumo</h3>
-            <p>Conhecer seu perfil de investidor ajuda a <strong>alinhar os investimentos aos seus objetivos e à sua tolerância ao risco</strong>, aumentando as chances de alcançar bons resultados e evitando escolhas que podem prejudicar sua saúde financeira.</p>
-        </div>
+        </section>
     </main>
-</div>
+
+    <!-- Rodapé simples -->
+    <footer>
+        <p>Educação Financeira para Todos | Aula 02 — Desafio da Carteira</p>
+    </footer>
 
 </body>
-</html>
-</p>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="2">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="2">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="2">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
 
 
 
 
-
-
-      
-        <!-- Repita o padrão para as demais aulas -->
+  
+    <!-- Aula 03 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="3">Aula 03</button>
         <div class="conteudo-aula" id="aula-3">
             <h2>Aula 03: Endividamento: causas e consequências - Parte 1
 </h2>
@@ -755,271 +764,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 03: Endividamento — Causas e Consequências (Parte 1)</title>
+    <title>Educação Financeira - Aula 03: Endividamento: Causas e Consequências (Parte 1)</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f0f4f8;
+            background-color: #f0f4f8;
             color: #2d3748;
-            line-height: 1.7;
+            line-height: 1.6;
             padding: 20px;
         }
+
         .container {
-            max-width: 960px;
+            max-width: 900px;
             margin: 0 auto;
-            background: #fff;
+            background-color: #ffffff;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 40px;
+            padding: 30px;
         }
+
         header {
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 3px solid #3182ce;
+            border-bottom: 2px solid #e2e8f0;
         }
+
         h1 {
             color: #2b6cb0;
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
+
         h2 {
-            color: #2c5282;
-            font-size: 1.3rem;
+            color: #2f855a;
+            font-size: 1.4rem;
             margin: 30px 0 15px;
-            border-left: 4px solid #4299e1;
-            padding-left: 12px;
         }
+
         h3 {
-            color: #2b6cb0;
-            font-size: 1.1rem;
-            margin: 20px 0 10px;
+            color: #d69e2e;
+            font-size: 1.2rem;
+            margin: 25px 0 12px;
         }
-        p { margin-bottom: 15px; text-align: justify; }
-        .svg-container {
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Estilo das ilustrações SVG embutidas */
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
             text-align: center;
-            margin: 25px 0;
         }
-        svg { max-width: 100%; height: auto; }
-        .two-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin: 25px 0;
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background-color: #f7fafc;
+            padding: 10px;
         }
-        .card {
-            background: #f7fafc;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .card.good { border-top: 4px solid #48bb78; }
-        .card.bad { border-top: 4px solid #f56565; }
-        ul { padding-left: 25px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .highlight-box {
-            background: #ebf8ff;
-            border-left: 5px solid #3182ce;
+
+        /* Caixas de destaque */
+        .caixa-destaque {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
             padding: 18px;
-            border-radius: 0 10px 10px 0;
-            margin: 25px 0;
-        }
-        .causes-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
             margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
-        .cause-item {
-            background: #fef5e7;
-            padding: 15px;
-            border-radius: 10px;
+
+        .caixa-bons {
+            background-color: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .caixa-maus {
+            background-color: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Listas */
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
             text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9rem;
         }
-        .solutions-box {
-            background: #f0fff4;
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 20px;
-        }
-        @media (max-width: 720px) {
-            .two-columns { grid-template-columns: 1fr; }
-            .container { padding: 20px; }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Aula 03: Endividamento — Causas e Consequências</h1>
-            <p style="text-align:center; color:#4a5568; font-style:italic;">Parte 1</p>
+            <h1>Educação Financeira — Aula 03</h1>
+            <p style="text-align: center; font-style: italic; color: #4a5568;">Endividamento: causas e consequências — Parte 1</p>
         </header>
 
-        <h2>Crédito: aliado ou vilão?</h2>
-
-              
-        <p>O crédito pode ser aliado ou vilão, dependendo de como é utilizado. Quando planejado, ele permite antecipar a compra de bens importantes, como uma casa ou um veículo, e pode ajudar uma família a lidar com uma necessidade inesperada. Porém, quando usado sem planejamento, os juros e as parcelas podem comprometer boa parte da renda e dificultar o pagamento das despesas do dia a dia.</p>
-        <p>Assim, os dados da POF mostram que o crédito tem um impacto importante no orçamento das famílias brasileiras. No longo prazo, ele pode trazer tranquilidade quando as parcelas cabem no orçamento e há condições de pagamento bem avaliadas. Por outro lado, pode gerar preocupações quando o consumidor assume dívidas acima de sua capacidade financeira. Mais importante do que ter ou não crédito é utilizá-lo com planejamento, conhecendo os juros, o valor total da dívida e o impacto das parcelas no orçamento familiar.</p>
-
-        <div class="highlight-box">
-            <strong>💡 Reflexão:</strong> O acesso ao crédito pode trazer tranquilidade ou preocupações, dependendo de como é utilizado. Quando há planejamento e as parcelas cabem no orçamento, o crédito ajuda na realização de objetivos. Quando usado em excesso, gera dívidas e juros que comprometem a renda por muito tempo. O crédito é um aliado quando usado com responsabilidade e planejamento.
-        </div>
-
-        <h2>Endividamento em alta</h2>
-        <p>O endividamento das famílias brasileiras é um problema relevante, especialmente pelo uso do cartão de crédito. A facilidade de parcelamento e o consumo impulsivo podem fazer com que as dívidas se acumulem e comprometam o orçamento familiar.</p>
-        <p><em>Em resumo: o crédito pode ser útil, mas, sem planejamento, pode contribuir para o endividamento e dificultar o equilíbrio financeiro das famílias.</em></p>
-
-        <h2>Onde começa o endividamento?</h2>
-        <p>O endividamento pode começar quando a pessoa gasta mais do que ganha e não planeja o uso do dinheiro. A falta de educação financeira desde cedo pode contribuir para escolhas de consumo impulsivas e para o acúmulo de dívidas. Por isso, aprender a organizar o orçamento e diferenciar necessidades de desejos é importante para evitar problemas financeiros no futuro.</p>
-
-        <!-- SVG: Causas do Endividamento -->
-        <div class="svg-container">
-            <svg width="600" height="280" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="600" height="280" fill="#fffaf0" rx="12"/>
-                <text x="300" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#c05621">Principais Causas do Endividamento</text>
-                
-                <g transform="translate(50, 60)">
-                    <circle cx="80" cy="70" r="55" fill="#fefcbf" stroke="#ecc94b" stroke-width="2"/>
-                    <text x="80" y="65" text-anchor="middle" font-weight="bold" font-size="13">Facilidade de</text>
-                    <text x="80" y="85" text-anchor="middle" font-size="13">crédito</text>
-                </g>
-                <g transform="translate(220, 60)">
-                    <circle cx="80" cy="70" r="55" fill="#e9d8fd" stroke="#9c27b0" stroke-width="2"/>
-                    <text x="80" y="65" text-anchor="middle" font-weight="bold" font-size="13">Falta de</text>
-                    <text x="80" y="85" text-anchor="middle" font-size="13">educação financeira</text>
-                </g>
-                <g transform="translate(390, 60)">
-                    <circle cx="80" cy="70" r="55" fill="#cdf2f0" stroke="#0d9488" stroke-width="2"/>
-                    <text x="80" y="65" text-anchor="middle" font-weight="bold" font-size="13">Pressão social</text>
-                    <text x="80" y="85" text-anchor="middle" font-size="13">e marketing</text>
-                </g>
-                <g transform="translate(135, 180)">
-                    <circle cx="80" cy="50" r="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-                    <text x="80" y="45" text-anchor="middle" font-weight="bold" font-size="12">Instabilidade econômica</text>
-                    <text x="80" y="65" text-anchor="middle" font-size="12">e falta de planejamento</text>
-                </g>
-                <g transform="translate(335, 180)">
-                    <circle cx="80" cy="50" r="50" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-                    <text x="80" y="45" text-anchor="middle" font-weight="bold" font-size="12">Renda e</text>
-                    <text x="80" y="65" text-anchor="middle" font-size="12">desigualdade</text>
-                </g>
-            </svg>
-        </div>
-
-        <h2>Renda e desigualdade social</h2>
-        <p>O crescimento do PIB per capita não significa, necessariamente, que a renda esteja sendo distribuída de forma igual. O <strong>coeficiente de Gini</strong> ajuda a medir essa desigualdade: quanto maior o indicador, maior a concentração de renda. Assim, mesmo com aumento da renda média, parte da população pode continuar enfrentando dificuldades financeiras, o que pode aumentar o risco de endividamento.</p>
-
-        <!-- SVG: Coeficiente de Gini -->
-        <div class="svg-container">
-            <svg width="500" height="160" viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="500" height="160" fill="#f7fafc" rx="12"/>
-                <text x="250" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2b6cb0">Coeficiente de Gini e Desigualdade</text>
-                <line x1="60" y1="130" x2="440" y2="130" stroke="#cbd5e0" stroke-width="2"/>
-                <rect x="80" y="50" width="140" height="80" rx="6" fill="#9ae6b4" stroke="#48bb78" stroke-width="2"/>
-                <text x="150" y="85" text-anchor="middle" font-weight="bold">Baixo Gini</text>
-                <text x="150" y="108" text-anchor="middle" font-size="12">Menos desigualdade</text>
-                <rect x="280" y="30" width="140" height="100" rx="6" fill="#feb2b2" stroke="#f56565" stroke-width="2"/>
-                <text x="350" y="75" text-anchor="middle" font-weight="bold">Alto Gini</text>
-                <text x="350" y="98" text-anchor="middle" font-size="12">Mais desigualdade</text>
-                <path d="M235 90 L265 90" stroke="#a0aec0" stroke-width="2" marker-end="url(#arrow2)"/>
+        <!-- Ilustração 1: Crédito como aliado ou vilão (SVG embutido, sem imagens externas) -->
+        <div class="ilustracao">
+            <svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="480" height="220" fill="#f7fafc" rx="8"/>
+                <!-- Título -->
+                <text x="240" y="30" font-family="sans-serif" font-size="18" fill="#2d3748" text-anchor="middle" font-weight="bold">Crédito: Aliado ou Vilão?</text>
+                <!-- Lado Esquerdo: Aliado -->
+                <circle cx="100" cy="90" r="50" fill="#9ae6b4" stroke="#2f855a" stroke-width="3"/>
+                <text x="100" y="95" font-family="sans-serif" font-size="14" fill="#22543d" text-anchor="middle" font-weight="bold">✅ ALIADO</text>
+                <text x="100" y="160" font-family="sans-serif" font-size="12" fill="#2d3748" text-anchor="middle">Com planejamento</text>
+                <!-- Seta -->
+                <path d="M170 90 L310 90" stroke="#718096" stroke-width="3" marker-end="url(#seta)"/>
                 <defs>
-                    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                        <polygon points="0 0, 10 5, 0 10" fill="#a0aec0"/>
+                    <marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#718096" />
                     </marker>
                 </defs>
+                <!-- Lado Direito: Vilão -->
+                <circle cx="380" cy="90" r="50" fill="#feb2b2" stroke="#c53030" stroke-width="3"/>
+                <text x="380" y="95" font-family="sans-serif" font-size="14" fill="#742a2a" text-anchor="middle" font-weight="bold">⚠ VILÃO</text>
+                <text x="380" y="160" font-family="sans-serif" font-size="12" fill="#2d3748" text-anchor="middle">Sem controle</text>
+                <!-- Rodapé -->
+                <text x="240" y="200" font-family="sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">Depende de como você usa!</text>
             </svg>
         </div>
 
-        <h2>Na prática: Análise dos hábitos</h2>
-        <div class="two-columns">
-            <div class="card good">
-                <h3 style="color:#2f855a; margin-top:0;">✅ Bons hábitos</h3>
-                <ul>
-                    <li>Focar em compras essenciais</li>
-                    <li>Comparar preços antes de comprar</li>
-                    <li>Guardar para emergências</li>
-                    <li>Pagar contas em dia</li>
-                    <li>Anotar receitas e gastos</li>
-                </ul>
-            </div>
-            <div class="card bad">
-                <h3 style="color:#c53030; margin-top:0;">❌ Maus hábitos</h3>
-                <ul>
-                    <li>Uso excessivo do cartão de crédito</li>
-                    <li>Compras não planejadas</li>
-                    <li>Compras impulsivas pela internet</li>
-                    <li>Excesso em restaurantes</li>
-                    <li>Falta de orçamento mensal</li>
-                </ul>
-            </div>
-        </div>
+        <section>
+            <h2>Crédito: aliado ou vilão?</h2>
+            <p>O crédito pode ser aliado ou vilão, dependendo de como é utilizado. Quando planejado, ele permite antecipar a compra de bens importantes, como uma casa ou um veículo, e pode ajudar uma família a lidar com uma necessidade inesperada. Porém, quando usado sem planejamento, os juros e as parcelas podem comprometer boa parte da renda e dificultar o pagamento das despesas do dia a dia.</p>
+            <p>Assim, os dados da POF mostram que o crédito tem um impacto importante no orçamento das famílias brasileiras. No longo prazo, ele pode trazer tranquilidade quando as parcelas cabem no orçamento e há condições de pagamento bem avaliadas. Por outro lado, pode gerar preocupações quando o consumidor assume dívidas acima de sua capacidade financeira. Mais importante do que ter ou não crédito é utilizá-lo com planejamento, conhecendo os juros, o valor total da dívida e o impacto das parcelas no orçamento familiar.</p>
 
-        <!-- SVG: Soluções -->
-        <div class="svg-container">
-            <svg width="600" height="240" viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="600" height="240" fill="#f0fff4" rx="12"/>
-                <text x="300" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#276749">Estratégias</text>
-                <g transform="translate(40, 60)">
-                    <rect x="0" y="0" width="150" height="130" rx="10" fill="#c6f6d5" stroke="#48bb78" stroke-width="2"/>
-                    <text x="75" y="35" text-anchor="middle" font-weight="bold">📊 Orçamento</text>
-                    <text x="75" y="60" text-anchor="middle" font-size="12">Definir limites</text>
-                    <text x="75" y="80" text-anchor="middle" font-size="12">Separar necessidades</text>
-                    <text x="75" y="100" text-anchor="middle" font-size="12">e desejos</text>
-                </g>
-                <g transform="translate(230, 60)">
-                    <rect x="0" y="0" width="150" height="130" rx="10" fill="#fefcbf" stroke="#ecc94b" stroke-width="2"/>
-                    <text x="75" y="35" text-anchor="middle" font-weight="bold">💳 Cartão</text>
-                    <text x="75" y="60" text-anchor="middle" font-size="12">Evitar parcelar</text>
-                    <text x="75" y="80" text-anchor="middle" font-size="12">Só se tiver</text>
-                    <text x="75" y="100" text-anchor="middle" font-size="12">dinheiro à vista</text>
-                </g>
-                <g transform="translate(420, 60)">
-                    <rect x="0" y="0" width="150" height="130" rx="10" fill="#fef3c7" stroke="#f6ad55" stroke-width="2"/>
-                    <text x="75" y="35" text-anchor="middle" font-weight="bold">💰 Dívidas</text>
-                    <text x="75" y="60" text-anchor="middle" font-size="12">Quitar juros altos</text>
-                    <text x="75" y="80" text-anchor="middle" font-size="12">Não assumir</text>
-                    <text x="75" y="100" text-anchor="middle" font-size="12">novas dívidas</text>
-                </g>
-                <path d="M115 190 L485 190" stroke="#48bb78" stroke-width="4"/>
-                <text x="300" y="215" text-anchor="middle" font-weight="bold" fill="#276749">✅ Equilíbrio financeiro recuperado</text>
+            <div class="caixa-destaque">
+                <strong>💡 Pergunta:</strong> O acesso ao crédito traz mais tranquilidade ou mais preocupações no longo prazo?<br>
+                <strong>Resposta:</strong> O acesso ao crédito pode trazer tranquilidade ou preocupações, dependendo de como é utilizado. Quando há planejamento e as parcelas cabem no orçamento, o crédito pode ajudar na realização de objetivos. Porém, quando usado em excesso, pode gerar dívidas e juros que comprometem a renda por muito tempo. Portanto, o crédito é um <em>aliado quando usado com responsabilidade e planejamento</em>.
+            </div>
+        </section>
+
+        <section>
+            <h2>Endividamento em alta</h2>
+            <p>O endividamento das famílias brasileiras é um problema relevante, especialmente pelo uso do cartão de crédito. A facilidade de parcelamento e o consumo impulsivo podem fazer com que as dívidas se acumulem e comprometam o orçamento familiar.</p>
+            <p>Em resumo: o crédito pode ser útil, mas, sem planejamento, pode contribuir para o endividamento e dificultar o equilíbrio financeiro das famílias.</p>
+        </section>
+
+        <!-- Ilustração 2: Onde começa o endividamento (SVG embutido) -->
+        <div class="ilustracao">
+            <svg width="480" height="240" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="480" height="240" fill="#f7fafc" rx="8"/>
+                <!-- Título -->
+                <text x="240" y="30" font-family="sans-serif" font-size="18" fill="#2d3748" text-anchor="middle" font-weight="bold">Onde começa o endividamento?</text>
+                <!-- Causas em blocos -->
+                <rect x="40" y="60" width="170" height="50" rx="8" fill="#fef5e7" stroke="#d69e2e" stroke-width="2"/>
+                <text x="125" y="90" font-family="sans-serif" font-size="13" fill="#744210" text-anchor="middle">Gastar mais do que ganha</text>
+                
+                <rect x="270" y="60" width="170" height="50" rx="8" fill="#fef5e7" stroke="#d69e2e" stroke-width="2"/>
+                <text x="355" y="90" font-family="sans-serif" font-size="13" fill="#744210" text-anchor="middle">Falta de planejamento</text>
+                
+                <rect x="40" y="130" width="170" height="50" rx="8" fill="#fef5e7" stroke="#d69e2e" stroke-width="2"/>
+                <text x="125" y="160" font-family="sans-serif" font-size="13" fill="#744210" text-anchor="middle">Consumo impulsivo</text>
+                
+                <rect x="270" y="130" width="170" height="50" rx="8" fill="#fef5e7" stroke="#d69e2e" stroke-width="2"/>
+                <text x="355" y="160" font-family="sans-serif" font-size="13" fill="#744210" text-anchor="middle">Falta de educação financeira</text>
+                
+                <!-- Resultado -->
+                <path d="M125 180 L125 200 L355 200 L355 180" stroke="#718096" stroke-width="2" fill="none"/>
+                <polygon points="240,220 220,200 260,200" fill="#e53e3e"/>
+                <text x="240" y="235" font-family="sans-serif" font-size="14" fill="#c53030" text-anchor="middle" font-weight="bold">→ DÍVIDAS E DESCONTROLE</text>
             </svg>
         </div>
 
-        <div class="solutions-box">
-            <h3 style="margin-top:0;">📋 Soluções práticas</h3>
-            <p>Montar um orçamento mensal, definindo limites para cada categoria de gasto e separando necessidades de desejos. Também é importante reduzir compras por impulso, diminuir temporariamente os gastos com restaurantes e estabelecer limites para o uso do cartão de crédito.</p>
-            <p>Além disso, priorizar o pagamento das dívidas, evitar novas compras parceladas enquanto reorganiza as finanças e manter reserva de emergência.</p>
+        <section>
+            <h2>Principais causas do endividamento</h2>
+            <p>O endividamento pode começar quando a pessoa gasta mais do que ganha e não planeja o uso do dinheiro. A falta de educação financeira desde cedo pode contribuir para escolhas de consumo impulsivas e para o acúmulo de dívidas. Por isso, aprender a organizar o orçamento e diferenciar necessidades de desejos é importante para evitar problemas financeiros no futuro.</p>
+            <p>Os principais fatores que contribuem para o endividamento são:</p>
             <ul>
-                <li>Controlar o uso do cartão de crédito</li>
-                <li>Evitar compras por impulso</li>
-                <li>Reduzir gastos com restaurantes</li>
-                <li>Criar orçamento mensal detalhado</li>
-                <li>Priorizar dívidas com juros mais altos</li>
-                <li>Registrar receitas e despesas</li>
-                <li>Evitar novas dívidas</li>
+                <li><strong>Facilidade de acesso ao crédito:</strong> pode estimular compras por impulso.</li>
+                <li><strong>Falta de educação financeira:</strong> dificulta o controle e o planejamento do orçamento.</li>
+                <li><strong>Pressão social e marketing:</strong> podem incentivar o consumo além das necessidades.</li>
+                <li><strong>Instabilidade econômica e falta de planejamento:</strong> podem levar ao desequilíbrio financeiro e ao acúmulo de dívidas.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="highlight-box" style="margin-top:30px;">
-            <h3 style="margin-top:0;">🎯 Pergunta-chave</h3>
-            <p><strong>De que forma a educação financeira contribui para evitar o endividamento ou para sair dele?</strong></p>
+        <section>
+            <h2>Renda e desigualdade social</h2>
+            <p>O crescimento do PIB per capita não significa, necessariamente, que a renda esteja sendo distribuída de forma igual. O coeficiente de Gini ajuda a medir essa desigualdade: quanto maior o indicador, maior a concentração de renda. Assim, mesmo com aumento da renda média, parte da população pode continuar enfrentando dificuldades financeiras, o que pode aumentar o risco de endividamento.</p>
+        </section>
+
+        <section>
+            <h2>Na prática: Análise dos hábitos financeiros da família Souza</h2>
+            
+            <div class="caixa-bons">
+                <h3>✅ Bons hábitos</h3>
+                <ul>
+                    <li>Focar em compras essenciais: evita gastos desnecessários.</li>
+                    <li>Comparar preços antes de comprar: ajuda a encontrar opções mais econômicas.</li>
+                    <li>Guardar uma quantia para emergências: cria uma reserva para situações inesperadas.</li>
+                    <li>Pagar as contas em dia: evita juros e multas.</li>
+                    <li>Anotar receitas e gastos: facilita o acompanhamento do orçamento.</li>
+                </ul>
+            </div>
+
+            <div class="caixa-maus">
+                <h3>⚠ Maus hábitos</h3>
+                <ul>
+                    <li>Uso excessivo do cartão de crédito: pode aumentar rapidamente o valor das dívidas.</li>
+                    <li>Compras não planejadas: dificultam o controle do orçamento.</li>
+                    <li>Compras impulsivas pela internet: podem gerar gastos desnecessários.</li>
+                    <li>Frequência exagerada em restaurantes: pode consumir uma parcela significativa da renda.</li>
+                    <li>Ausência de um orçamento mensal detalhado: dificulta saber quanto pode ser gasto e favorece o descontrole.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Soluções práticas</h2>
+            <p>A família pode montar um orçamento mensal, definindo limites para cada categoria de gasto e separando necessidades de desejos. Também é importante reduzir compras por impulso, diminuir temporariamente os gastos com restaurantes e estabelecer limites para o uso do cartão de crédito.</p>
+            <p>Além disso, João e Maria podem priorizar o pagamento das dívidas, evitar novas compras parceladas enquanto reorganizam as finanças e continuar mantendo uma pequena reserva para emergências. Dessa forma, a família poderá recuperar gradualmente o equilíbrio financeiro.</p>
+
+            <div class="caixa-destaque">
+                <h3>📋 Estratégias para reduzir o endividamento:</h3>
+                <ul>
+                    <li><strong>Controlar o uso do cartão de crédito:</strong> evitar compras parceladas e usar o cartão apenas quando houver dinheiro para pagar a fatura.</li>
+                    <li><strong>Evitar compras por impulso:</strong> esperar antes de comprar e avaliar se o produto é realmente necessário.</li>
+                    <li><strong>Reduzir gastos com restaurantes:</strong> preparar mais refeições em casa e estabelecer um limite mensal para esse tipo de gasto.</li>
+                    <li><strong>Criar um orçamento mensal detalhado:</strong> definir quanto será destinado a despesas essenciais, lazer, dívidas e reserva de emergência.</li>
+                    <li><strong>Priorizar o pagamento das dívidas:</strong> quitar primeiro as dívidas com juros mais altos, evitando que cresçam.</li>
+                    <li><strong>Manter o registro de receitas e despesas:</strong> continuar anotando todos os gastos para identificar onde é possível economizar.</li>
+                    <li><strong>Evitar novas dívidas:</strong> enquanto reorganizam as finanças, a família deve reduzir compras desnecessárias e novos parcelamentos.</li>
+                </ul>
+            </div>
+            <p>Com essas medidas, a família poderá diminuir os gastos, controlar melhor o dinheiro e reduzir gradualmente o acúmulo de dívidas.</p>
+        </section>
+
+        <section>
+            <h2>Conclusão</h2>
+            <p>De que forma a educação financeira contribui para evitar o endividamento ou para sair dele?</p>
             <p>A educação financeira ajuda a evitar o endividamento porque ensina a pessoa a planejar o orçamento, controlar os gastos, diferenciar necessidades de desejos e usar o crédito com responsabilidade. Para quem já está endividado, ela ajuda a organizar as dívidas, priorizar pagamentos e evitar novos gastos desnecessários. Assim, contribui para alcançar maior equilíbrio e segurança financeira.</p>
-        </div>
+        </section>
+
+        <footer>
+            <p>Aula 03 — Endividamento: Causas e Consequências • Parte 1<br>
+            Educação Financeira — Material didático independente</p>
+        </footer>
     </div>
 </body>
-</html>
-</p>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="3">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="3">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="3">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+  
+    <!-- Aula 04 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="4">Aula 04</button>
         <div class="conteudo-aula" id="aula-4">
             <h2>Aula 04: Endividamento: causas e consequências – Parte 2
 </h2>
@@ -1030,429 +1077,1757 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 04: Endividamento — Causas e Consequências (Parte 2)</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ========== ESTILOS GERAIS ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f0f4f8;
+            background-color: #f4f7fa;
             color: #2d3748;
             line-height: 1.7;
-            padding: 20px;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 40px;
-        }
+
+        /* ========== CABEÇALHO ========== */
         header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            padding: 2.5rem 1.5rem;
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #2b6cb0;
         }
-        h1 { color: #2b6cb0; font-size: 1.9rem; margin-bottom: 10px; }
-        h2 { color: #2c5282; font-size: 1.4rem; margin: 35px 0 15px; }
-        h3 { color: #2d3748; font-size: 1.1rem; margin: 20px 0 10px; }
-        p { margin-bottom: 15px; text-align: justify; }
-        .svg-container {
-            display: flex;
-            justify-content: center;
-            margin: 25px 0;
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
         }
-        svg { max-width: 100%; height: auto; }
-        .destaque {
-            background: #ebf8ff;
-            border-left: 5px solid #3182ce;
-            padding: 18px;
-            border-radius: 8px;
-            margin: 20px 0;
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
-        .pergunta {
-            background: #f7fafc;
-            border-left: 5px solid #48bb78;
-            padding: 16px;
-            border-radius: 8px;
-            margin: 18px 0 10px;
-            font-weight: 600;
+
+        /* ========== CONTAINER PRINCIPAL ========== */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem;
         }
-        .resposta {
-            padding: 0 18px 10px;
+
+        section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
         }
-        ul { margin: 12px 0 12px 30px; }
-        li { margin-bottom: 8px; }
-        .fonte { font-size: 0.85rem; color: #718096; margin-top: 5px; }
-        .rodape {
+
+        section h2 {
+            color: #2b6cb0;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #edf2f7;
+        }
+
+        section h3 {
+            color: #2d3748;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+        }
+
+        /* ========== ILUSTRAÇÕES SVG ========== */
+        .ilustracao {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .grafico-container {
+            background-color: #f7fafc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grafico-titulo {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        /* ========== RODAPÉ ========== */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
             color: #718096;
             font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 1rem;
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.4rem; }
+            section { padding: 1.2rem; }
+            ul { margin-left: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- CABEÇALHO DA PÁGINA -->
+<header>
+    <h1>📚 Educação Financeira — Aula 04</h1>
+    <p>Endividamento: Causas e Consequências – Parte 2</p>
+</header>
+
+<main>
+
+    <!-- ================= SEÇÃO 1: INTRODUÇÃO ================= -->
+    <section>
+        <h2>🎯 O que leva ao endividamento?</h2>
+
+        <!-- Ilustração SVG: Orçamento Pessoal -->
+        <svg class="ilustracao" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fundo -->
+            <rect width="300" height="150" fill="#f0f4f8" rx="10"/>
+            <!-- Cofrinho -->
+            <ellipse cx="150" cy="90" rx="70" ry="45" fill="#ecc94b"/>
+            <rect x="115" y="45" width="70" height="20" rx="5" fill="#d69e2e"/>
+            <ellipse cx="150" cy="45" rx="25" ry="8" fill="#744210"/>
+            <!-- Moedas -->
+            <circle cx="100" cy="100" r="12" fill="#f6e05e" stroke="#b7791f" stroke-width="2"/>
+            <text x="97" y="104" font-size="10" fill="#744210" font-weight="bold">R$</text>
+            <circle cx="195" cy="100" r="12" fill="#f6e05e" stroke="#b7791f" stroke-width="2"/>
+            <text x="192" y="104" font-size="10" fill="#744210" font-weight="bold">R$</text>
+            <!-- Sinais de atenção -->
+            <path d="M60 50 L70 30 L80 50 Z" fill="#e53e3e"/>
+            <text x="66" y="47" font-size="9" fill="white" font-weight="bold">!</text>
+            <path d="M220 50 L230 30 L240 50 Z" fill="#e53e3e"/>
+            <text x="226" y="47" font-size="9" fill="white" font-weight="bold">!</text>
+            <!-- Legenda -->
+            <text x="150" y="135" text-anchor="middle" font-size="11" fill="#4a5568">Sem orçamento → Gastar mais do que recebe</text>
+        </svg>
+
+        <p>A <strong>falta de um orçamento pessoal</strong> pode levar ao endividamento porque dificulta o controle sobre quanto dinheiro entra e quanto é gasto. Sem planejamento, a pessoa pode gastar mais do que recebe, acumular compras parceladas e não reservar dinheiro para imprevistos. Com o aumento das dívidas e dos juros, sobra menos renda para as despesas essenciais, comprometendo a estabilidade financeira.</p>
+    </section>
+
+    <!-- ================= SEÇÃO 2: CAUSAS PSICOLÓGICAS ================= -->
+    <section>
+        <h2>🧠 Dívidas: causas psicológicas e impactos pessoais</h2>
+        <p>As dívidas podem ter causas psicológicas, como <strong>impulsividade, ansiedade, pressão social</strong> e dificuldade de controlar os gastos. O desejo de comprar algo para se sentir melhor ou para acompanhar outras pessoas pode levar a decisões financeiras sem planejamento.</p>
+        <p>Além disso, o endividamento pode causar <strong>estresse, preocupação, conflitos familiares</strong> e dificuldade para manter uma vida financeira equilibrada. Por isso, é importante desenvolver hábitos de planejamento, controle dos gastos e consumo consciente.</p>
+
+        <h3>👨‍👩‍👧 Efeito nas relações sociais</h3>
+        <p>O endividamento pode afetar significativamente as relações sociais. A preocupação com as dívidas pode causar estresse e conflitos familiares, dificultando o diálogo e a convivência. Sentimentos como <strong>culpa e vergonha</strong> podem fazer a pessoa se afastar de amigos, familiares e até prejudicar suas relações profissionais.</p>
+
+        <h3>💔 Impacto na saúde mental e emocional</h3>
+        <p>O endividamento prolongado pode prejudicar a saúde mental, aumentando <strong>estresse, ansiedade e insônia</strong>. Essas preocupações dificultam a tomada de decisões, diminuem a qualidade de vida e afetam o desempenho pessoal e profissional. Manter a organização financeira é uma forma de cuidar também da saúde emocional.</p>
+    </section>
+
+    <!-- ================= SEÇÃO 3: INADIMPLÊNCIA ================= -->
+    <section>
+        <h2>📉 Inadimplência: um problema social</h2>
+        <p>A inadimplência é um problema social porque afeta muitas pessoas e famílias. O aumento das dívidas atrasadas mostra que cada vez mais brasileiros enfrentam dificuldades para manter seus pagamentos em dia, comprometendo o orçamento familiar e dificultando a realização de planos.</p>
+    </section>
+
+    <!-- ================= SEÇÃO 4: CENÁRIO NO BRASIL ================= -->
+    <section>
+        <h2>🇧🇷 Analisando o cenário do endividamento no Brasil</h2>
+
+        <!-- Gráfico SVG: Distribuição das dívidas -->
+        <div class="grafico-container">
+            <p class="grafico-titulo">📊 Distribuição das dívidas no Brasil (jan/2026)</p>
+            <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+                <!-- Barras -->
+                <rect x="60" y="50" width="70" height="130" fill="#2b6cb0" rx="4"/>
+                <rect x="170" y="65" width="70" height="115" fill="#48bb78" rx="4"/>
+                <rect x="280" y="130" width="70" height="50" fill="#ed8936" rx="4"/>
+                
+                <!-- Valores -->
+                <text x="95" y="42" text-anchor="middle" font-weight="bold" font-size="14" fill="#2b6cb0">26,3%</text>
+                <text x="205" y="57" text-anchor="middle" font-weight="bold" font-size="14" fill="#2f855a">22%</text>
+                <text x="315" y="122" text-anchor="middle" font-weight="bold" font-size="14" fill="#c05621">~10%</text>
+                
+                <!-- Rótulos -->
+                <text x="95" y="195" text-anchor="middle" font-size="11">Bancos e</text>
+                <text x="95" y="209" text-anchor="middle" font-size="11">Cartões</text>
+                <text x="205" y="195" text-anchor="middle" font-size="11">Contas</text>
+                <text x="205" y="209" text-anchor="middle" font-size="11">Básicas</text>
+                <text x="315" y="195" text-anchor="middle" font-size="11">Outros</text>
+            </svg>
+        </div>
+
+        <h3>🔍 O que os dados revelam?</h3>
+        <p>Os dados mostram que o endividamento está ligado tanto ao uso do crédito quanto às despesas essenciais:</p>
+        <ul>
+            <li><strong>Bancos e cartões de crédito (26,3%):</strong> revelam a importância de usar o crédito com planejamento. O cartão facilita compras antes de ter o dinheiro, e sem controle, as parcelas se acumulam e os juros crescem rapidamente.</li>
+            <li><strong>Contas básicas (22%):</strong> indicam que dificuldades para pagar água, luz e gás também levam ao acúmulo de dívidas — ou seja, a renda muitas vezes não basta para cobrir as necessidades do dia a dia.</li>
+        </ul>
+        <p>Dados do IBGE mostram que atrasos nessas contas estão associados a dificuldades financeiras das famílias, e o Banco Central reforça que o planejamento do orçamento e a formação de poupança são formas de fortalecer a segurança financeira.</p>
+    </section>
+
+    <!-- ================= SEÇÃO 5: PERGUNTAS E REFLEXÕES ================= -->
+    <section>
+        <h2>💡 Refletindo sobre os dados</h2>
+
+        <h3>Por que o cartão de crédito leva ao endividamento?</h3>
+        <p>Porque permite comprar antes de ter o dinheiro e facilita o parcelamento. Sem controle, as parcelas se acumulam e comprometem a renda. Se a fatura não for paga integralmente, os juros fazem a dívida disparar.</p>
+
+        <h3>O que as contas básicas revelam sobre a economia familiar?</h3>
+        <p>Que muitas famílias têm renda insuficiente para cobrir despesas essenciais. A água, a luz e o gás não são gastos supérfluos — são necessidades básicas. Quando ficam em atraso, mostram que o problema é também de falta de renda, não apenas de descontrole.</p>
+
+        <h3>Como o uso inadequado do crédito agrava a situação?</h3>
+        <p>Facilita gastos acima do que se pode pagar. Com o tempo, parcelas, empréstimos e juros se somam, a dívida cresce e a pessoa acaba contraindo novas dívidas para pagar as antigas — um ciclo difícil de sair.</p>
+    </section>
+
+    <!-- ================= SEÇÃO 6: ESTRATÉGIAS ================= -->
+    <section>
+        <h2>🛡️ Estratégias para reduzir a inadimplência</h2>
+
+        <!-- Ilustração SVG: Soluções -->
+        <svg class="ilustracao" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fundo -->
+            <rect width="300" height="140" fill="#f0fff4" rx="10"/>
+            <!-- Escudo -->
+            <path d="M150 25 L215 50 L215 95 Q215 125 150 140 Q85 125 85 95 L85 50 Z" fill="#48bb78" stroke="#2f855a" stroke-width="3"/>
+            <!-- Símbolo de OK -->
+            <path d="M115 85 L140 105 L185 65" stroke="white" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Itens -->
+            <text x="50" y="45" font-size="10" fill="#276749">✓ Orçamento</text>
+            <text x="220" y="45" font-size="10" fill="#276749">✓ Reserva</text>
+            <text x="50" y="115" font-size="10" fill="#276749">✓ Consumo consciente</text>
+            <text x="210" y="115" font-size="10" fill="#276749">✓ Negociar dívidas</text>
+        </svg>
+
+        <ul>
+            <li>📝 <strong>Criar um orçamento</strong> e acompanhar todas as receitas e despesas.</li>
+            <li>🏠 <strong>Priorizar gastos essenciais</strong> e evitar compras por impulso.</li>
+            <li>💳 <strong>Usar o crédito com responsabilidade</strong>: só assumir parcelas que cabem no orçamento.</li>
+            <li>📉 <strong>Organizar e negociar dívidas</strong>, começando pelas que têm os juros mais altos.</li>
+            <li>💰 <strong>Formar uma reserva financeira</strong> para imprevistos, por menor que seja o valor guardado.</li>
+            <li>👨‍👩‍👧 <strong>Conversar em família sobre dinheiro</strong>, definindo prioridades e metas em conjunto.</li>
+        </ul>
+
+        <p><strong>Pequenas decisões do dia a dia</strong> — evitar compras por impulso, comparar preços, controlar o cartão de crédito e guardar parte da renda — fazem toda a diferença. O Banco Central destaca justamente o planejamento e a poupança como bases para a segurança financeira. Escolhas responsáveis hoje evitam que pequenos gastos se transformem em grandes dívidas amanhã.</p>
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    Educação Financeira — Aula 04 | Endividamento: Causas e Consequências – Parte 2<br>
+    Fontes: Serasa, IBGE e Banco Central do Brasil
+</footer>
+
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="4">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="4">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="4">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  
+    <!-- Aula 05 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="5">Aula 05</button>
+        <div class="conteudo-aula" id="aula-5">
+            <h2>Aula 5: Crédito e benefícios - isso é um uso consciente - Parte 1
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira — Aula 5: Crédito e Benefícios</title>
+    
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        /* Cabeçalho principal */
+        header {
+            background: linear-gradient(135deg, #2980b9, #16a085);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 0 0 16px 16px;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Conteúdo principal */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-left: 5px solid #16a085;
+            padding-left: 0.8rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #16a085;
+            margin: 1rem 0;
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Caixa de destaque */
+        .destaque {
+            background-color: #eef9f4;
+            border: 2px solid #a3e4c0;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .destaque strong {
+            color: #107566;
+        }
+
+        /* Tabela comparativa */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.4rem 0;
+        }
+
+        th, td {
+            border: 1px solid #d0d7d9;
+            padding: 0.9rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eaf2f8;
+            color: #2980b9;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fbfc;
+        }
+
+        /* Área de ilustrações SVG embutidas */
+        .ilustracao {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        svg {
+            max-width: 280px;
+            height: auto;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 700px) {
+            main {
+                padding: 1.2rem;
+            }
+
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            table, th, td {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Educação Financeira</h1>
+        <p>Aula 5: Crédito e Benefícios — isso é um uso consciente? · Parte 1</p>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Seção: Programas de Fidelidade -->
+        <section>
+            <h2>Programas de Fidelidade</h2>
+            <p>Os programas de fidelidade têm se tornado cada vez mais estratégicos no varejo, oferecendo benefícios que podem ser convertidos em descontos, produtos ou serviços.</p>
+
+            <!-- Ilustração embutida com SVG — ícone de cartão e coração (fidelidade) -->
+            <div class="ilustracao">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="40" width="160" height="90" rx="12" fill="#2980b9" />
+                    <rect x="30" y="50" width="140" height="70" rx="8" fill="#eaf2f8" />
+                    <path d="M100,70 C95,64 85,62 80,68 C75,74 75,84 82,90 L100,102 L118,90 C125,84 125,74 120,68 C115,62 105,64 100,70 Z" fill="#e74c3c" />
+                    <text x="100" y="115" text-anchor="middle" font-size="12" fill="#2c3e50">Fidelidade</text>
+                </svg>
+            </div>
+
+            <h3>Benefícios para o consumidor</h3>
+            <p>Descontos, produtos e serviços.</p>
+
+            <h3>Benefícios para o varejo</h3>
+            <p>Maior fidelização, engajamento e volume de gastos.</p>
+
+            <p><strong>A ideia central:</strong> os programas de fidelidade podem ser vantajosos, mas devem ser utilizados com planejamento financeiro, evitando compras desnecessárias apenas para acumular benefícios.</p>
+        </section>
+
+        <!-- Seção: Para Refletir -->
+        <section>
+            <h2>Para Refletir</h2>
+            <p><em>Em que aspectos os programas de fidelidade melhoram a experiência de compra?</em></p>
+            <p>Os programas de fidelidade melhoram a experiência de compra principalmente por:</p>
+            <ul>
+                <li>Oferecer benefícios e recompensas, como descontos, pontos, produtos ou serviços.</li>
+                <li>Personalizar ofertas, tornando as promoções mais relevantes para cada cliente.</li>
+                <li>Aumentar o engajamento, incentivando o consumidor a participar e voltar à loja.</li>
+                <li>Gerar economia, quando os benefícios são usados de forma planejada.</li>
+                <li>Fortalecer o relacionamento com a marca, criando maior sensação de valorização e reconhecimento do cliente.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Crédito e Benefícios -->
+        <section>
+            <h2>Crédito e Benefícios</h2>
+            <p>Os benefícios oferecidos pelas instituições financeiras — como cashback, milhas e descontos — são estratégias para incentivar o uso do crédito. Cabe ao consumidor compreender essasas vantagens para tomar decisões conscientes e evitar o uso inadequado do crédito.</p>
+
+            <div class="destaque">
+                <strong>💡 Destaque:</strong> O crédito permite comprar bens e serviços no presente e pagar depois, mas <em>não deve ser visto como uma extensão da renda</em>.
+            </div>
+        </section>
+
+        <!-- Seção: Tabela Comparativa -->
+        <section>
+            <h2>Comparativo dos Benefícios no Uso do Crédito</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Cashback</th>
+                        <th>Milhas e Programas de Fidelidade</th>
+                        <th>Benefícios Bancários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Vantagens</th>
+                        <td>Economia direta e imediata, incentiva o uso consciente se bem planejado.</td>
+                        <td>Acúmulo de recompensas ao longo do tempo que podem gerar benefícios significativos.</td>
+                        <td>Acesso a condições diferenciadas; pode agregar valor ao consumo quando alinhado ao planejamento.</td>
+                    </tr>
+                    <tr>
+                        <th>Riscos</th>
+                        <td>Pode estimular gastos para atingir valor mínimo de reembolso; prazos e limites restritivos.</td>
+                        <td>Pode levar a gastos excessivos para acumular pontos; se mal gerenciado, não compensa custos.</td>
+                        <td>Pode incentivar compras desnecessárias; risco de valorizar benefícios ilusórios.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Conclusão:</strong> um benefício só é vantajoso quando não incentiva gastos desnecessários. Avalie sempre as condições e mantenha o consumo dentro do orçamento.</p>
+        </section>
+
+        <!-- Seção: Riscos e Armadilhas -->
+        <section>
+            <h2>Riscos e Armadilhas do Crédito</h2>
+            <p>Os benefícios podem trazer riscos quando utilizados sem cuidado. Os principais são:</p>
+            <ul>
+                <li><strong>Uso descontrolado do crédito:</strong> atração por ofertas e benefícios leva a gastos além do planejado.</li>
+                <li><strong>Consumo impulsivo:</strong> compras feitas sem necessidade real apenas por haver benefício.</li>
+                <li><strong>Acúmulo de dívidas:</strong> uso excessivo de parcelamentos e cartões gera faturas acumuladas.</li>
+                <li><strong>Fraudes e roubo de dados:</strong> promoções falsas ou pouco transparentes expõem dados pessoais.</li>
+            </ul>
+            <p>É fundamental verificar as regras das ofertas, evitar compras por impulso e controlar os gastos antes de assumir crédito.</p>
+        </section>
+
+        <!-- Seção: Uso Consciente -->
+        <section>
+            <h2>Uso Consciente do Crédito: Estratégias e Decisões</h2>
+            <p>Três atitudes principais ajudam a usar o crédito de forma inteligente:</p>
+            <ul>
+                <li><strong>Definir limites de gastos:</strong> não comprometer mais do que o orçamento permite.</li>
+                <li><strong>Criar e seguir um orçamento pessoal:</strong> aproveitar benefícios apenas quando forem realmente vantajosos.</li>
+                <li><strong>Acompanhar receitas e despesas:</strong> identificar excessos e manter o controle financeiro.</li>
+            </ul>
+
+            <!-- Ilustração embutida com SVG — ícone de planejamento financeiro -->
+            <div class="ilustracao">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="60" r="45" fill="#16a085" />
+                    <path d="M100,30 L108,55 L135,55 L113,72 L121,97 L100,80 L79,97 L87,72 L65,55 L92,55 Z" fill="#fff" />
+                    <text x="100" y="125" text-anchor="middle" font-size="12" fill="#2c3e50">Planejamento = Saúde Financeira</text>
+                </svg>
+            </div>
+
+            <div class="destaque">
+                <strong>💡 Reflexão:</strong> O desejo de acumular benefícios pode levar a gastar mais do que o necessário apenas para obter recompensas. <em>Um benefício não é vantajoso se, para obtê-lo, for preciso gastar além do orçamento.</em>
+            </div>
+        </section>
+
+        <!-- Seção: Na Prática -->
+        <section>
+            <h2>Na Prática: Análise de Notícia</h2>
+            <p>Segundo pesquisa da Serasa (2022), em cenário de juros altos e inflação, muitas famílias passaram a usar o cartão de crédito para cobrir contas, sendo que cerca de <strong>70% dos usuários possuem mais de três cartões</strong>.</p>
+            <p>Embora o uso do cartão e de parcelamentos ajude a manter o poder de compra no curto prazo, o acúmulo de faturas pode gerar endividamento ao longo do tempo.</p>
+
+            <h3>Atividade Proposta</h3>
+            <p>Assista ao vídeo indicado e reflita sobre:</p>
+            <ul>
+                <li><strong>Contextualizar:</strong> como o cenário de juros altos e inflação influencia a decisão de usar crédito para manter o poder de compra.</li>
+                <li><strong>Identificar motivos:</strong> quais os principais fatores que levam ao aumento do uso do cartão de crédito.</li>
+                <li><strong>Avaliar riscos:</strong> como o acúmulo de faturas pode comprometer a saúde financeira das famílias.</li>
+                <li><strong>Debater uso consciente:</strong> em quais situações os benefícios do crédito são reais vantagens e quando se tornam risco de endividamento.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Educação Financeira — Aula 5 · Crédito e Benefícios · Uso Consciente do Crédito</p>
+    </footer>
+
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="5">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="5">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="5">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  
+    <!-- Aula 06 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="6">Aula 06</button>
+        <div class="conteudo-aula" id="aula-6">
+            <h2>Aula 06: Crédito e benefícios: isso é um uso consciente? - Parte 2</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira — Aula 06: Crédito e Benefícios (Parte 2)</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, #165DFF 0%, #0F4CD0 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            border-radius: 0 0 16px 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(22, 93, 255, 0.15);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #165DFF;
+            font-size: 1.35rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #E8F0FF;
+        }
+
+        h3 {
+            color: #334155;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .destaque {
+            background-color: #FFF9E6;
+            border-left: 4px solid #F59E0B;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .destaque h3 {
+            color: #B45309;
+            margin-top: 0;
+        }
+
+        .exemplo {
+            background-color: #EFF6FF;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.8rem 0;
+            font-style: italic;
+        }
+
+        .ilustracao {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .pergunta {
+            background-color: #F0FDF4;
+            border-left: 4px solid #22C55E;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748B;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            header {
+                padding: 1.5rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Educação Financeira</h1>
+        <p class="subtitulo">Aula 06: Crédito e Benefícios — isso é um uso consciente? (Parte 2)</p>
+    </header>
+
+    <main>
+        <!-- Seção 1: Introdução e influência das promoções -->
+        <section>
+            <h2>🎁 Benefícios no Consumo</h2>
+
+            <!-- Ilustração 1: Promoções e escolhas - SVG criado do zero -->
+            <div class="ilustracao">
+                <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Fundo suave -->
+                    <rect width="320" height="180" rx="12" fill="#EFF6FF"/>
+                    <!-- Caixa de presente -->
+                    <rect x="110" y="70" width="100" height="80" rx="6" fill="#F59E0B"/>
+                    <rect x="145" y="70" width="30" height="80" fill="#FBBF24"/>
+                    <path d="M160 45 L140 65 L180 65 Z" fill="#EF4444"/>
+                    <rect x="140" y="60" width="40" height="12" rx="4" fill="#EF4444"/>
+                    <!-- Etiqueta de desconto -->
+                    <circle cx="240" cy="60" r="35" fill="#22C55E"/>
+                    <text x="240" y="66" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">-%</text>
+                    <!-- Balão de pensamento -->
+                    <ellipse cx="70" cy="75" rx="45" ry="30" fill="white" stroke="#CBD5E1" stroke-width="2"/>
+                    <text x="70" y="80" font-family="sans-serif" font-size="11" fill="#475569" text-anchor="middle">Preciso mesmo?</text>
+                    <polygon points="55,95 65,110 75,95" fill="white" stroke="#CBD5E1" stroke-width="2"/>
+                    <!-- Título -->
+                    <text x="160" y="165" font-family="sans-serif" font-size="13" fill="#334155" text-anchor="middle">Descontos atraem, mas exijam reflexão!</text>
+                </svg>
+            </div>
+
+            <p>Os benefícios oferecidos no consumo — como descontos, brindes e vantagens — são muito atrativos, mas precisam ser avaliados pelo <strong>real valor</strong> que proporcionam a você. Nem toda oferta representa economia ou uma experiência melhor.</p>
+            
+            <p>É fundamental perguntar-se: <em>esse desconto atende a uma necessidade real, ou ele está apenas estimulando uma compra que não estava planejada?</em></p>
+
+            <div class="pergunta">
+                <h3>💬 Reflita:</h3>
+                <p><strong>De que forma promoções, descontos ou brindes influenciam suas escolhas na hora de comprar?</strong></p>
+                <p style="margin:0; font-size:0.95rem;">Assista ao vídeo sugerido e compartilhe sua resposta com base no que aprendeu!</p>
+            </div>
+        </section>
+
+        <!-- Seção 2: Clubes de oferta e fidelidade -->
+        <section>
+            <h2>🏷️ Clubes de Oferta e Programas de Fidelidade</h2>
+            <p>Clubes de oferta e campanhas de fidelidade podem trazer vantagens reais, como descontos exclusivos e condições diferenciadas. Porém, também podem estimular o consumo repetido e, às vezes, desnecessário.</p>
+
+            <div class="destaque">
+                <h3>💡 FICA A DICA</h3>
+                <p style="margin:0;"><strong>Sempre compare os preços e as condições</strong> oferecidas nos clubes com os valores praticados fora do programa. Assim você confirma se há vantagem econômica de verdade ou se é apenas uma estratégia para você comprar mais.</p>
+            </div>
+        </section>
+
+        <!-- Seção 3: Descontos: vantagem ou estratégia? -->
+        <section>
+            <h2>💰 Descontos: Vantagens Reais ou Estratégia de Consumo?</h2>
+            <p>Descontos podem representar economia e melhores condições de pagamento. Mas também funcionam como uma estratégia para estimular o consumo e aumentar a fidelidade do cliente. Sempre verifique: o desconto realmente reduz o preço final, e a compra é necessária?</p>
+
+            <h3>📌 Exemplos comuns:</h3>
+            <div class="exemplo">
+                “Parcelamento em 12 vezes sem juros no cartão da loja.”
+            </div>
+            <div class="exemplo">
+                “Cadastre-se no clube e economize 50% na compra da segunda unidade.”
+            </div>
+        </section>
+
+        <!-- Seção 4: Comportamento do consumidor e algoritmos -->
+        <section>
+            <h2>📊 Ofertas, Comportamento e Algoritmos</h2>
+
+            <!-- Ilustração 2: Algoritmos e decisões de compra - SVG criado do zero -->
+            <div class="ilustracao">
+                <svg width="340" height="200" viewBox="0 0 340 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Fundo -->
+                    <rect width="340" height="200" rx="12" fill="#FAF5FF"/>
+                    <!-- Cérebro/processamento -->
+                    <ellipse cx="170" cy="70" rx="75" ry="45" fill="#EDE9FE" stroke="#A78BFA" stroke-width="3"/>
+                    <text x="170" y="75" font-family="sans-serif" font-size="14" font-weight="bold" fill="#5B21B6" text-anchor="middle">Algoritmo</text>
+                    <!-- Linhas de conexão -->
+                    <line x1="170" y1="115" x2="170" y2="140" stroke="#A78BFA" stroke-width="2" stroke-dasharray="5,3"/>
+                    <!-- Produtos/recomendações -->
+                    <rect x="50" y="140" width="70" height="45" rx="6" fill="#DDD6FE"/>
+                    <text x="85" y="168" font-family="sans-serif" font-size="10" fill="#4C1D95" text-anchor="middle">Produto A</text>
+                    <rect x="135" y="140" width="70" height="45" rx="6" fill="#C4B5FD"/>
+                    <text x="170" y="168" font-family="sans-serif" font-size="10" fill="#4C1D95" text-anchor="middle">Produto B</text>
+                    <rect x="220" y="140" width="70" height="45" rx="6" fill="#A78BFA"/>
+                    <text x="255" y="168" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Produto C</text>
+                    <!-- Usuário -->
+                    <circle cx="40" cy="170" r="22" fill="#FBBF24"/>
+                    <circle cx="40" cy="163" r="10" fill="#F59E0B"/>
+                    <ellipse cx="40" cy="180" rx="14" ry="8" fill="#F59E0B"/>
+                    <!-- Título -->
+                    <text x="170" y="195" font-family="sans-serif" font-size="12" fill="#6D28D9" text-anchor="middle">Recomendações personalizadas — pense antes de comprar!</text>
+                </svg>
+            </div>
+
+            <h3>Impacto das ofertas no comportamento do consumidor</h3>
+            <p>As ofertas podem estimular compras mais frequentes e até o uso de crédito para aproveitar benefícios. Sem planejamento, isso pode levar a gastos excessivos e dificuldades financeiras. Avalie sempre: a compra é necessária e cabe no seu orçamento?</p>
+            <p>Quando os preços estão altos, fazer compras menores e mais frequentes, buscando promoções com planejamento, pode ajudar no controle dos gastos — desde que as compras sejam realmente necessárias.</p>
+
+            <h3>Como os algoritmos influenciam suas decisões?</h3>
+            <p>Plataformas como redes sociais e lojas virtuais usam algoritmos que analisam seus interesses, pesquisas, curtidas e compras anteriores para exibir anúncios e recomendações personalizadas. Isso pode criar a sensação de que um produto é mais necessário ou popular do que realmente é, aumentando compras por impulso.</p>
+            <p>Por isso, é essencial <strong>desenvolver senso crítico</strong>: reflita antes de comprar apenas porque algo foi recomendado. Pergunte-se: eu realmente preciso disso, ou estou sendo influenciado a comprar?</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Educação Financeira — Aula 06 | Crédito e Benefícios: isso é um uso consciente? (Parte 2)</p>
+        <p>Aprenda a consumir com consciência: compare, avalie a real necessidade e planeje seus gastos! 💙</p>
+    </footer>
+
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="6">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="6">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="6">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+  
+    <!-- Aula 07 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="7">Aula 07</button>
+        <div class="conteudo-aula" id="aula-7">
+            <h2>Aula 07: Planejamento financeiro e dívidas – Parte 1
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira - Aula 07: Planejamento e Dívidas (Parte 1)</title>
+    <style>
+        /* Estilos gerais da página */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fa;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Seções */
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #edf2f7;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #2f855a;
+            margin: 20px 0 12px;
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Destaques e caixas de atenção */
+        .destaque {
+            background-color: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 15px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .alerta {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 15px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .solucao {
+            background-color: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 15px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        /* Imagens SVG embutidas */
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+        }
+
+        .container-ilustracao {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .legenda {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho da aula -->
+    <header>
+        <h1>Aula 07: Planejamento Financeiro e Dívidas – Parte 1</h1>
+        <p>Educação Financeira | Dívidas × Organização × Consumo Consciente</p>
+    </header>
+
+    <!-- Introdução ao tema -->
+    <section>
+        <h2>Dívidas vs. Planejamento Financeiro</h2>
+        
+        <!-- Ilustração SVG: Equilíbrio financeiro -->
+        <div class="container-ilustracao">
+            <svg class="ilustracao" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="300" height="180" fill="#f0f4f8" rx="10"/>
+                <!-- Balança -->
+                <path d="M150 40 L150 150 M80 80 L220 80" stroke="#4a5568" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="150" cy="80" r="12" fill="#2b6cb0"/>
+                <!-- Lado esquerdo: Dívidas -->
+                <rect x="50" y="85" width="60" height="50" fill="#e53e3e" rx="5" opacity="0.8"/>
+                <text x="80" y="115" text-anchor="middle" fill="white" font-size="11" font-weight="bold">DÍVIDAS</text>
+                <path d="M50 85 L30 60" stroke="#4a5568" stroke-width="3"/>
+                <!-- Lado direito: Planejamento -->
+                <rect x="190" y="65" width="60" height="50" fill="#38a169" rx="5" opacity="0.8"/>
+                <text x="220" y="95" text-anchor="middle" fill="white" font-size="10" font-weight="bold">PLANEJAR</text>
+                <path d="M250 85 L270 60" stroke="#4a5568" stroke-width="3"/>
+                <!-- Seta indicando direção -->
+                <path d="M150 55 L140 70 L160 70 Z" fill="#ed8936"/>
+                <!-- Legenda inferior -->
+                <text x="150" y="170" text-anchor="middle" fill="#2d3748" font-size="12">Organização evita o peso das dívidas</text>
+            </svg>
+            <p class="legenda">O equilíbrio financeiro vem do planejamento, não de gastar sem controle.</p>
+        </div>
+
+        <p>O planejamento financeiro vai além de simplesmente reduzir despesas. Ele envolve organizar o dinheiro de forma consciente para evitar o endividamento e, ao mesmo tempo, permitir investimentos em objetivos pessoais e profissionais.</p>
+
+        <h3>Podemos comparar:</h3>
+        <ul>
+            <li><strong>Dívidas:</strong> comprometem a renda futura e limitam suas escolhas.</li>
+            <li><strong>Planejamento financeiro:</strong> ajuda a antecipar despesas, definir prioridades e tomar decisões com segurança.</li>
+        </ul>
+
+        <h3>Benefícios de uma vida financeira organizada:</h3>
+        <ul>
+            <li><strong>Crescimento pessoal e profissional:</strong> facilita a realização de metas como cursos, projetos e objetivos de longo prazo.</li>
+            <li><strong>Consumo consciente:</strong> não significa deixar de gastar, mas entender <em>por quê</em>, <em>quanto</em> e <em>quando</em> gastar.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>A mudança de mentalidade é a chave</h2>
+        <p>Para sair do ciclo de dívidas, é preciso primeiro mudar a forma de pensar em relação ao dinheiro. Em vez de usar o crédito para cobrir despesas que não cabem no orçamento, a pessoa passa a:</p>
+        <ul>
+            <li>Pensar antes de gastar e priorizar necessidades reais;</li>
+            <li>Planejar os gastos e controlar o consumo;</li>
+            <li>Evitar contrair novas dívidas desnecessárias;</li>
+            <li>Estabelecer metas e guardar parte da renda sempre que possível.</li>
+        </ul>
+        <p>Assim, fica mais fácil recuperar o equilíbrio financeiro e conquistar seus objetivos.</p>
+    </section>
+
+    <section>
+        <h2>Estudo de Caso: A Família Silva</h2>
+        <div class="alerta">
+            <strong>Situação:</strong> A família Silva tem renda mensal de R$ 6.000,00. As despesas fixas somam R$ 4.500,00, restando apenas R$ 1.500,00 para despesas variáveis — que frequentemente ultrapassam esse valor. O saldo negativo é coberto com cartão de crédito, gerando juros e aumentando a dívida.
+        </div>
+
+        <h3>1. Diagnóstico</h3>
+        <p>O problema principal é a <strong>falta de planejamento e controle</strong>. Usar o cartão de crédito para cobrir o que falta no orçamento faz a dívida crescer rapidamente, especialmente com juros altos.</p>
+
+        <h3>2. Como a dívida cresce?</h3>
+        <p>Dívida inicial: R$ 5.000,00 | Taxa: 20% ao mês | Tempo: 6 meses</p>
+
+        <p><strong>📌 Juros Simples</strong> — calculados sempre sobre o valor inicial:</p>
+        <p><em>Fórmula: J = C × i × t</em><br>
+        J = 5.000 × 0,20 × 6 = R$ 6.000,00<br>
+        Montante = 5.000 + 6.000 = <strong>R$ 11.000,00</strong></p>
+
+        <p><strong>📌 Juros Compostos</strong> — juros sobre juros, crescimento exponencial:</p>
+        <p><em>Fórmula: M = C × (1 + i)ᵗ</em><br>
+        M = 5.000 × (1,20)⁶ = <strong>R$ 14.929,92</strong></p>
+
+        <table>
+            <tr>
+                <th>Tipo de Juros</th>
+                <th>Valor Inicial</th>
+                <th>Após 6 meses</th>
+                <th>Aumento</th>
+            </tr>
+            <tr>
+                <td>Simples</td>
+                <td>R$ 5.000,00</td>
+                <td>R$ 11.000,00</td>
+                <td>R$ 6.000,00</td>
+            </tr>
+            <tr>
+                <td>Compostos</td>
+                <td>R$ 5.000,00</td>
+                <td>R$ 14.929,92</td>
+                <td>R$ 9.929,92</td>
+            </tr>
+        </table>
+
+        <div class="destaque">
+            <strong>⚠️ Atenção:</strong> Os juros compostos fazem a dívida crescer muito mais rápido. A diferença entre os dois sistemas chega a <strong>R$ 3.929,92</strong> em apenas 6 meses! Por isso, dívidas com taxas elevadas precisam ser controladas logo.
+        </div>
+
+        <!-- Ilustração SVG: Gráfico de crescimento -->
+        <div class="container-ilustracao">
+            <svg class="ilustracao" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo e grade -->
+                <rect width="300" height="200" fill="#f8f9fa" rx="10"/>
+                <line x1="40" y1="170" x2="280" y2="170" stroke="#cbd5e0" stroke-width="2"/>
+                <line x1="40" y1="20" x2="40" y2="170" stroke="#cbd5e0" stroke-width="2"/>
+                <!-- Barra juros simples -->
+                <rect x="80" y="70" width="60" height="100" fill="#ed8936" rx="3" opacity="0.8"/>
+                <text x="110" y="185" text-anchor="middle" font-size="10">Simples</text>
+                <text x="110" y="60" text-anchor="middle" font-size="9" fill="#c05621">R$11.000</text>
+                <!-- Barra juros compostos -->
+                <rect x="180" y="35" width="60" height="135" fill="#e53e3e" rx="3" opacity="0.8"/>
+                <text x="210" y="185" text-anchor="middle" font-size="10">Compostos</text>
+                <text x="210" y="25" text-anchor="middle" font-size="9" fill="#c53030">R$14.930</text>
+                <!-- Valor base -->
+                <text x="45" y="175" font-size="9">0</text>
+                <text x="15" y="175" font-size="9">R$5mil</text>
+                <!-- Título -->
+                <text x="150" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d3748">Crescimento da Dívida em 6 meses</text>
+            </svg>
+            <p class="legenda">Comparação do crescimento da dívida com juros simples e compostos.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Causas e Consequências do Endividamento</h2>
+
+        <h3>Principais causas</h3>
+        <ul>
+            <li>Falta de planejamento financeiro;</li>
+            <li>Despesas variáveis acima do orçamento;</li>
+            <li>Uso frequente do cartão de crédito para cobrir gastos do dia a dia;</li>
+            <li>Juros elevados;</li>
+            <li>Ausência de reserva financeira para emergências.</li>
+        </ul>
+
+        <h3>Possíveis consequências</h3>
+        <ul>
+            <li>Aumento contínuo do saldo devedor;</li>
+            <li>Comprometimento da renda futura;</li>
+            <li>Redução da capacidade de consumo;</li>
+            <li>Estresse e conflitos familiares;</li>
+            <li>Dificuldade para investir em objetivos pessoais e profissionais.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Estratégias para Sair do Vermelho</h2>
+        <div class="solucao">
+            <strong>Como resolver cada problema:</strong>
+        </div>
+        <ul>
+            <li><strong>Despesas acima do orçamento:</strong> estabeleça um limite e acompanhe os gastos diariamente.</li>
+            <li><strong>Cartão de crédito:</strong> evite novas compras e use-o apenas se puder pagar integralmente.</li>
+            <li><strong>Dívida com juros altos:</strong> negocie com o credor buscando taxa menor e parcelas que cabem no bolso.</li>
+            <li><strong>Falta de controle:</strong> faça uma planilha ou anote tudo — receitas e despesas.</li>
+            <li><strong>Gastos desnecessários:</strong> identifique o que pode ser cortado temporariamente.</li>
+            <li><strong>Sem reserva:</strong> depois de equilibrar as contas, comece a guardar aos poucos para emergências.</li>
+            <li><strong>Desacompanhamento:</strong> revise o orçamento todo mês e compare com o planejado.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conclusão e Reflexão</h2>
+        <p>A situação da família Silva mostra que sem controle e planejamento, pequenos desequilíbrios se transformam em dívidas difíceis de quitar, especialmente com juros elevados. A solução passa por reduzir gastos, controlar o crédito, negociar a dívida e organizar o orçamento.</p>
+
+        <div class="destaque">
+            <strong>Pergunta para reflexão:</strong> Como a prática regular de planejar suas finanças pode mudar a forma como você lida com o crédito e ajuda a conquistar seus objetivos?
+        </div>
+
+        <p>A resposta está na consciência: ao organizar renda, despesas e metas, você sabe exatamente o que pode e o que não pode gastar. O crédito deixa de ser um socorro para cobrir o descontrole e passa a ser usado com sabedoria, quando realmente vale a pena. O planejamento abre caminho para economizar e realizar sonhos — cursos, projetos, viagens, casa nova — sem escravizar-se às dívidas.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Educação Financeira — Aula 07: Planejamento Financeiro e Dívidas (Parte 1)<br>
+        Organize-se, evite dívidas e construa seu futuro! 💙</p>
+    </footer>
+
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="7">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="7">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="7">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  
+    <!-- Aula 08 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="8">Aula 08</button>
+        <div class="conteudo-aula" id="aula-8">
+            <h2>Aula 08: Planejamento financeiro e dívidas - Parte 2
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira - Aula 08: Planejamento e Dívidas (Parte 2)</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #27ae60;
+        }
+
+        h1 {
+            color: #27ae60;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #e67e22;
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .destaque {
+            background-color: #fff9c4;
+            border-left: 5px solid #f1c40f;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .cenarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .cenario {
+            background-color: #e8f4fc;
+            border-radius: 8px;
+            padding: 15px;
+            border-top: 4px solid #3498db;
+        }
+
+        .cenario h4 {
+            color: #d35400;
+            margin-bottom: 8px;
+        }
+
+        .exemplo-calculado {
+            background-color: #eafaf1;
+            border: 2px solid #2ecc71;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .codigo {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 8px 0;
+        }
+
+        .video-link {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+
+        .video-link:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Aula 04: Endividamento — Causas e Consequências (Parte 2)</h1>
+            <!-- Ilustração SVG: Cofrinho e crescimento financeiro -->
+            <div class="ilustracao">
+                <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cofrinho -->
+                    <ellipse cx="160" cy="110" rx="90" ry="65" fill="#f4a460" stroke="#d2691e" stroke-width="3"/>
+                    <ellipse cx="160" cy="100" rx="75" ry="48" fill="#ffdab9"/>
+                    <!-- Entrada de moedas -->
+                    <rect x="135" y="65" width="50" height="10" rx="3" fill="#8b4513"/>
+                    <!-- Moedas caindo -->
+                    <circle cx="100" cy="50" r="15" fill="#ffd700" stroke="#daa520" stroke-width="2"/>
+                    <text x="96" y="55" font-size="12" font-weight="bold" fill="#b8860b">$</text>
+                    <circle cx="220" cy="55" r="15" fill="#ffd700" stroke="#daa520" stroke-width="2"/>
+                    <text x="216" y="60" font-size="12" font-weight="bold" fill="#b8860b">$</text>
+                    <!-- Gráfico de crescimento -->
+                    <polyline points="70,150 110,140 150,125 190,105 230,85" stroke="#27ae60" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <circle cx="70" cy="150" r="6" fill="#2ecc71"/>
+                    <circle cx="110" cy="140" r="6" fill="#2ecc71"/>
+                    <circle cx="150" cy="125" r="6" fill="#2ecc71"/>
+                    <circle cx="190" cy="105" r="6" fill="#2ecc71"/>
+                    <circle cx="230" cy="85" r="6" fill="#2ecc71"/>
+                    <text x="140" y="170" font-size="13" fill="#27ae60" font-weight="bold">Economia crescente</text>
+                </svg>
+            </div>
+
+            <h1>📚 Educação Financeira — Aula 08</h1>
+            <p><strong>Planejamento financeiro e dívidas — Parte 2</strong></p>
         </header>
 
-        <!-- SEÇÃO 1: Falta de orçamento -->
-        <h2>O que leva ao endividamento?</h2>
-        <p>A falta de um orçamento pessoal pode levar ao endividamento porque dificulta o controle sobre quanto dinheiro entra e quanto é gasto. Sem planejamento, a pessoa pode gastar mais do que recebe, acumular compras parceladas e não reservar dinheiro para imprevistos. Com o aumento das dívidas e dos juros, sobra menos renda para as despesas essenciais, comprometendo a estabilidade financeira.</p>
+        <section>
+            <h2>💰 Benefícios no consumo</h2>
+            <p>A conscientização e o controle das despesas podem transformar a realidade financeira dos consumidores porque permitem identificar gastos desnecessários, estabelecer prioridades e evitar compras por impulso.</p>
+            <p>Com um planejamento financeiro, a pessoa consegue organizar melhor sua renda, reservar dinheiro para emergências e reduzir o risco de contrair dívidas. Dessa forma, o consumo se torna mais responsável e consciente, contribuindo para uma vida financeira mais equilibrada e para a realização de objetivos no futuro.</p>
+        </section>
 
-        <div class="svg-container">
-            <svg width="620" height="240" viewBox="0 0 620 240" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#f6e05e;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#ed8936;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#fc8181;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#e53e3e;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#90cdf4;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#3182ce;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <rect x="10" y="10" width="600" height="220" rx="12" fill="#f7fafc" stroke="#e2e8f0" stroke-width="2"/>
-                <text x="310" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748">Sem Orçamento → O Caminho do Endividamento</text>
-                
-                <rect x="30" y="60" width="150" height="100" rx="10" fill="url(#grad3)" stroke="#2b6cb0" stroke-width="2"/>
-                <text x="105" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">Sem controle</text>
-                <text x="105" y="115" text-anchor="middle" font-size="11" fill="#1a365d">Gasta mais do que recebe</text>
-                <polygon points="190,110 210,100 210,120" fill="#718096"/>
+        <section>
+            <h2>📊 Simulação de orçamento e tomada de decisão</h2>
+            <p>A família Costa deseja organizar suas finanças mensais. O objetivo inicial é criar uma reserva de emergência, economizando <strong>R$ 100,00 por mês</strong>. Para isso, é necessário entender como distribuir a renda e identificar áreas em que podem ajustar as despesas. Vamos simular diferentes cenários e analisar os impactos no orçamento.</p>
 
-                <rect x="220" y="60" width="150" height="100" rx="10" fill="url(#grad1)" stroke="#dd6b20" stroke-width="2"/>
-                <text x="295" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#744210">Compras parceladas</text>
-                <text x="295" y="115" text-anchor="middle" font-size="11" fill="#744210">Sem reserva para imprevistos</text>
-                <polygon points="380,110 400,100 400,120" fill="#718096"/>
+            <!-- Ilustração SVG: Família planejando orçamento -->
+            <div class="ilustracao">
+                <svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Mesa -->
+                    <rect x="40" y="110" width="220" height="20" rx="4" fill="#8b4513"/>
+                    <!-- Papel e caneta -->
+                    <rect x="80" y="85" width="140" height="30" fill="#fff" stroke="#ccc" stroke-width="2"/>
+                    <line x1="90" y1="93" x2="190" y2="93" stroke="#3498db" stroke-width="1.5"/>
+                    <line x1="90" y1="101" x2="170" y2="101" stroke="#3498db" stroke-width="1.5"/>
+                    <rect x="200" y="75" width="6" height="35" fill="#e74c3c"/>
+                    <!-- Figuras familiares -->
+                    <circle cx="65" cy="60" r="18" fill="#ffd9b3" stroke="#e69966" stroke-width="2"/>
+                    <circle cx="150" cy="55" r="20" fill="#ffd9b3" stroke="#e69966" stroke-width="2"/>
+                    <circle cx="235" cy="60" r="18" fill="#ffd9b3" stroke="#e69966" stroke-width="2"/>
+                    <!-- Corpos simplificados -->
+                    <rect x="55" y="78" width="20" height="32" rx="6" fill="#3498db"/>
+                    <rect x="140" y="75" width="20" height="35" rx="6" fill="#e74c3c"/>
+                    <rect x="225" y="78" width="20" height="32" rx="6" fill="#27ae60"/>
+                    <!-- Título -->
+                    <text x="150" y="150" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">Família Costa — Planejamento</text>
+                </svg>
+            </div>
 
-                <rect x="410" y="60" width="170" height="100" rx="10" fill="url(#grad2)" stroke="#c53030" stroke-width="2"/>
-                <text x="495" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#742a2a">Dívidas + Juros</text>
-                <text x="495" y="115" text-anchor="middle" font-size="11" fill="#742a2a">Renda comprometida</text>
-                <text x="495" y="135" text-anchor="middle" font-size="11" fill="#742a2a">Instabilidade financeira</text>
-            </svg>
-        </div>
+            <h3>📋 Cenários de variação financeira</h3>
+            <div class="cenarios">
+                <div class="cenario">
+                    <h4>Cenário A</h4>
+                    <p>Acréscimo de R$ 100,00 na renda extra, mas despesas com transporte sobem 20%.</p>
+                </div>
+                <div class="cenario">
+                    <h4>Cenário B</h4>
+                    <p>Redução salarial de R$ 800,00.</p>
+                </div>
+                <div class="cenario">
+                    <h4>Cenário C</h4>
+                    <p>Despesas com moradia aumentam em 20%.</p>
+                </div>
+                <div class="cenario">
+                    <h4>Cenário D</h4>
+                    <p>Despesas com educação sobem 15%.</p>
+                </div>
+                <div class="cenario">
+                    <h4>Cenário E</h4>
+                    <p>Gastos adicionais com saúde: aumento de R$ 200,00.</p>
+                </div>
+            </div>
 
-        <!-- SEÇÃO 2: Causas psicológicas -->
-        <h2>Dívidas: causas psicológicas e impactos pessoais</h2>
-        <p>As dívidas podem ter causas psicológicas, como impulsividade, ansiedade, pressão social e dificuldade de controlar os gastos. O desejo de comprar algo para se sentir melhor ou para acompanhar outras pessoas pode levar a decisões financeiras sem planejamento.</p>
-        <p>Além disso, o endividamento pode causar estresse, preocupação, conflitos familiares e dificuldade para manter uma vida financeira equilibrada. Por isso, é importante desenvolver hábitos de planejamento, controle dos gastos e consumo consciente.</p>
+            <h3>📝 Modelo de análise prática</h3>
+            <div class="exemplo-calculado">
+                <p>Como exemplo, vamos analisar um cenário em que as despesas com saúde, inicialmente de <strong>R$ 400,00</strong>, aumentam em <strong>20%</strong>:</p>
+                <div class="codigo">
+                    Novo valor = 400 × (1 + 0,20) = R$ 480,00<br>
+                    Valor do aumento = 480 – 400 = R$ 80,00
+                </div>
+                <p>Se a família tinha um saldo inicial de <strong>R$ 54,00</strong>:</p>
+                <div class="codigo">
+                    Novo saldo = 54 – 80 = – R$ 26,00
+                </div>
+                <p>Esse cenário mostra como um aumento em uma única categoria pode desequilibrar o orçamento. Para se recuperar, é preciso reduzir gastos não essenciais — como jantares fora ou passeios — até que o saldo volte a ser positivo.</p>
+            </div>
+        </section>
 
-
-
-<h2>Causas Psicológicas ➝‬ Impactos Pessoais</h2>
-      
-        <div class="svg-container">
-            <svg width="600" height="260" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="580" height="240" rx="12" fill="#f7fafc" stroke="#e2e8f0" stroke-width="2"/>
-                <text x="300" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748"></text>
-                
-                <g>
-                    <circle cx="90" cy="90" r="60" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
-                    <text x="90" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Impulsividade</text>
-                    <text x="90" y="105" text-anchor="middle" font-size="10" fill="#78350f">Compras sem pensar</text>
-                </g>
-                <g>
-                    <circle cx="230" cy="90" r="60" fill="#fce7f3" stroke="#ec4899" stroke-width="3"/>
-                    <text x="230" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#9d174d">Ansiedade</text>
-                    <text x="230" y="105" text-anchor="middle" font-size="10" fill="#831843">Comprar para se sentir bem</text>
-                </g>
-                <g>
-                    <circle cx="370" cy="90" r="60" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
-                    <text x="370" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#3730a3">Pressão social</text>
-                    <text x="370" y="105" text-anchor="middle" font-size="10" fill="#312e81">Acompanhar outros</text>
-                </g>
-                <g>
-                    <circle cx="510" cy="90" r="60" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
-                    <text x="510" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Falta de controle</text>
-                    <text x="510" y="105" text-anchor="middle" font-size="10" fill="#1d4ed8">Dificuldade em poupar</text>
-                </g>
-
-                <path d="M90 150 L90 180 L510 180 L510 150" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#seta)"/>
-                <defs><marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/></marker></defs>
-
-                <rect x="120" y="195" width="360" height="45" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-                <text x="300" y="215" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">→ Estresse • Conflitos familiares • Desequilíbrio financeiro</text>
-            </svg>
-        </div>
-
-        <!-- SEÇÃO 3: Relações sociais e saúde mental -->
-        <h2>Efeito das dívidas nas relações sociais</h2>
-        <p>O endividamento pode afetar significativamente as relações sociais. A preocupação com as dívidas pode causar estresse e conflitos familiares, dificultando o diálogo e a convivência. Além disso, sentimentos como culpa, vergonha e pressão social podem fazer a pessoa se afastar de amigos, familiares e até prejudicar suas relações profissionais. Por isso, buscar organização financeira e apoio pode ajudar a reduzir esses impactos.</p>
-
-        <h2>Impacto na saúde mental e emocional</h2>
-        <p>O endividamento prolongado pode prejudicar a saúde mental e emocional, aumentando o estresse, a ansiedade e as dificuldades para dormir. Essas preocupações podem dificultar a tomada de decisões, diminuir a qualidade de vida e afetar o desempenho pessoal e profissional. Por isso, manter uma organização financeira é importante para preservar o bem-estar.</p>
-
-        <div class="svg-container">
-            <svg width="600" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="580" height="200" rx="12" fill="#f7fafc" stroke="#e2e8f0" stroke-width="2"/>
-                <text x="300" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748">Endividamento: Efeitos em Cadeia</text>
-                
-                <rect x="30" y="60" width="160" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-                <text x="110" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350f">Preocupação</text>
-                <text x="110" y="110" text-anchor="middle" font-size="11" fill="#78350f">Estresse e ansiedade</text>
-                <text x="110" y="130" text-anchor="middle" font-size="11" fill="#78350f">Dificuldade para dormir</text>
-
-                <polygon points="200,105 220,95 220,115" fill="#9ca3af"/>
-
-                <rect x="230" y="60" width="160" height="100" rx="10" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
-                <text x="310" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">Conflitos</text>
-                <text x="310" y="110" text-anchor="middle" font-size="11" fill="#831843">Familiares</text>
-                <text x="310" y="130" text-anchor="middle" font-size="11" fill="#831843">Culpa e vergonha</text>
-
-                <polygon points="400,105 420,95 420,115" fill="#9ca3af"/>
-
-                <rect x="430" y="60" width="140" height="100" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-                <text x="500" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Isolamento</text>
-                <text x="500" y="110" text-anchor="middle" font-size="11" fill="#1d4ed8">Afasta de amigos</text>
-                <text x="500" y="130" text-anchor="middle" font-size="11" fill="#1d4ed8">Queda no desempenho</text>
-            </svg>
-        </div>
-
-        <!-- SEÇÃO 4: Inadimplência e cenário Brasil -->
-        <h2>Inadimplência: um problema social</h2>
-        <p>A inadimplência é um problema social porque afeta muitas pessoas e famílias. O aumento das dívidas atrasadas mostra que cada vez mais brasileiros enfrentam dificuldades para manter seus pagamentos em dia. Isso pode comprometer o orçamento familiar, aumentar o estresse e dificultar a realização de planos financeiros.</p>
-
-        <h2>Analisando o cenário do endividamento no Brasil</h2>
-        <p>O gráfico de janeiro de 2026 mostra que as dívidas no Brasil estão concentradas principalmente em bancos e cartões de crédito, além de contas básicas e financeiras. Esses dados ajudam a perceber como gastos cotidianos, crédito e dificuldades de renda podem contribuir para a inadimplência. <em>(Serasa)</em></p>
-        <p>Para responder às perguntas, observe quais categorias aparecem com maior participação e o que isso revela sobre os hábitos de consumo e as dificuldades financeiras da população.</p>
-
-        <div class="svg-container">
-            <svg width="520" height="420" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="500" height="400" rx="12" fill="#f7fafc" stroke="#e2e8f0" stroke-width="2"/>
-                <text x="260" y="40" text-anchor="middle" font-size="17" font-weight="bold" fill="#2d3748">Distribuição das Dívidas no Brasil — Jan/2026</text>
-                
-                <!-- Gráfico de rosca -->
-                <g transform="translate(200, 190)">
-                    <!-- Bancos e cartões: 26,3% -->
-                    <path d="M 0,-130 A 130,130 0 0,1 116.26,58.46 L 89.43,44.97 A 90,90 0 0 0 0,-90 Z" fill="#e53e3e" stroke="#fff" stroke-width="2"/>
-                    <!-- Contas básicas: 22% -->
-                    <path d="M 116.26,58.46 A 130,130 0 0,1 44.97,121.94 L 34.98,94.76 A 90,90 0 0 0 89.43,44.97 Z" fill="#ed8936" stroke="#fff" stroke-width="2"/>
-                    <!-- Outras dívidas: 51,7% -->
-                    <path d="M 44.97,121.94 A 130,130 0 1,1 -44.97,-121.94 L -34.98,-94.76 A 90,90 0 1,0 34.98,94.76 Z" fill="#48bb78" stroke="#fff" stroke-width="2"/>
-                </g>
-
-                <!-- Rótulos -->
-                <g font-size="14" font-weight="bold">
-                    <rect x="335" y="90" width="22" height="22" fill="#e53e3e" rx="3"/>
-                    <text x="358" y="107" fill="#742a2a">Bancos e cartões: 26,3%</text>
-                    
-                    <rect x="335" y="130" width="22" height="22" fill="#ed8936" rx="3"/>
-                    <text x="358" y="147" fill="#744210">Contas básicas: 22%</text>
-                    
-                    <rect x="335" y="170" width="22" height="22" fill="#48bb78" rx="3"/>
-                    <text x="358" y="187" fill="#22543d">Outras dívidas: 51,7%</text>
-                </g>
-
-
-              
-                <text x="260" y="385" text-anchor="middle" font-size="12" fill="#718096">Fonte: Serasa — Dados de janeiro de 2026</text>
-            </svg>
-
-          
-        </div>
-
-
-
-      
         <div class="destaque">
-            <h3>O que os dados revelam?</h3>
-            <p>Os dados revelam que o endividamento está relacionado tanto ao uso do crédito quanto às despesas essenciais. O destaque para bancos e cartões de crédito (26,3%) mostra a importância de usar o crédito com planejamento, enquanto as contas básicas (22%) indicam que dificuldades para pagar necessidades do dia a dia também podem levar ao acúmulo de dívidas.</p>
-            <p>A partir disso, é importante refletir sobre como o planejamento financeiro e o consumo consciente podem ajudar a evitar a inadimplência.</p>
+            💡 <strong>Acompanhamento é fundamental:</strong> O acompanhamento do orçamento é fundamental para garantir um planejamento financeiro saudável, especialmente em casos de mudanças na renda.
         </div>
 
-        <!-- SEÇÃO 5: Perguntas e respostas -->
-        <h2>Refletindo sobre os dados e a situação financeira</h2>
+        <section>
+            <h2>🛡️ Evitando o endividamento</h2>
+            <p>A simulação de orçamento ajuda a família a visualizar seus gastos, identificar despesas desnecessárias e perceber onde pode economizar. Ela também permite testar diferentes situações — como redução da renda ou aumento de despesas — e planejar alternativas antes que surjam problemas financeiros.</p>
+            <p>Assim, a família pode controlar melhor o dinheiro, evitar compras por impulso, reduzir gastos não essenciais e manter uma reserva de emergência, diminuindo o risco de endividamento.</p>
+            
+            <p>🎬 Para complementar, assista ao vídeo educativo produzido em parceria com a Turma da Mônica e o Sicredi:</p>
+            <a href="https://www.youtube.com/watch?v=1VYXQwrDNXs" target="_blank" rel="noopener noreferrer" class="video-link">▶️ Assistir à aula em vídeo</a>
+        </section>
 
-        <div class="pergunta">
-            1. Por que o cartão de crédito pode levar mais pessoas ao endividamento do que outros tipos de dívida?
+        <footer>
+            <p>📘 Educação Financeira — Aula 08: Planejamento financeiro e dívidas (Parte 2)<br>
+            Aprenda, planeje e conquiste sua liberdade financeira!</p>
+        </footer>
+    </div>
+</body>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="8">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="8">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="8">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
-        <div class="resposta">
-            <p>O cartão de crédito pode facilitar o endividamento porque permite comprar antes de ter o dinheiro disponível, além de possibilitar o parcelamento das compras. Quando os gastos não são controlados, a pessoa pode acumular várias parcelas e comprometer grande parte da renda. Se a fatura não for paga integralmente, os juros podem aumentar rapidamente o valor da dívida.</p>
-        </div>
+    </div>
 
-        <div class="pergunta">
-            2. O que o percentual de contas básicas revela sobre a situação econômica das famílias?
-        </div>
-        <div class="resposta">
-            <p>O percentual de 22% de dívidas relacionadas a contas básicas (água, luz e gás) revela que muitas famílias enfrentam dificuldades para pagar despesas essenciais. Isso pode indicar que a renda disponível não é suficiente para cobrir todos os gastos do mês, tornando água, luz e gás fontes importantes de inadimplência. Dados do IBGE também mostram que atrasos nessas contas estão associados a dificuldades financeiras das famílias. <em>(Agência de Notícias IBGE)</em></p>
-        </div>
 
-        <div class="pergunta">
-            3. Como o uso inadequado do crédito pode agravar o endividamento ao longo do tempo?
-        </div>
-        <div class="resposta">
-            <p>O uso inadequado do crédito pode agravar o endividamento porque facilita gastos acima da renda disponível. Com o acúmulo de parcelas, empréstimos e juros, a dívida pode crescer e comprometer cada vez mais o orçamento. Assim, a pessoa pode ter dificuldade para pagar outras despesas e acabar contraindo novas dívidas para quitar as anteriores.</p>
-        </div>
 
-        <div class="svg-container">
-            <svg width="580" height="180" viewBox="0 0 580 180" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="560" height="160" rx="12" fill="#f7fafc" stroke="#e2e8f0" stroke-width="2"/>
-                <text x="290" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748">Ciclo do Endividamento Sem Controle</text>
-                
-                <rect x="30" y="60" width="110" height="70" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-                <text x="85" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350f">Gasta mais</text>
-                <text x="85" y="110" text-anchor="middle" font-size="10" fill="#78350f">do que recebe</text>
 
-                <polygon points="150,95 170,85 170,105" fill="#f59e0b"/>
 
-                <rect x="180" y="60" width="110" height="70" rx="8" fill="#fed7d7" stroke="#e53e3e" stroke-width="2"/>
-                <text x="235" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#742a2a">Contrai</text>
-                <text x="235" y="110" text-anchor="middle" font-size="10" fill="#742a2a">novas dívidas</text>
-
-                <polygon points="300,95 320,85 320,105" fill="#e53e3e"/>
-
-                <rect x="330" y="60" width="110" height="70" rx="8" fill="#feb2b2" stroke="#c53030" stroke-width="2"/>
-                <text x="385" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#742a2a">Juros</text>
-                <text x="385" y="105" text-anchor="middle" font-size="10" fill="#742a2a">aumentam</text>
-                <text x="385" y="122" text-anchor="middle" font-size="10" fill="#742a2a">a dívida</text>
-
-                <polygon points="450,95 470,85 470,105" fill="#c53030"/>
-
-                <rect x="480" y="60" width="80" height="70" rx="8" fill="#fc8181" stroke="#9b2c2c" stroke-width="2"/>
-                <text x="520" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Renda</text>
-                <text x="520" y="115" text-anchor="middle" font-size="10" fill="#fff">comprometida</text>
-            </svg>
-        </div>
-
-        <div class="pergunta">
-            4. Que estratégias podem ajudar a reduzir a inadimplência?
-        </div>
-        <div class="resposta">
-            <p>Algumas estratégias individuais e familiares podem ajudar:</p>
-            <ul>
-                <li>Criar um orçamento e acompanhar receitas e despesas;</li>
-                <li>Priorizar gastos essenciais e evitar compras por impulso;</li>
-                <li>Usar o crédito com responsabilidade, evitando parcelas que não cabem no orçamento;</li>
-                <li>Organizar e negociar dívidas, começando pelas com juros mais altos;</li>
-                <li>Criar uma pequena reserva financeira para imprevistos;</li>
-                <li>Conversar em família sobre dinheiro, definindo prioridades e metas.</li>
-            </ul>
-            <p class="fonte">Fonte: bcb.gov.br — Banco Central do Brasil</p>
-        </div>
-
-        <div class="pergunta">
-            5. De que maneira pequenas decisões do dia a dia impactam o futuro financeiro?
-        </div>
-        <div class="resposta">
-            <p>Pequenas decisões financeiras podem fazer uma grande diferença no futuro. Evitar compras por impulso, acompanhar os gastos, comparar preços, controlar o uso do crédito e guardar parte do dinheiro quando possível ajudam a manter o orçamento equilibrado e a prevenir dívidas. O Banco Central destaca justamente o planejamento do orçamento e a formação de poupança como formas de fortalecer a segurança financeira. <em>(bcb.gov.br)</em></p>
-            <p>Assim, escolhas responsáveis no dia a dia podem evitar que pequenos gastos se acumulem e comprometam a renda no futuro.</p>
-        </div>
-
-        <div class="svg-container">
-            <svg width="580" height="200" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="10" width="560" height="180" rx="12" fill="#f0fff4" stroke="#9ae6b4" stroke-width="2"/>
-                <text x="290" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#22543d">Decisões Responsáveis → Segurança Financeira</text>
-                
-                <g>
-                    <circle cx="80" cy="90" r="45" fill="#c6f6d5" stroke="#48bb78" stroke-width="3"/>
-                    <text x="80" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#22543d">Evitar</text>
-                    <text x="80" y="102" text-anchor="middle" font-size="10" fill="#276749">compras</text>
-                    <text x="80" y="117" text-anchor="middle" font-size="10" fill="#276749">por impulso</text>
-                </g>
-                <g>
-                    <circle cx="185" cy="90" r="45" fill="#c6f6d5" stroke="#48bb78" stroke-width="3"/>
-                    <text x="185" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#22543d">Acompanhar</text>
-                    <text x="185" y="108" text-anchor="middle" font-size="10" fill="#276749">gastos</text>
-                </g>
-                <g>
-                    <circle cx="290" cy="90" r="45" fill="#c6f6d5" stroke="#48bb78" stroke-width="3"/>
-                    <text x="290" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#22543d">Controlar</text>
-                    <text x="290" y="102" text-anchor="middle" font-size="10" fill="#276749">crédito</text>
-                </g>
-                <g>
-                    <circle cx="395" cy="90" r="45" fill="#c6f6d5" stroke="#48bb78" stroke-width="3"/>
-                    <text x="395" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#22543d">Guardar</text>
-                    <text x="395" y="102" text-anchor="middle" font-size="10" fill="#276749">poupança</text>
-                </g>
-                <g>
-                    <circle cx="500" cy="90" r="45" fill="#9ae6b4" stroke="#2f855a" stroke-width="3"/>
-                    <text x="500" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#1c4532">Futuro</text>
-                    <text x="500" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#1c4532">com</text>
-                    <text x="500" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#1c4532">segurança</text>
-                </g>
-                <path d="M125 90 L140 90 M230 90 L245 90 M335 90 L350 90 M440 90 L455 90" stroke="#2f855a" stroke-width="3" stroke-dasharray="5,4"/>
-            </svg>
-        </div></p>
-        </div>
-       
-        
-        
-        
-        <div class="conteudo-aula" id="aula-5">
-            <h2>Aula 05</h2>
-            <p>Conteúdo da Aula 05...</p>
-        </div>
-        <div class="conteudo-aula" id="aula-6">
-            <h2>Aula 06</h2>
-            <p>Conteúdo da Aula 06...</p>
-        </div>
-        <div class="conteudo-aula" id="aula-7">
-            <h2>Aula 07</h2>
-            <p>Conteúdo da Aula 07...</p>
-        </div>
-        <div class="conteudo-aula" id="aula-8">
-            <h2>Aula 08</h2>
-            <p>Conteúdo da Aula 08...</p>
-        </div>
+  
+    <!-- Aula 09 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="9">Aula 09</button>
         <div class="conteudo-aula" id="aula-9">
             <h2>Aula 09</h2>
             <p>Conteúdo da Aula 09...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="9">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="9">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="9">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 10 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="10">Aula 10</button>
         <div class="conteudo-aula" id="aula-10">
             <h2>Aula 10</h2>
             <p>Conteúdo da Aula 10...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="10">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="10">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="10">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 11 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="11">Aula 11</button>
         <div class="conteudo-aula" id="aula-11">
             <h2>Aula 11</h2>
             <p>Conteúdo da Aula 11...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="11">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="11">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="11">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 12 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="12">Aula 12</button>
         <div class="conteudo-aula" id="aula-12">
             <h2>Aula 12</h2>
             <p>Conteúdo da Aula 12...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="12">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="12">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="12">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 13 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="13">Aula 13</button>
         <div class="conteudo-aula" id="aula-13">
             <h2>Aula 13</h2>
             <p>Conteúdo da Aula 13...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="13">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="13">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="13">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 14 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="14">Aula 14</button>
         <div class="conteudo-aula" id="aula-14">
-            <h2>Aula 14 — Conclusão</h2>
-            <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
+            <h2>Aula 14</h2>
+            <p>Conteúdo da Aula 14...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="14">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="14">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="14" disabled>Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
     </div>
 
 <script>
-    // Seleciona todos os botões e conteúdos
     const botoes = document.querySelectorAll('.botao-aula');
     const conteudos = document.querySelectorAll('.conteudo-aula');
+    const totalAulas = botoes.length;
+    let aulaAtual = null;
 
-    // Adiciona o clique em cada botão
+    // Exibe uma aula e fecha as demais
+    function exibirAula(numero) {
+        // Fecha todas as aulas
+        botoes.forEach(btn => btn.classList.remove('ativa'));
+        conteudos.forEach(ctd => ctd.classList.remove('visivel'));
+
+        // Abre a aula selecionada
+        aulaAtual = numero;
+        document.querySelector(`.botao-aula[data-aula="${numero}"]`).classList.add('ativa');
+        const conteudo = document.getElementById(`aula-${numero}`);
+        conteudo.classList.add('visivel');
+
+        // Rola suavemente até o conteúdo
+        conteudo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        atualizarEstadoBotoes();
+    }
+
+    // Ativa/desativa botões de navegação conforme a aula atual
+    function atualizarEstadoBotoes() {
+        document.querySelectorAll('.btn-anterior').forEach(btn => btn.disabled = (aulaAtual <= 1));
+        document.querySelectorAll('.btn-proximo').forEach(btn => btn.disabled = (aulaAtual >= totalAulas));
+    }
+
+    // Volta ao início (fecha todas as aulas e sobe ao topo)
+    function voltarInicio() {
+        aulaAtual = null;
+        botoes.forEach(btn => btn.classList.remove('ativa'));
+        conteudos.forEach(ctd => ctd.classList.remove('visivel'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Clique nos botões das aulas
     botoes.forEach(botao => {
         botao.addEventListener('click', () => {
-            // Remove destaque de todos os botões e esconde todos os conteúdos
-            botoes.forEach(btn => btn.classList.remove('ativa'));
-            conteudos.forEach(ctd => ctd.classList.remove('visivel'));
-
-            // Pega o número da aula clicada
-            const numeroAula = botao.getAttribute('data-aula');
-            
-            // Adiciona destaque ao botão clicado e mostra o conteúdo correspondente
-            botao.classList.add('ativa');
-            document.getElementById(`aula-${numeroAula}`).classList.add('visivel');
+            exibirAula(parseInt(botao.dataset.aula));
         });
+    });
+
+    // Navegação pelos botões dentro do conteúdo
+    document.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-proximo') && aulaAtual < totalAulas) {
+            exibirAula(aulaAtual + 1);
+        }
+        if (e.target.classList.contains('btn-anterior') && aulaAtual > 1) {
+            exibirAula(aulaAtual - 1);
+        }
+        if (e.target.classList.contains('btn-inicio')) {
+            voltarInicio();
+        }
+    });
+
+    // Navegação pelo TECLADO
+    document.addEventListener('keydown', e => {
+        if (!aulaAtual) return;
+
+        if (e.key === 'ArrowLeft' && aulaAtual > 1) {
+            e.preventDefault();
+            exibirAula(aulaAtual - 1);
+        }
+        else if (e.key === 'ArrowRight' && aulaAtual < totalAulas) {
+            e.preventDefault();
+            exibirAula(aulaAtual + 1);
+        }
+        else if (e.key === 'Escape') {
+            e.preventDefault();
+            voltarInicio();
+        }
     });
 </script>
 
 </body>
-</html> 
-
-
+</html>
 
 
 
@@ -1461,11 +2836,8 @@
 </main>
 
 <footer>
-    Prof.Valter@2026
+   Professor Valter @2026 
 </footer>
 
 </body>
 </html>
-
-
-
