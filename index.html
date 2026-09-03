@@ -2913,8 +2913,353 @@
     <div class="item-aula">
         <button class="botao-aula" data-aula="9">Aula 9: Endividamento controlado - Parte 1</button>
         <div class="conteudo-aula" id="aula-9">
-            <h2>Aula 09</h2>
-            <p>Conteúdo da Aula 09...</p>
+            <h2>Aula 09: Endividamento controlado - Parte 1 </h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09: Endividamento Controlado — Parte 1</title>
+    <style>
+        /* ===== ESTILOS GERAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 16px;
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            padding: 28px 24px;
+            border-radius: 14px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            opacity: 0.92;
+            font-style: italic;
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        main {
+            max-width: 880px;
+            margin: 0 auto;
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #edf2f7;
+        }
+
+        h3 {
+            color: #2f855a;
+            font-size: 1.15rem;
+            margin: 18px 0 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .destaque {
+            background-color: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 18px 0;
+        }
+
+        .resumo {
+            background-color: #e6fffa;
+            border-left: 4px solid #319795;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin-top: 22px;
+        }
+
+        /* ===== ILUSTRAÇÕES SVG ===== */
+        .ilustracao {
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .ilustracao svg {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+        }
+
+        .legenda {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-top: 8px;
+        }
+
+        /* ===== ÁREA DE PERGUNTA E RESPOSTA INTERATIVA ===== */
+        .caixa-pergunta {
+            background-color: #ebf4ff;
+            border: 2px solid #90cdf4;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .botao-resposta {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+
+        .botao-resposta:hover {
+            background-color: #2b6cb0;
+        }
+
+        .resposta-completa {
+            margin-top: 16px;
+            padding: 16px;
+            background-color: #f0fff4;
+            border-left: 4px solid #48bb78;
+            border-radius: 0 8px 8px 0;
+            display: none;
+        }
+
+        .resposta-completa.mostra {
+            display: block;
+            animation: aparece 0.4s ease-out;
+        }
+
+        @keyframes aparece {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.4rem; }
+            main { padding: 18px; }
+            header { padding: 20px 16px; }
+            .ilustracao svg { max-width: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- CABEÇALHO COM TÍTULO DA AULA -->
+<header>
+    <h1>Aula 09: Endividamento Controlado — Parte 1</h1>
+    <p class="subtitulo">Parcelar: risco ou estratégia?</p>
+</header>
+
+<main>
+    <!-- INTRODUÇÃO -->
+    <section>
+        <h2>💡 Parcelar: risco ou estratégia?</h2>
+        <p>Parcelar uma compra pode ser uma <strong>estratégia financeira</strong> quando a dívida é planejada e cabe dentro do seu orçamento mensal. Torna-se um problema apenas quando feito sem cuidado.</p>
+
+        <!-- ILUSTRAÇÃO 1: Planejamento e orçamento (SVG embutido) -->
+        <div class="ilustracao">
+            <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fundo -->
+                <rect width="320" height="180" rx="12" fill="#f7fafc"/>
+                <!-- Cofre/caixa -->
+                <rect x="50" y="60" width="80" height="70" rx="6" fill="#4299e1" stroke="#2b6cb0" stroke-width="3"/>
+                <rect x="60" y="70" width="60" height="40" rx="3" fill="#90cdf4"/>
+                <circle cx="90" cy="115" r="8" fill="#f6e05e" stroke="#ecc94b" stroke-width="2"/>
+                <!-- Gráfico crescente -->
+                <polygon points="150,110 175,90 200,70 225,50 250,35 250,130 150,130" fill="#48bb78" opacity="0.75"/>
+                <polyline points="150,110 175,90 200,70 225,50 250,35" stroke="#2f855a" stroke-width="3" fill="none"/>
+                <!-- Etiqueta -->
+                <text x="75" y="160" font-size="13" fill="#2d3748" font-weight="500">Planejamento = Segurança</text>
+                <!-- Sinais de atenção -->
+                <path d="M280 40 L288 56 L272 56 Z" fill="#ed8936"/>
+                <text x="220" y="30" font-size="11" fill="#744210">Atenção aos juros!</text>
+            </svg>
+            <p class="legenda">Ilustração: com planejamento, o crédito ajuda a crescer sem perder o controle.</p>
+        </div>
+
+        <p>Para evitar que a dívida saia do controle, é importante seguir algumas regras simples:</p>
+        <ul>
+            <li>✅ Verificar se o valor das parcelas cabe no orçamento mensal;</li>
+            <li>✅ Conferir se há juros e outras taxas antes de comprar;</li>
+            <li>✅ Evitar acumular várias compras parceladas ao mesmo tempo;</li>
+            <li>✅ Anotar as parcelas e acompanhar os pagamentos até quitar a dívida;</li>
+            <li>✅ Manter uma reserva para imprevistos, evitando fazer novas dívidas para pagar as antigas.</li>
+        </ul>
+
+        <div class="destaque">
+            <strong>💵 Bom exemplo:</strong> Comprar roupas necessárias para um novo emprego, parcelar em 3 vezes, sem comprometer o orçamento. Assim você adquire o que precisa e mantém seu dinheiro para outras despesas. O crédito, quando planejado, é uma ferramenta útil!
+        </div>
+
+        <p><strong>Em resumo:</strong> o crédito não é necessariamente ruim. Ele se torna um problema quando é usado sem planejamento ou quando as parcelas comprometem a capacidade de pagar outras despesas.</p>
+    </section>
+
+    <!-- ENDIVIDAMENTO CONTROLADO -->
+    <section>
+        <h2>📊 Endividamento Controlado</h2>
+        <p>O endividamento controlado acontece quando a pessoa utiliza o crédito de forma planejada, assumindo apenas dívidas que consegue pagar dentro do seu orçamento. Para manter o controle:</p>
+        <ul>
+            <li>Analise o valor das parcelas e os juros;</li>
+            <li>Evite o acúmulo de várias dívidas;</li>
+            <li>Mantenha os pagamentos em dia;</li>
+            <li>O crédito consciente ajuda a alcançar metas: comprar veículo, imóvel ou material de trabalho.</li>
+        </ul>
+    </section>
+
+    <!-- TIPOS DE FINANCIAMENTO -->
+    <section>
+        <h2>📋 Tipos Comuns de Financiamento</h2>
+        <ul>
+            <li>🚗 <strong>Veículos:</strong> compra de carros ou motos;</li>
+            <li>🏠 <strong>Imóveis:</strong> compra de casas ou apartamentos;</li>
+            <li>🎓 <strong>Educação:</strong> pagamento de cursos técnicos ou superiores;</li>
+            <li>💼 <strong>Negócios:</strong> compra de equipamentos ou expansão;</li>
+            <li>📺 <strong>Eletrodomésticos:</strong> aquisição de aparelhos para a casa.</li>
+        </ul>
+        <p>Em todos os casos, analise <strong>juros, prazo e valor das parcelas</strong> antes de assinar, para garantir que a dívida permaneça dentro do orçamento.</p>
+    </section>
+
+    <!-- FINANCIAMENTO DE VEÍCULOS -->
+    <section>
+        <h2>🚗 Financiamento de Veículos</h2>
+        
+        <!-- ILUSTRAÇÃO 2: Financiamento comparado (SVG embutido) -->
+        <div class="ilustracao">
+            <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Carro -->
+                <rect x="40" y="80" width="100" height="45" rx="10" fill="#48bb78"/>
+                <rect x="60" y="60" width="50" height="30" rx="6" fill="#9ae6b4"/>
+                <circle cx="60" cy="125" r="12" fill="#2d3748"/>
+                <circle cx="120" cy="125" r="12" fill="#2d3748"/>
+                <!-- Comparação -->
+                <rect x="175" y="40" width="130" height="100" rx="8" fill="#fef5e7" stroke="#ed8936" stroke-width="2"/>
+                <text x="176" y="62" font-size="11" fill="#744210" font-weight="bold">Analise antes de decidir:</text>
+                <text x="185" y="82" font-size="11" fill="#2d3748">✓ Taxa de juros</text>
+                <text x="185" y="100" font-size="11" fill="#2d3748">✓ Prazo adequado</text>
+                <text x="185" y="118" font-size="11" fill="#2d3748">✓ Valor total pago</text>
+                <text x="185" y="136" font-size="11" fill="#2d3748">✓ Parcela no orçamento</text>
+            </svg>
+            <p class="legenda">Ilustração: compare as condições antes de assumir um financiamento.</p>
+        </div>
+
+        <p>No financiamento de veículos, o banco paga o valor ao vendedor, e você paga em parcelas mensais <strong>com juros</strong>. Ou seja: financiar significa assumir uma dívida com custo adicional.</p>
+        
+        <h3>Para manter o controle:</h3>
+        <ul>
+            <li>Compare taxas de juros entre diferentes instituições;</li>
+            <li>Escolha um prazo que não comprometa seu orçamento;</li>
+            <li>Se possível, dê uma entrada maior e reduza o valor financiado;</li>
+            <li>Verifique o <strong>valor total</strong> a pagar, e não apenas o valor da parcela;</li>
+            <li>Não assuma parcelas que dificultem o pagamento de outras contas.</li>
+        </ul>
+        <p>🎬 <strong>Para saber mais:</strong> assista ao vídeo com dicas para evitar juros abusivos: <a href="https://www.youtube.com/watch?v=8_Q_5TPFFn4" target="_blank" rel="noopener noreferrer">Clique aqui para assistir</a>.</p>
+    </section>
+
+    <!-- FINANCIAMENTO IMOBILIÁRIO -->
+    <section>
+        <h2>🏠 Financiamento para Moradia</h2>
+        <p>Permite comprar um imóvel e pagar ao longo do tempo. Fique atento aos fatores principais:</p>
+        <ul>
+            <li><strong>Valor da entrada:</strong> quanto maior, menor o valor financiado;</li>
+            <li><strong>Taxa de juros:</strong> influencia diretamente o custo total;</li>
+            <li><strong>Prazo:</strong> prazos maiores reduzem a parcela, mas aumentam o total pago;</li>
+            <li><strong>Orçamento familiar:</strong> a parcela precisa caber com segurança na renda;</li>
+            <li><strong>Programas habitacionais:</strong> podem oferecer condições facilitadas.</li>
+        </ul>
+        <p>Assim como no financiamento de veículos, o crédito imobiliário ajuda a alcançar uma meta importante — desde que contratado com planejamento e consciência.</p>
+    </section>
+
+    <!-- PERGUNTA INTERATIVA — ENCERRAMENTO ATUALIZADO -->
+    <section class="caixa-pergunta">
+        <h2>✍️ Encerramento</h2>
+        <p><strong>Pergunta:</strong> Por que é preciso garantir um bom planejamento financeiro antes de adquirir um financiamento?</p>
+        
+        <p style="margin-top:14px;"><em>Clique abaixo para ver a resposta:</em></p>
+
+        <button class="botao-resposta" onclick="mostraRespostaCorreta()">Ver resposta</button>
+
+        <!-- RESPOSTA CORRETA (aparece ao clicar) -->
+        <div class="resposta-completa" id="respostaCorreta">
+            <strong>✅ Resposta:</strong>
+            <p>É preciso fazer um bom planejamento financeiro antes de adquirir um financiamento para garantir que as parcelas caibam no orçamento e possam ser pagas em dia. Também é importante analisar os juros, o prazo e o valor total da dívida. Dessa forma, evita-se o endividamento descontrolado e é possível alcançar a meta sem comprometer a saúde financeira.</p>
+        </div>
+    </section>
+
+    <!-- RESUMO FINAL -->
+    <div class="resumo">
+        <h3>📝 Resumo da Aula</h3>
+        <p>O crédito não é inimigo: ele é uma ferramenta. Quando usado com planejamento, cabe no orçamento e evita acúmulo de dívidas, torna-se uma estratégia inteligente para alcançar metas. Quando usado sem cuidado, com juros altos ou sem verificar o valor total, leva ao endividamento descontrolado. <strong>Planeje, compare e só contrate se tiver certeza de que pode pagar!</strong></p>
+    </div>
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <p>Aula 09 — Endividamento Controlado · Parte 1 | Educação Financeira</p>
+    <p>Conteúdo alinhado à proposta de educação financeira para o planejamento consciente do crédito.</p>
+</footer>
+
+<!-- SCRIPT DE INTERATIVIDADE ATUALIZADO -->
+<script>
+    // Mostra resposta com animação
+    function mostraRespostaCorreta() {
+        document.getElementById('respostaCorreta').classList.toggle('mostra');
+    }
+</script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="9">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="9">🏠 Voltar ao Início</button>
@@ -2928,8 +3273,331 @@
     <div class="item-aula">
         <button class="botao-aula" data-aula="10">Aula 10: Endividamento controlado - Parte 2</button>
         <div class="conteudo-aula" id="aula-10">
-            <h2>Aula 10</h2>
-            <p>Conteúdo da Aula 10...</p>
+            <h2>Aula 10: Endividamento controlado – Parte 2</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Financeira - Aula 10: Endividamento Controlado – Parte 2</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5aa0, #4a90e2);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
+            max-width: 320px;
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e9f2;
+            font-size: 1.3rem;
+        }
+
+        .pergunta {
+            background-color: #f0f7ff;
+            border-left: 5px solid #4a90e2;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pergunta:hover {
+            background-color: #e0effe;
+            transform: translateX(5px);
+        }
+
+        .resposta {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .correta {
+            background-color: #e8f8e8;
+            border-left: 5px solid #28a745;
+            color: #155724;
+        }
+
+        .erro {
+            background-color: #fef0f0;
+            border-left: 5px solid #dc3545;
+            color: #721c24;
+        }
+
+        .destaque {
+            font-weight: bold;
+            color: #2c5aa0;
+        }
+
+        .exemplo {
+            background-color: #fff9e6;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 12px 0;
+            border-left: 4px solid #f5a623;
+        }
+
+        .lista-conclusao {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+
+        .lista-conclusao li {
+            margin: 8px 0;
+            padding: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #555;
+            font-size: 0.95rem;
+            border-top: 1px solid #cce0f5;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .ilustracao {
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏦 Educação Financeira</h1>
+        <p class="subtitulo">Aula 10: Endividamento Controlado – Parte 2<br>Aluguel vs. Financiamento</p>
+    </header>
+
+    <!-- Ilustração SVG: Casa com opções de aluguel e compra -->
+    <div class="ilustracao">
+        <svg width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Casa -->
+            <polygon points="150,30 60,90 240,90" fill="#4a90e2" stroke="#2c5aa0" stroke-width="3"/>
+            <rect x="80" y="90" width="140" height="80" fill="#74b9ff" stroke="#2c5aa0" stroke-width="3"/>
+            <rect x="115" y="120" width="70" height="50" fill="#5d4037" stroke="#3e2723" stroke-width="2"/>
+            <circle cx="165" cy="145" r="5" fill="#ffd700"/>
+            <rect x="90" y="100" width="25" height="25" fill="#e1f5fe" stroke="#2c5aa0" stroke-width="2"/>
+            <rect x="185" y="100" width="25" height="25" fill="#e1f5fe" stroke="#2c5aa0" stroke-width="2"/>
+            <!-- Etiquetas -->
+            <rect x="20" y="130" width="70" height="30" rx="8" fill="#28a745" opacity="0.9"/>
+            <text x="35" y="150" font-family="Arial" font-size="12" fill="white">Aluguel</text>
+            <rect x="210" y="130" width="80" height="30" rx="8" fill="#f5a623" opacity="0.9"/>
+            <text x="211" y="150" font-family="Arial" font-size="12" fill="white">Financiamento</text>
+        </svg>
+    </div>
+
+    <section>
+        <h2>🏠 Aluguel vs. Financiamento</h2>
+        <p>Diante do cenário apresentado, você acha que optar pelo aluguel é uma escolha inteligente ou uma necessidade?</p>
+        
+        <div class="pergunta" onclick="mostrarResposta('resposta1', true)">
+            👆 Clique aqui para ver a resposta
+            <div id="resposta1" class="resposta correta">
+                <strong>Resposta:</strong> Optar pelo aluguel pode ser tanto uma escolha inteligente quanto uma necessidade, dependendo da situação financeira de cada família. Quando os juros do financiamento estão altos, o aluguel pode evitar uma dívida grande e permitir maior flexibilidade.<br><br>
+                Por outro lado, para quem possui condições financeiras estáveis e consegue um financiamento adequado, comprar um imóvel pode ser uma forma de construir patrimônio. Assim, <span class="destaque">não existe uma única resposta correta</span>: o mais importante é analisar a renda, os juros, o valor do imóvel e as condições do aluguel antes de decidir.
+            </div>
+        </div>
+    </section>
+
+    <!-- Ilustração SVG: Planejamento e parcelas -->
+    <div class="ilustracao">
+        <svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cofrinho e barras de parcelas -->
+            <ellipse cx="70" cy="110" rx="50" ry="40" fill="#ffd700" stroke="#e6ac00" stroke-width="3"/>
+            <ellipse cx="70" cy="85" rx="20" ry="8" fill="#e6ac00"/>
+            <circle cx="50" cy="100" r="6" fill="#e6ac00"/>
+            <circle cx="90" cy="100" r="6" fill="#e6ac00"/>
+            <rect x="45" y="120" width="50" height="15" fill="#e6ac00"/>
+            <!-- Barras representando parcelas -->
+            <rect x="140" y="70" width="30" height="70" fill="#28a745" rx="3"/>
+            <rect x="180" y="50" width="30" height="90" fill="#4a90e2" rx="3"/>
+            <rect x="220" y="30" width="30" height="110" fill="#dc3545" rx="3"/>
+            <text x="141" y="150" font-size="10" fill="#333">Pouco</text>
+            <text x="181" y="150" font-size="10" fill="#333">Médio</text>
+            <text x="223" y="150" font-size="10" fill="#333">Muito</text>
+            <text x="130" y="28" font-size="12" font-weight="bold" fill="#2c5aa0">Peso das parcelas</text>
+        </svg>
+    </div>
+
+    <section>
+        <h2>💳 Parcelamentos no dia a dia</h2>
+        <div class="pergunta" onclick="mostrarResposta('resposta2', true)">
+            👆 Clique para saber mais sobre o parcelamento
+            <div id="resposta2" class="resposta correta">
+                <strong>Resposta:</strong> Parcelar não é necessariamente ruim. Quando há planejamento, o parcelamento pode ajudar a resolver uma necessidade ou realizar um objetivo sem comprometer todo o orçamento de uma vez.<br><br>
+                Porém, é importante verificar: se as parcelas cabem no orçamento, se existem juros e se não haverá excesso de dívidas. Assim, o parcelamento pode ser uma estratégia financeira quando usado com <span class="destaque">responsabilidade</span>.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🤔 Desejo vs. Necessidade nos Parcelamentos</h2>
+        <p>Diferenciar o que é essencial do que é apenas vontade ajuda a evitar dívidas desnecessárias.</p>
+        
+        <div class="exemplo">
+            <strong>Exemplo prático:</strong><br>
+            ✅ Parcelar um aparelho básico que possibilite comunicação → <em>Necessidade</em><br>
+            ❌ Parcelar um smartphone de última geração → <em>Desejo</em>
+        </div>
+
+        <div class="pergunta" onclick="mostrarResposta('resposta3', true)">
+            👆 Clique para ver a orientação completa
+            <div id="resposta3" class="resposta correta">
+                Antes de parcelar uma compra, é importante pensar se ela é realmente essencial ou se pode esperar. Fazer essa análise ajuda a evitar parcelas desnecessárias e o acúmulo de dívidas. <span class="destaque">Pergunte-se: eu realmente preciso disso ou é apenas um desejo?</span> Essa simples reflexão pode evitar muitos problemas financeiros.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🏦 O que leva um banco a aceitar o seu financiamento?</h2>
+        <p>O banco avalia o risco de emprestar dinheiro. Quanto menor o risco, maiores as chances de aprovação.</p>
+        
+        <div class="pergunta" onclick="mostrarResposta('resposta4', true)">
+            👆 Clique para ver os critérios avaliados
+            <div id="resposta4" class="resposta correta">
+                <strong>Critérios principais:</strong>
+                <ul class="lista-conclusao">
+                    <li>📝 <strong>Histórico de crédito:</strong> se costuma pagar contas em dia</li>
+                    <li>💰 <strong>Capacidade de pagamento:</strong> se a renda comporta as parcelas</li>
+                    <li>🛡️ <strong>Garantias:</strong> bens que reduzem o risco</li>
+                    <li>📊 <strong>Estabilidade financeira:</strong> renda previsível gera confiança</li>
+                    <li>👤 <strong>Perfil financeiro:</strong> situação geral e histórico do cliente</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>💵 Será que vale a pena dar uma entrada maior?</h2>
+        <div class="pergunta" onclick="mostrarResposta('resposta5', true)">
+            👆 Clique para ver a resposta
+            <div id="resposta5" class="resposta correta">
+                Dar uma entrada maior pode ser vantajoso, pois reduz o valor financiado e, consequentemente, o impacto dos juros ao longo do tempo.<br><br>
+                <strong>Mas atenção:</strong> não gaste toda a reserva financeira apenas para aumentar a entrada. O ideal é manter dinheiro para emergências e avaliar se vale mais a pena esperar e economizar antes de financiar.<br><br>
+                <span class="destaque">Conclusão:</span> uma entrada maior pode diminuir o custo do financiamento, mas deve ser feita <em>sem comprometer a segurança financeira</em>.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>⚠️ Consequências de não pagar financiamentos</h2>
+        <div class="pergunta" onclick="mostrarResposta('resposta6', true)">
+            👆 Clique para entender os riscos
+            <div id="resposta6" class="resposta correta">
+                Deixar de pagar traz consequências sérias:
+                <ul class="lista-conclusao">
+                    <li>A dívida cresce com juros e multas</li>
+                    <li>Seu nome pode ficar negativado (restrição de crédito)</li>
+                    <li>O bem usado como garantia pode ser tomado</li>
+                    <li>Dificuldade para obter crédito no futuro</li>
+                </ul>
+                Por isso, <span class="destaque">avalie bem sua capacidade de pagamento antes de assumir qualquer dívida</span>.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>✅ Encerramento: Antes de parcelar, analise:</h2>
+        <ul class="lista-conclusao">
+            <li>🔍 Se a compra é realmente necessária ou apenas um desejo</li>
+            <li>📏 Se as parcelas cabem no orçamento mensal</li>
+            <li>💸 Se há juros, multas ou outras taxas</li>
+            <li>🧮 O valor total que será pago no final</li>
+            <li>⚠️ Se o parcelamento pode comprometer outras despesas</li>
+        </ul>
+        <p style="margin-top:15px; font-weight:bold; color:#2c5aa0;">Assim, é possível fazer uma escolha mais consciente e evitar problemas financeiros no futuro!</p>
+    </section>
+
+    <footer>
+        <p>📚 Educação Financeira – Aula 10: Endividamento Controlado – Parte 2</p>
+        <p>Aluguel vs. Financiamento • Parcelamentos • Decisões Conscientes</p>
+    </footer>
+
+    <script>
+        // Função para mostrar respostas com feedback visual
+        function mostrarResposta(id, estaCorreta) {
+            const elemento = document.getElementById(id);
+            if (elemento.style.display === "block") {
+                elemento.style.display = "none";
+            } else {
+                elemento.style.display = "block";
+                // Garante que a classe correta seja aplicada
+                if (estaCorreta) {
+                    elemento.classList.remove("erro");
+                    elemento.classList.add("correta");
+                } else {
+                    elemento.classList.remove("correta");
+                    elemento.classList.add("erro");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="10">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="10">🏠 Voltar ao Início</button>
